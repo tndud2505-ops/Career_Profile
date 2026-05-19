@@ -847,7 +847,7 @@ img {
 
 @keyframes panelIn {
   from {
-    opacity: 0;
+    opacity: 0.92;
     transform: translateY(10px);
   }
   to {
