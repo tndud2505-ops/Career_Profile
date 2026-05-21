@@ -229,10 +229,12 @@ a:focus-visible {
 
 .hero-image {
   margin: 0;
+  max-width: 420px;
   padding: 10px;
   background: rgba(255, 255, 255, 0.42);
   border: 1px solid var(--line);
   box-shadow: 0 14px 34px rgba(61, 55, 45, 0.05);
+  justify-self: end;
 }
 
 .hero-image img {
@@ -257,9 +259,9 @@ a:focus-visible {
 }
 
 .hero h1 {
-  max-width: 18ch;
+  max-width: 14ch;
   font-family: var(--sans);
-  font-size: 3.1rem;
+  font-size: 2.86rem;
   line-height: 1.22;
 }
 
@@ -277,7 +279,7 @@ a:focus-visible {
 }
 
 .hero-copy > p {
-  max-width: 58ch;
+  max-width: 45ch;
   font-size: 0.96rem;
 }
 
@@ -291,9 +293,19 @@ a:focus-visible {
   line-height: 1.55;
 }
 
+body[data-active-panel="career"] .hero,
+body[data-active-panel="projects"] .hero {
+  display: none;
+}
+
 .panel {
   padding-top: 58px;
   scroll-margin-top: 96px;
+}
+
+body[data-active-panel="career"] .panel,
+body[data-active-panel="projects"] .panel {
+  padding-top: 26px;
 }
 
 .panel[hidden],
@@ -331,6 +343,11 @@ a:focus-visible {
   border-top: 1px solid var(--line-strong);
 }
 
+.intro-grid--compact {
+  grid-template-columns: minmax(0, 0.88fr) minmax(280px, 0.72fr);
+  gap: 28px 40px;
+}
+
 .intro-statement {
   display: grid;
   gap: 18px;
@@ -345,6 +362,34 @@ a:focus-visible {
 
 .intro-statement p {
   max-width: 67ch;
+}
+
+.intro-facts {
+  display: grid;
+  gap: 0;
+  margin: 28px 0 0;
+  border-top: 1px solid var(--line-strong);
+}
+
+.intro-facts div {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 18px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.intro-facts dt {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.intro-facts dd {
+  margin: 0;
+  color: var(--body);
+  line-height: 1.7;
 }
 
 .flow-artifact {
@@ -751,13 +796,17 @@ a:focus-visible {
   }
 
   .hero h1 {
-    max-width: 18ch;
-    font-size: 2.7rem;
+    max-width: 24ch;
+    font-size: 2.46rem;
   }
 
   .hero {
     grid-template-columns: minmax(0, 1fr);
     gap: 30px;
+  }
+
+  .hero-image {
+    justify-self: start;
   }
 
   .method-ledger {
@@ -773,6 +822,10 @@ a:focus-visible {
   }
 
   .project-lab {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-grid--compact {
     grid-template-columns: 1fr;
   }
 
@@ -882,6 +935,11 @@ a:focus-visible {
   }
 
   .scope-list div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .intro-facts div {
     grid-template-columns: 1fr;
     gap: 6px;
   }
