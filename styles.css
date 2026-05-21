@@ -229,7 +229,7 @@ a:focus-visible {
 
 .hero-image {
   margin: 0;
-  max-width: 420px;
+  max-width: 340px;
   padding: 10px;
   background: rgba(255, 255, 255, 0.42);
   border: 1px solid var(--line);
@@ -806,6 +806,7 @@ body[data-active-panel="projects"] .panel {
   }
 
   .hero-image {
+    max-width: 320px;
     justify-self: start;
   }
 
@@ -885,6 +886,7 @@ body[data-active-panel="projects"] .panel {
   }
 
   .hero-image {
+    max-width: 280px;
     padding: 8px;
   }
 
