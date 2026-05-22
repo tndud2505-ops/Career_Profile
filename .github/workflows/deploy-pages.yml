@@ -33,7 +33,6 @@ jobs:
           cp README.md _site/
           cp site_preview.png _site/
           cp .nojekyll _site/
-          cp ./*.docx _site/
           cp -R assets _site/assets
 
       - name: Setup GitHub Pages
