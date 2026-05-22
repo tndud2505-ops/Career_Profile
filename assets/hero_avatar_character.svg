@@ -1,36 +1,33 @@
-<svg width="920" height="1080" viewBox="0 0 920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="920" height="1080" rx="40" fill="#F5F2EA"/>
-  <rect x="36" y="36" width="848" height="1008" rx="34" fill="#FBFAF6" stroke="#D9D4CA"/>
-  <rect x="116" y="108" width="688" height="864" rx="30" fill="url(#bg)"/>
+<svg width="760" height="940" viewBox="0 0 760 940" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="760" height="940" rx="38" fill="#F5F2EA"/>
+  <rect x="34" y="34" width="692" height="872" rx="34" fill="#FBFAF6" stroke="#DAD5CB"/>
+  <rect x="94" y="94" width="572" height="752" rx="32" fill="url(#bg)"/>
 
-  <ellipse cx="458" cy="916" rx="220" ry="84" fill="#E7EEF3"/>
-  <path d="M294 900C320 812 384 772 460 772C536 772 598 812 624 900V972H294V900Z" fill="#C7D8E7"/>
-  <path d="M348 894C372 830 408 804 460 804C512 804 548 830 572 894" stroke="#A7C2D8" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="380" cy="350" r="166" fill="#F3DDCE"/>
+  <path d="M228 338C228 218 288 144 382 144C476 144 532 216 532 330C532 346 530 362 526 378C496 314 446 282 380 282C314 282 264 314 234 378C230 364 228 350 228 338Z" fill="#151B18"/>
+  <path d="M248 292C282 222 326 188 382 188C442 188 486 224 510 292C474 268 430 256 382 256C330 256 286 268 248 292Z" fill="#202722"/>
 
-  <path d="M300 392C300 260 372 180 458 180C544 180 616 260 616 392V508C616 654 550 748 458 748C366 748 300 654 300 508V392Z" fill="#F4D9C9"/>
-  <path d="M314 394C314 276 386 208 458 208C530 208 602 276 602 394V494C602 612 550 704 458 704C366 704 314 612 314 494V394Z" fill="#F7E2D4"/>
+  <circle cx="282" cy="376" r="24" fill="#F0D2C4"/>
+  <circle cx="478" cy="376" r="24" fill="#F0D2C4"/>
+  <path d="M318 392C332 382 348 382 362 392" stroke="#222A25" stroke-width="9" stroke-linecap="round"/>
+  <path d="M398 392C412 382 428 382 442 392" stroke="#222A25" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="340" cy="430" r="9" fill="#222A25"/>
+  <circle cx="420" cy="430" r="9" fill="#222A25"/>
+  <path d="M364 486C374 494 386 494 396 486" stroke="#9E6D61" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="306" cy="462" r="13" fill="#EFBBAE" fill-opacity="0.55"/>
+  <circle cx="454" cy="462" r="13" fill="#EFBBAE" fill-opacity="0.55"/>
 
-  <path d="M284 384C284 232 380 142 468 142C568 142 642 214 642 338C642 388 634 432 616 474L594 458V360C594 286 544 224 470 224C396 224 334 270 328 346L320 450L294 470C286 438 284 412 284 384Z" fill="#171B18"/>
-  <path d="M336 256C368 196 430 164 494 164C566 164 624 206 638 302C596 262 544 242 476 242C414 242 372 248 336 256Z" fill="#232825"/>
-  <path d="M322 278C356 246 402 228 470 228C534 228 588 250 620 288C588 236 532 198 468 198C406 198 356 224 322 278Z" fill="#2C332F"/>
-  <path d="M304 434C284 430 268 444 268 470C268 502 286 536 312 542L320 480L304 434Z" fill="#F2D6C6"/>
-  <path d="M612 438C632 432 650 444 650 470C650 502 632 536 606 542L598 482L612 438Z" fill="#F2D6C6"/>
+  <path d="M236 794C260 688 314 638 380 638C446 638 500 688 524 794V856H236V794Z" fill="#C9DCE8"/>
+  <path d="M306 790C324 734 350 706 380 706C410 706 436 734 454 790" stroke="#A6C4D8" stroke-width="16" stroke-linecap="round"/>
+  <path d="M332 606C346 628 364 640 380 640C396 640 414 628 428 606L418 686H342L332 606Z" fill="#F0D2C4"/>
 
-  <path d="M390 486C414 472 436 470 458 470C480 470 504 472 528 486" stroke="#5A473D" stroke-width="9" stroke-linecap="round"/>
-  <ellipse cx="384" cy="516" rx="18" ry="12" fill="#222724"/>
-  <ellipse cx="532" cy="516" rx="18" ry="12" fill="#222724"/>
-  <path d="M446 566C454 550 460 550 468 566" stroke="#C99B88" stroke-width="8" stroke-linecap="round"/>
-  <path d="M408 618C426 634 490 634 510 618" stroke="#A16F63" stroke-width="10" stroke-linecap="round"/>
-  <path d="M382 448C404 432 426 428 452 432" stroke="#171B18" stroke-width="10" stroke-linecap="round"/>
-  <path d="M470 432C496 428 520 432 542 448" stroke="#171B18" stroke-width="10" stroke-linecap="round"/>
-
-  <path d="M370 732C394 756 424 772 458 772C492 772 522 756 546 732L520 790H396L370 732Z" fill="#F1D5C4"/>
-  <rect x="290" y="906" width="336" height="38" rx="19" fill="#B8CDDF"/>
+  <rect x="124" y="126" width="18" height="688" rx="9" fill="#F2EEE5" fill-opacity="0.8"/>
+  <rect x="618" y="126" width="18" height="688" rx="9" fill="#F2EEE5" fill-opacity="0.8"/>
 
   <defs>
-    <linearGradient id="bg" x1="460" y1="108" x2="460" y2="972" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#EDF4FA"/>
-      <stop offset="1" stop-color="#F8FAFD"/>
+    <linearGradient id="bg" x1="380" y1="94" x2="380" y2="846" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF5F1"/>
+      <stop offset="1" stop-color="#FAFBF8"/>
     </linearGradient>
   </defs>
 </svg>
