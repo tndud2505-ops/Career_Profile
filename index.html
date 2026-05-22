@@ -45,27 +45,15 @@
 
       <nav class="tab-nav" aria-label="주요 화면" role="tablist">
         <button
-          id="tab-intro"
-          class="tab-button is-active"
-          type="button"
-          role="tab"
-          data-panel="intro"
-          aria-controls="panel-intro"
-          aria-selected="true"
-        >
-          <span>01</span>
-          소개
-        </button>
-        <button
           id="tab-career"
-          class="tab-button"
+          class="tab-button is-active"
           type="button"
           role="tab"
           data-panel="career"
           aria-controls="panel-career"
-          aria-selected="false"
+          aria-selected="true"
         >
-          <span>02</span>
+          <span>01</span>
           실무 기록
         </button>
         <button
@@ -77,7 +65,7 @@
           aria-controls="panel-projects"
           aria-selected="false"
         >
-          <span>03</span>
+          <span>02</span>
           개인 프로젝트
         </button>
       </nav>
@@ -471,61 +459,14 @@
       </section>
 
       <section
-        id="panel-intro"
-        class="panel is-active"
-        data-panel="intro"
-        role="tabpanel"
-        aria-labelledby="tab-intro"
-      >
-        <div class="section-head">
-          <p class="section-number">01</p>
-          <div>
-            <p class="eyebrow">소개</p>
-            <h2>총 경력 3년+의 자동차 전장 SW 경험을 핵심만 남겨 소개합니다.</h2>
-          </div>
-        </div>
-
-        <div class="intro-grid intro-grid--compact">
-          <article class="intro-statement">
-            <h3>주어진 기능 구현에서 멈추지 않고, 다시 보기 쉬운 구조까지 만드는 개발자입니다.</h3>
-            <p>
-              냉매 밸브 액추에이터, SCM·PSU, AUTOSAR 기반 코드 설계와 자동화 툴 개발을 거치며
-              하드웨어 동작과 소프트웨어 흐름을 함께 다뤄왔습니다.
-              반복되는 실무를 더 빠르게 이해하고 검증할 수 있도록 정리하는 방식에 강점이 있습니다.
-            </p>
-          </article>
-
-          <dl class="intro-facts" aria-label="핵심 소개">
-            <div>
-              <dt>총 경력</dt>
-              <dd>3년+</dd>
-            </div>
-            <div>
-              <dt>핵심 분야</dt>
-              <dd>자동차 전장 SW, AUTOSAR, 모터 제어, Python 툴 개발</dd>
-            </div>
-            <div>
-              <dt>현재 역할</dt>
-              <dd>AUTOSAR 기반 코드 생성 툴과 단위 검증 자동화 환경 개발</dd>
-            </div>
-            <div>
-              <dt>강점</dt>
-              <dd>복잡한 실무를 화면, 로그, 검증 흐름으로 다시 정리해 팀이 바로 이해할 수 있게 만드는 일</dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-
-      <section
         id="panel-career"
-        class="panel"
+        class="panel is-active"
         data-panel="career"
         role="tabpanel"
         aria-labelledby="tab-career"
-        hidden
       >
         <div class="section-head">
-          <p class="section-number">02</p>
+          <p class="section-number">01</p>
           <div>
             <p class="eyebrow">실무 기록</p>
             <h2>인증 경력 기준으로 정리한 실무 기록과 직접 맡은 범위입니다.</h2>
@@ -645,7 +586,7 @@
         hidden
       >
         <div class="section-head project-head">
-          <p class="section-number">03</p>
+          <p class="section-number">02</p>
           <div>
             <p class="eyebrow">개인 프로젝트</p>
             <h2>실제 화면과 함께 문제, 기능, 결과가 바로 읽히도록 더 자세히 정리했습니다.</h2>
