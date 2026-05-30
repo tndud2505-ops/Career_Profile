@@ -349,7 +349,6 @@ a:focus-visible {
 .intro-statement p,
 .career-record p,
 .project-detail p,
-.method-ledger p,
 .scope-list dd,
 .proof-list dd,
 .feature-list li {
@@ -387,8 +386,7 @@ a:focus-visible {
 }
 
 body[data-active-panel="career"] .hero,
-body[data-active-panel="projects"] .hero,
-body[data-active-panel="method"] .hero {
+body[data-active-panel="projects"] .hero {
   display: none;
 }
 
@@ -498,37 +496,6 @@ body[data-active-panel="projects"] .panel {
   border: 1px solid rgba(28, 33, 29, 0.14);
 }
 
-.method-ledger {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--line-strong);
-}
-
-.method-ledger article {
-  min-height: 160px;
-  padding: 24px 26px 0 0;
-  border-right: 1px solid var(--line);
-}
-
-.method-ledger article + article {
-  padding-left: 26px;
-}
-
-.method-ledger span {
-  display: block;
-  margin-bottom: 16px;
-  color: var(--faint);
-  font-family: var(--mono);
-  font-size: 0.78rem;
-}
-
-.method-ledger strong {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--accent);
-  font-size: 1.16rem;
-}
 
 .career-records {
   border-top: 1px solid var(--line-strong);
@@ -1000,18 +967,6 @@ body[data-active-panel="projects"] .panel {
   .hero h1 {
     max-width: 100%;
     font-size: clamp(2.5rem, 6vw, 3.6rem);
-  }
-
-  .method-ledger {
-    grid-template-columns: 1fr;
-  }
-
-  .method-ledger article,
-  .method-ledger article + article {
-    min-height: 0;
-    padding: 22px 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
   }
 
   .project-lab {
