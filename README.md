@@ -2,14 +2,15 @@
 
 ## 이 폴더의 역할
 
-이 폴더는 김수영 포트폴리오의 정적 웹사이트 초안입니다.
+이 폴더는 김수영 포트폴리오의 실제 정적 웹사이트 소스입니다.
 
 포함 파일:
 
 - `index.html`
 - `styles.css`
 - `assets/`
-- `site_preview.png`
+- `.nojekyll`
+- `run_local_preview.bat`
 
 ## 바로 확인하는 방법
 
@@ -22,7 +23,7 @@
 PowerShell에서:
 
 ```powershell
-cd C:\DeVelop\이력관리\final_portfolio_package\portfolio_site
+cd C:\DeVelop\Career_Management\final_portfolio_package\portfolio_site
 python -m http.server 4280
 ```
 
@@ -43,10 +44,9 @@ http://127.0.0.1:4280
 
 ## 현재 구성 의도
 
-- 히어로에서 직무 정체성을 즉시 이해
-- 실무 프로젝트는 설명 도해 + 성과 중심
-- 현재/개인 프로젝트는 실제 캡처 중심
-- 채널별 전략과 DOCX 원본으로 연결
+- 이 폴더에는 실제 서비스에 필요한 파일만 남깁니다.
+- QA 캡처, 브라우저 프로필, 리뷰 스냅샷은 바깥 `../workspace_artifacts/portfolio_site/`로 분리했습니다.
+- 추가 원고와 배포 문서는 바깥 `../docs/`와 `../deliverables/`를 기준으로 봅니다.
 
 ## 추후 확장 방향
 

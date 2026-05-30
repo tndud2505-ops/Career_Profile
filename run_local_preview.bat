@@ -1,4 +1,6 @@
 @echo off
 cd /d "%~dp0"
-start "" http://127.0.0.1:4280
-python -m http.server 4280
+set PORT=5180
+start "" http://127.0.0.1:%PORT%/
+py -3 -m http.server %PORT% --bind 127.0.0.1
+if errorlevel 1 python -m http.server %PORT% --bind 127.0.0.1
