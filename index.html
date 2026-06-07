@@ -612,95 +612,109 @@
               hidden
             >
               <div class="project-copy">
-                <p class="project-kicker">생활형 자동화 에이전트 묶음</p>
-                <h3>반복해서 다시 확인하게 되는 생활형 작업을, 도메인별 규칙과 원본 데이터 기준으로 자동화했습니다</h3>
+                <p class="project-kicker">생활형 반자동화 도구 묶음</p>
+                <h3>규칙적으로 확인해야 하는 검색, 조사, 리뷰 작업을 원본 데이터와 전용 규칙으로 반자동화했습니다</h3>
                 <p>
-                  중고나라 검색기, Discord agent, Git researcher, 논문 에이전트를 하나로 묶었습니다.
-                  공통점은 단순 호출기가 아니라, 각 도메인의 입력 방식과 판단 규칙을 따로 두고
-                  사람이 다시 하게 되는 비교, 선별, 기록, 전달 루프를 줄여주는 데 있습니다.
+                  중고 매물 검색, 원격 Codex 작업, GitHub 프로젝트 탐색, 논문 정리, 코드 품질 리뷰처럼
+                  반복되지만 놓치면 손해가 생기는 일을 전용 도구로 나누었습니다.
                 </p>
               </div>
               <dl class="project-ledger">
                 <div>
                   <dt>왜 만들었는지</dt>
-                  <dd>중고거래 후보 비교, 로컬 작업 원격 조종, GitHub 프로젝트 탐색, 논문 리서치처럼 자주 반복되지만 매번 다시 정리해야 하는 일이 계속 생겼습니다.</dd>
+                  <dd>매번 직접 검색하고 비교하고 다시 물어보는 방식은 결과가 흩어지고, 기준이 바뀌고, 좋은 후보나 문제 지점을 놓치기 쉬웠습니다.</dd>
                 </div>
                 <div>
                   <dt>어떤 기능인지</dt>
-                  <dd>도메인별 입력을 받아 raw data를 직접 모으고, 규칙 기반 필터와 보조 해석을 거쳐 사람이 바로 판단할 수 있는 형태로 다시 정리해 주는 자동화 도구 묶음입니다.</dd>
+                  <dd>각 도메인에 맞는 수집기와 필터를 두고, 원본 데이터, 판단 기준, 결과 리포트를 남겨 사람이 바로 확인할 수 있게 정리합니다.</dd>
                 </div>
                 <div>
                   <dt>어떻게 구현했는지</dt>
-                  <dd>Discord transport와 로컬 실행 서버, GitHub Search and README API, raw DOM 수집기, paper-distill-mcp, openkb, harness validators처럼 목적별 전용 입력층과 검증층을 따로 붙였습니다.</dd>
+                  <dd>raw DOM 수집, Discord 입력 채널, GitHub Search와 README 분석, 논문 지식 저장소, Python 품질 게이트처럼 목적별 입력층과 검증층을 따로 붙였습니다.</dd>
                 </div>
                 <div>
                   <dt>어디까지 맡는지</dt>
-                  <dd>자동으로 결정을 대신하는 도구가 아니라, 사람이 더 빨리 비교하고 설명하고 다음 후보를 정리하도록 돕는 보조 도구들입니다.</dd>
+                  <dd>결정을 대신하는 자동화가 아니라, 사람이 판단하기 전에 필요한 후보 압축, 근거 정리, 오류 탐지를 먼저 해 주는 보조 도구입니다.</dd>
                 </div>
                 <div>
                   <dt>뭘 확인했는지</dt>
-                  <dd>검색 결과 수집, 규칙 적용, 세션 라우팅, 중복 제거, 후보 압축, validator 통과처럼 각 도메인의 실제 작업 루프가 끊기지 않는지 확인했습니다.</dd>
+                  <dd>검색 결과 수집, 평균가 계산, 알림 조건, 원격 작업 라우팅, 관련 프로젝트 선별, 논문 근거 저장, 품질 리포트 생성 흐름을 확인했습니다.</dd>
                 </div>
               </dl>
-              <p class="project-subsection-title">이 탭 안에는 아래 네 가지 자동화 기능이 같이 들어 있습니다.</p>
+              <p class="project-subsection-title">이 탭 안에는 아래 다섯 가지 자동화 기능이 같이 들어 있습니다.</p>
               <section class="project-feature-grid" aria-label="일상생활 자동화 세부 기능">
                 <article class="project-feature-card">
                   <p class="project-breakdown-label">01</p>
                   <h4>중고나라 검색기</h4>
-                  <p>여러 중고거래 사이트에서 raw DOM and HTML을 직접 읽어오고, 품목별 가격 비교를 자동화하기 위해 만든 수집 and 비교 도구입니다.</p>
+                  <p>중고 사이트를 주기적으로 돌며 부품명, 가격, 본문, 링크를 모으고 평균가 리포트와 낮은 가격 매물 알림 후보를 만드는 검색 도구입니다.</p>
                   <dl class="project-mini-ledger">
                     <div>
-                      <dt>원리</dt>
-                      <dd>사이트 raw data를 source of truth로 두고, 제목, 가격, 본문, 상세 링크에서 부품 정보를 뽑아 `part`, `semi_pc`, `full_pc` 같은 타입으로 정리한 뒤 비교합니다.</dd>
+                      <dt>편한 점</dt>
+                      <dd>사람이 매번 검색어를 바꿔가며 확인하지 않아도, 새 매물과 평균가보다 낮은 후보를 먼저 확인할 수 있습니다.</dd>
                     </div>
                     <div>
-                      <dt>동작</dt>
-                      <dd>검색 조건 해석 → 사이트별 raw DOM 수집 → 품목 정규화 → 중복 제거 → 가격대, 설명 부족, unknown parts 같은 필터 적용 → 비교 후보 정리 흐름으로 돌아갑니다.</dd>
+                      <dt>차이점</dt>
+                      <dd>단순 키워드 검색이 아니라 DOM 원본에서 제목, 가격, 설명을 분리하고 중복과 불명확한 부품명을 필터링해 리포트로 정리합니다.</dd>
                     </div>
                   </dl>
                 </article>
                 <article class="project-feature-card">
                   <p class="project-breakdown-label">02</p>
                   <h4>Discord Agent</h4>
-                  <p>Discord를 입력 and 승인 표면으로 쓰고, 실제 실행은 로컬 Codex 작업 서버가 맡도록 분리한 원격 조종형 에이전트입니다.</p>
+                  <p>외부에서도 Discord 메시지로 Codex 작업을 요청하고, 실제 실행은 로컬 Codex 서버가 처리하도록 만든 원격 작업 도구입니다.</p>
                   <dl class="project-mini-ledger">
                     <div>
-                      <dt>원리</dt>
-                      <dd>Discord bot이 메시지, 첨부, 승인 입력을 받고, 로컬 app-server가 워크스페이스 연결, thread 재개, 실행 상태 추적, 업로드 and 응답 반환을 담당합니다.</dd>
+                      <dt>편한 점</dt>
+                      <dd>PC 앞에 있지 않아도 작업 요청, 첨부 전달, 결과 확인을 같은 채널에서 이어갈 수 있습니다.</dd>
                     </div>
                     <div>
-                      <dt>동작</dt>
-                      <dd>`/register`로 채널과 프로젝트를 연결한 뒤, 첨부는 `.codex-uploads/`에 저장하고, 라우터가 Generic, Guided, Native control plane 중 맞는 모드를 골라 Codex thread나 특화 runtime으로 보냅니다.</dd>
+                      <dt>차이점</dt>
+                      <dd>Discord는 입력과 승인 창만 맡고, 프로젝트 연결, thread 재개, 파일 저장, 실행 상태 추적은 로컬 서버가 관리합니다.</dd>
                     </div>
                   </dl>
                 </article>
                 <article class="project-feature-card">
                   <p class="project-breakdown-label">03</p>
                   <h4>Git Researcher</h4>
-                  <p>GitHub API와 선별 규칙을 같이 적용해서, 매일 쏟아지는 AI agent 저장소 중 다시 볼 후보만 남기기 위한 탐색 런타임입니다.</p>
+                  <p>GitHub에서 AI agent, MCP, harness 관련 프로젝트를 찾을 때 관련도 높은 저장소만 남기도록 만든 조사 도구입니다.</p>
                   <dl class="project-mini-ledger">
                     <div>
-                      <dt>도구 and API</dt>
-                      <dd>GitHub Search API, README 원문 조회, 저장소 메타데이터, review history, skillbook, Codex 브리핑 세션을 같이 사용합니다.</dd>
+                      <dt>편한 점</dt>
+                      <dd>그냥 Codex에게 검색을 맡기는 것보다 검색 조건, 제외 규칙, README 근거, 저장소 메타데이터가 남아 결과를 다시 검토하기 쉽습니다.</dd>
                     </div>
                     <div>
-                      <dt>전문화 포인트</dt>
-                      <dd>쿼리에서 추출한 의도를 바탕으로 `fork:false`, stars threshold, fresh-first, repeat window 같은 운영 규칙을 붙이고, 설명 and README를 다시 합쳐 MCP, coding-agent, harness 같은 라벨을 누적합니다.</dd>
+                      <dt>차이점</dt>
+                      <dd>`fork:false`, star 기준, 최근 업데이트, 반복 제외, README 키워드 라벨을 같이 적용해 유명하지만 무관한 repo와 오래된 후보를 줄입니다.</dd>
                     </div>
                   </dl>
                 </article>
                 <article class="project-feature-card">
                   <p class="project-breakdown-label">04</p>
                   <h4>논문 에이전트</h4>
-                  <p>논문 탐색 결과를 openkb와 하니스에 계속 쌓아 두고, 다음 탐색과 정리에 다시 쓰도록 만든 연구 지원형 자가발전 에이전트입니다.</p>
+                  <p>논문을 한 번 묻고 끝내지 않고, 핵심 주장, 근거, 관련 개념, 다음 질문을 지식 저장소에 쌓아 다시 쓰게 만든 연구 보조 도구입니다.</p>
                   <dl class="project-mini-ledger">
                     <div>
-                      <dt>도구 and API</dt>
-                      <dd>paper-distill-mcp, openkb, pdf skill, harness validators, Zotero and Better BibTeX 흐름을 같이 씁니다.</dd>
+                      <dt>편한 점</dt>
+                      <dd>논문마다 다시 처음부터 설명을 요청하지 않아도, 이전에 읽은 요약과 근거 노트를 바탕으로 다음 논문 비교와 초안 작성이 이어집니다.</dd>
                     </div>
                     <div>
-                      <dt>전문화 포인트</dt>
-                      <dd>검색 세션은 `.harness/events/`, 논문 and 개념 노트는 `knowledge/openkb/wiki/`, 논문용 압축 근거는 `knowledge/curated/`, 챕터 상태와 리뷰는 `.harness/`에 따로 쌓고 validator로 완료 기준을 검사해 다음 탐색과 초안 작성에 다시 씁니다.</dd>
+                      <dt>차이점</dt>
+                      <dd>PDF 요약만 하는 것이 아니라 검색 세션, 개념 노트, 압축 근거, 챕터 상태를 나누어 저장하고 validator로 누락을 확인합니다.</dd>
+                    </div>
+                  </dl>
+                </article>
+                <article class="project-feature-card">
+                  <p class="project-breakdown-label">05</p>
+                  <h4>Review Agent</h4>
+                  <p>AI로 만든 Python 프로그램의 코드 품질을 올리기 위해 lint, 의존성, dead code를 한 번에 검사하는 리뷰 에이전트입니다.</p>
+                  <dl class="project-mini-ledger">
+                    <div>
+                      <dt>무엇을 봄</dt>
+                      <dd>Ruff로 문법과 스타일 문제를 잡고, deptry로 빠진 의존성이나 안 쓰는 패키지를 찾고, vulture로 실행되지 않는 죽은 코드를 표시합니다.</dd>
+                    </div>
+                    <div>
+                      <dt>차이점</dt>
+                      <dd>여러 도구 결과를 한 리포트로 묶고, Ruff와 겹치는 vulture 경고는 숨겨 사람이 실제로 고칠 문제에 집중하게 합니다.</dd>
                     </div>
                   </dl>
                 </article>
