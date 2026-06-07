@@ -452,66 +452,76 @@
               hidden
             >
               <div class="project-copy">
-                <p class="project-kicker">Jira 하위 작업 리뷰 and 진행 관리</p>
-                <h3>Jira를 대체하지 않고, 하위 작업 리뷰와 진행 확인만 빠르게 묶은 Jira Mini</h3>
+                <p class="project-kicker">Jira 경량 작업공간 / 리뷰 관리</p>
+                <h3>무거운 Jira 화면에서 리뷰와 진행 관리에 필요한 흐름만 따로 꺼낸 작업공간</h3>
                 <p>
-                  Jira에서 자주 다시 보게 되는 하위 작업 목록, 리뷰 메모, 댓글, 본문 수정 흐름만
-                  따로 뽑아 빠르게 확인하기 위해 만든 보조 도구입니다.
+                  상위 업무와 하위 작업을 한눈에 펼쳐 보고, 검색, 본문 수정, 댓글 기록,
+                  최근 활동 확인을 같은 화면에서 이어가도록 만든 보조 도구입니다.
                 </p>
               </div>
-              <p class="project-note-band">기능을 늘리기보다, 리뷰할 때 실제로 다시 보게 되는 화면만 좁혀서 더 빠르게 읽게 하는 데 집중했습니다.</p>
+              <p class="project-note-band">Jira를 대체하기보다 프로젝트 관리자가 반복해서 보는 검색, 수정, 리뷰 댓글, 최근 활동 판단 흐름을 더 빠르게 만드는 데 집중했습니다.</p>
               <figure class="project-hero-media">
-                <img src="./assets/jira_review_workspace.png" alt="Jira Mini의 작업 목록 and 상태 확인 화면" />
-                <figcaption>하위 작업 상태와 최근 변경, 리뷰 지점을 한 자리에서 다시 보기 쉽게 정리한 화면입니다.</figcaption>
+                <img src="./assets/jira_review_workspace.png" alt="Jira Mini의 작업 목록과 상태 확인 화면" />
+                <figcaption>상위 업무를 접고 펼치면서 여러 하위 작업의 상태, 담당자, 최근 활동을 한 화면에서 비교할 수 있게 정리했습니다.</figcaption>
               </figure>
               <dl class="project-ledger">
                 <div>
                   <dt>왜 만들었는지</dt>
-                  <dd>일반 Jira 화면은 정보가 많아 하위 작업 상태와 리뷰 흐름을 빠르게 읽기 불편했습니다.</dd>
+                  <dd>기존 Jira 화면은 기능이 많은 대신 하위 작업 여러 개를 빠르게 훑고 리뷰 지점을 찾기에는 이동과 클릭이 많았습니다.</dd>
                 </div>
                 <div>
                   <dt>어떤 기능인지</dt>
-                  <dd>이슈 목록에서 하위 작업을 고르고 상세 화면에서 본문, 댓글, 첨부, 진행 상태를 바로 확인하고 수정합니다.</dd>
+                  <dd>검색과 접기/펼치기로 이슈를 좁히고, 상세 화면에서 상태, 담당자, 일정, 본문, 첨부, 댓글을 이어서 확인합니다.</dd>
                 </div>
                 <div>
                   <dt>어떻게 구현했는지</dt>
-                  <dd>작업 목록, 하위 작업 리스트, 상세 보기, 댓글 구분, 첨부 관리, 진행 메모 정리 기능을 묶었습니다.</dd>
+                  <dd>목록 화면과 상세 리뷰 화면을 분리하고, 빠른 수정 컨트롤과 Jira 본문 편집에 필요한 표, 차트, 서식 흐름을 묶었습니다.</dd>
                 </div>
                 <div>
                   <dt>어디까지 맡는지</dt>
-                  <dd>Jira를 완전히 대체하는 제품이 아니라, 다시 확인해야 하는 리뷰 and 진행 흐름만 빠르게 보는 보조 화면입니다.</dd>
+                  <dd>서브태스크를 추가할 때 AI 도움으로 제목, 설명, 완료 기준 초안을 일정한 형식으로 정리할 수 있게 했습니다.</dd>
                 </div>
                 <div>
                   <dt>뭘 확인했는지</dt>
-                  <dd>이슈 선택, 상세 로딩, 본문 수정, 첨부 확인, 댓글 분기, Jira 연동 흐름이 실제로 이어지는지 확인했습니다.</dd>
+                  <dd>일반 댓글, 진척도 댓글, 리뷰 댓글을 구분하고 최근 댓글과 첨부 기록을 기반으로 활동 여부를 다시 읽게 했습니다.</dd>
                 </div>
               </dl>
               <section class="project-role-grid" aria-label="Jira Mini 핵심 기능">
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 1</p>
-                  <h4>하위 작업 빠른 탐색</h4>
-                  <p>다시 봐야 하는 하위 작업과 최근 변경 지점을 한 화면에 모아, 이슈를 고르기 전 탐색 시간을 줄였습니다.</p>
+                  <h4>검색과 목록 가시성 강화</h4>
+                  <p>업무명, 담당자, 상태를 기준으로 찾고 상위 업무를 접고 펼치며 여러 하위 작업의 진행 흐름을 한눈에 봅니다.</p>
                 </article>
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 2</p>
-                  <h4>리뷰 and 본문 확인</h4>
-                  <p>본문, 댓글, 첨부, 리뷰 메모를 따로 오가지 않고 같은 맥락에서 읽고 수정할 수 있게 만들었습니다.</p>
+                  <h4>목록에서 바로 수정</h4>
+                  <p>상태, 담당자, 보고자, 일정 같은 관리 필드는 상세 페이지로 이동하지 않고 목록 흐름 안에서 바로 바꿀 수 있습니다.</p>
                 </article>
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 3</p>
-                  <h4>진행 상태 다시 읽기</h4>
-                  <p>이 도구의 목적은 Jira 전체를 대체하는 것이 아니라, 현재 어떤 하위 작업이 어디까지 갔는지 다시 읽게 하는 것입니다.</p>
+                  <h4>본문 편집과 첨부 검토</h4>
+                  <p>상세 화면에서는 Jira 본문 서식, 표, 차트, 이미지 첨부를 보면서 수정과 검토를 같은 맥락에서 진행합니다.</p>
+                </article>
+                <article class="project-role-card">
+                  <p class="project-breakdown-label">기능 4</p>
+                  <h4>AI 서브태스크 초안</h4>
+                  <p>하위 작업을 추가할 때 AI가 제목, 상세 내용, 완료 기준을 일정한 형식으로 정리해 작업 품질 편차를 줄입니다.</p>
+                </article>
+                <article class="project-role-card">
+                  <p class="project-breakdown-label">기능 5</p>
+                  <h4>댓글 기반 진척 확인</h4>
+                  <p>일반, 진척도, 리뷰 댓글을 나누어 남기고 최근 활동 기록을 기반으로 업데이트 여부를 빠르게 판단합니다.</p>
                 </article>
               </section>
               <p class="project-gallery-title">설명용 화면 예시</p>
               <div class="project-screens" aria-label="Jira Mini 실제 화면">
                 <figure>
-                  <img src="./assets/jira_review_workspace.png" alt="Jira Mini의 작업 목록 and 상태 확인 화면" />
-                  <figcaption>작업 목록 화면에서는 어떤 하위 작업이 열려 있고 무엇이 최근에 바뀌었는지 먼저 보여줍니다.</figcaption>
+                  <img src="./assets/jira_review_workspace.png" alt="Jira Mini의 작업 목록과 상태 확인 화면" />
+                  <figcaption>작업공간 화면에서는 검색, 상태 필터, 상위 업무 접기/펼치기, 하위 작업 빠른 수정이 한 흐름으로 이어집니다.</figcaption>
                 </figure>
                 <figure>
                   <img src="./assets/jira_review_issue_detail.png" alt="Jira Mini의 상세 리뷰 화면" />
-                  <figcaption>상세 화면에서는 본문, 댓글, 첨부, 리뷰 메모가 이어져 있어 수정과 검토를 같은 흐름에서 진행할 수 있습니다.</figcaption>
+                  <figcaption>상세 화면에서는 본문 수정, 댓글 유형 선택, 첨부 확인, Jira 원본 이동을 한 자리에서 처리할 수 있습니다.</figcaption>
                 </figure>
               </div>
             </article>
