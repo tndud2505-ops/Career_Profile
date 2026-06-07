@@ -567,6 +567,17 @@ body[data-active-panel="projects"] .panel {
   font-size: 0.94rem;
 }
 
+.scope-list ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 1.05rem;
+}
+
+.scope-list li {
+  line-height: 1.72;
+}
+
 .project-lab {
   display: grid;
   grid-template-columns: 290px minmax(0, 1fr);
