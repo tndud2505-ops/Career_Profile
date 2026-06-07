@@ -302,40 +302,19 @@
             >
               <div class="project-copy">
                 <p class="project-kicker">로컬 에이전트 운영 콘솔</p>
-                <h3>사람이 팀을 운영하듯 요청하고, 체크하고, 조정할 수 있게 만든 Codex Team</h3>
+                <h3>CODEX TEAM</h3>
                 <p>
                   이 프로젝트는 에이전트를 여러 개 붙여 놓은 데모가 아니라, 누가 요청했고 누가 막혔고
                   어떤 검토가 필요한지 한눈에 보이게 만든 로컬 운영 콘솔입니다. 결과는 채팅으로
                   흘러가다 사라지지 않고 issue, discussion, decision, approval, evidence로 남습니다.
                 </p>
               </div>
-              <p class="project-note-band">Operator → Chief → Specialists → Review and Decision → Evidence 흐름을 화면과 기록에 같이 남깁니다.</p>
-              <figure class="project-hero-media">
-                <img src="./assets/codexteam_organization_latest.png" alt="Codex Team의 최신 조직 설계 화면에서 chief와 specialist 역할 구조를 보여주는 화면" />
-                <figcaption>최신 조직 설계 화면으로, 누가 총괄하고 누가 구현과 검증을 맡는지 한눈에 보이게 정리한 보드입니다.</figcaption>
-              </figure>
-              <dl class="project-ledger">
-                <div>
-                  <dt>왜 만들었는지</dt>
-                  <dd>AI 작업이 여러 갈래로 흩어지면 지금 무엇이 막혔는지, 누가 확인해야 하는지, 언제 사람이 개입해야 하는지 다시 찾기 어려웠습니다.</dd>
-                </div>
-                <div>
-                  <dt>어떤 기능인지</dt>
-                  <dd>실행 재개, 에이전트 보드, issue 승격, discussion and decision 분기, approval 요청, 검증 기록까지 한 화면에서 이어 보게 만든 운영 콘솔입니다.</dd>
-                </div>
-                <div>
-                  <dt>어떻게 구현했는지</dt>
-                  <dd>reopen-first 실행 흐름, chief 중심 조직화, specialist 역할 분리, findings 흐름, file-based persistence와 harness 검증 구조를 묶었습니다.</dd>
-                </div>
-                <div>
-                  <dt>어디까지 맡는지</dt>
-                  <dd>에이전트가 자동으로 끝내는 구조보다, 사람이 위험과 승인 시점을 잡고 chief가 조정하며 evidence가 남는 팀 운영 구조에 가깝습니다.</dd>
-                </div>
-                <div>
-                  <dt>뭘 확인했는지</dt>
-                  <dd>issue 승격, follow-up action 생성, chief 응답 이후 add-agent and decision 연결, 검증 기록 보존이 실제로 끊기지 않는지 확인했습니다.</dd>
-                </div>
-              </dl>
+              <p class="project-note-band">만든 이유: AI 작업이 여러 갈래로 흩어지면 지금 무엇이 막혔는지, 누가 확인해야 하는지, 언제 사람이 개입해야 하는지 다시 찾기 어려웠습니다.</p>
+              <div class="project-stack-line" aria-label="Codex Team 기술스택과 구성">
+                <strong>기술스택 / 구성</strong>
+                <span>Codex thread 운영, 역할 보드, issue/discussion/decision 흐름, approval, evidence 기록</span>
+              </div>
+              <p class="project-gallery-title">역할 구조</p>
               <section class="project-role-grid" aria-label="Codex Team 역할 구조">
                 <article class="project-role-card">
                   <p class="project-breakdown-label">역할 1</p>
@@ -349,7 +328,7 @@
                 </article>
                 <article class="project-role-card">
                   <p class="project-breakdown-label">역할 3</p>
-                  <h4>Specialists and Review</h4>
+                  <h4>Specialists / Review</h4>
                   <p>planner, implementer, tester, reviewer가 좁은 역할로 나뉘어 일하고 결과는 approval과 evidence까지 남겨 재진입 가능한 기록으로 바뀝니다.</p>
                 </article>
               </section>
@@ -382,42 +361,21 @@
                   반영되는 흐름을 보여주기 위한 학습용 프로젝트입니다.
                 </p>
               </div>
-              <p class="project-note-band">코드를 실행하면 하드웨어 반응이 어디에서 어떻게 보이는지 설명 없이도 따라갈 수 있게 만드는 것이 목표였습니다.</p>
-              <figure class="project-hero-media">
-                <img src="./assets/virtual_mcu_schematic_focus.png" alt="Virtual MCU Lab의 회로 and 동작 연계 화면" />
-                <figcaption>코드 실행 결과가 register와 graph, schematic 상태로 같이 바뀌는 흐름을 한 화면에서 보여줍니다.</figcaption>
-              </figure>
-              <dl class="project-ledger">
-                <div>
-                  <dt>왜 만들었는지</dt>
-                  <dd>실제 보드가 없으면 MCU 코드가 어떤 반응을 만드는지 설명만으로 이해시키기 어려웠습니다.</dd>
-                </div>
-                <div>
-                  <dt>어떤 기능인지</dt>
-                  <dd>코드를 실행하면 가상 MCU가 동작하고, 결과가 핀 상태, register, graph, log로 동시에 반영됩니다.</dd>
-                </div>
-                <div>
-                  <dt>어떻게 구현했는지</dt>
-                  <dd>코드 에디터, 실행기, schematic 뷰어, register and graph inspector, log 화면을 하나의 학습 루프로 묶었습니다.</dd>
-                </div>
-                <div>
-                  <dt>어디까지 맡는지</dt>
-                  <dd>실제 보드를 완전히 대체하는 장비가 아니라, 학습과 설명에 필요한 핵심 반응을 확인하게 만드는 환경입니다.</dd>
-                </div>
-                <div>
-                  <dt>뭘 확인했는지</dt>
-                  <dd>코드 실행 결과가 핀 상태, register, graph, log에서 같은 방향으로 반영되는지 확인했습니다.</dd>
-                </div>
-              </dl>
+              <p class="project-note-band">만든 이유: 실제 보드가 없으면 MCU 코드가 어떤 하드웨어 반응을 만드는지 설명만으로 이해시키기 어려웠습니다.</p>
+              <div class="project-stack-line" aria-label="Virtual MCU Lab 기술스택과 구성">
+                <strong>기술스택 / 구성</strong>
+                <span>웹 UI, C 코드 에디터, 가상 MCU 상태 모델, schematic, register, graph, log 표시</span>
+              </div>
+              <p class="project-gallery-title">핵심 기능</p>
               <section class="project-role-grid" aria-label="Virtual MCU Lab 핵심 기능">
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 1</p>
-                  <h4>코드 작성 and 실행</h4>
+                  <h4>코드 작성과 실행</h4>
                   <p>브라우저 안에서 코드를 바로 바꾸고 실행해 결과를 확인할 수 있습니다. 코드를 바꿨을 때 하드웨어 반응이 어떻게 달라지는지가 바로 이어집니다.</p>
                 </article>
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 2</p>
-                  <h4>회로 and 상태 시각화</h4>
+                  <h4>회로와 상태 시각화</h4>
                   <p>schematic, pin 상태, register 값, graph를 따로 보지 않고 한 자리에서 연결해 보이게 했습니다.</p>
                 </article>
                 <article class="project-role-card">
@@ -459,33 +417,12 @@
                   최근 활동 확인을 같은 화면에서 이어가도록 만든 보조 도구입니다.
                 </p>
               </div>
-              <p class="project-note-band">Jira를 대체하기보다 프로젝트 관리자가 반복해서 보는 검색, 수정, 리뷰 댓글, 최근 활동 판단 흐름을 더 빠르게 만드는 데 집중했습니다.</p>
-              <figure class="project-hero-media">
-                <img src="./assets/jira_review_workspace.png" alt="Jira Mini의 작업 목록과 상태 확인 화면" />
-                <figcaption>상위 업무를 접고 펼치면서 여러 하위 작업의 상태, 담당자, 최근 활동을 한 화면에서 비교할 수 있게 정리했습니다.</figcaption>
-              </figure>
-              <dl class="project-ledger">
-                <div>
-                  <dt>왜 만들었는지</dt>
-                  <dd>기존 Jira 화면은 기능이 많은 대신 하위 작업 여러 개를 빠르게 훑고 리뷰 지점을 찾기에는 이동과 클릭이 많았습니다.</dd>
-                </div>
-                <div>
-                  <dt>어떤 기능인지</dt>
-                  <dd>검색과 접기/펼치기로 이슈를 좁히고, 상세 화면에서 상태, 담당자, 일정, 본문, 첨부, 댓글을 이어서 확인합니다.</dd>
-                </div>
-                <div>
-                  <dt>어떻게 구현했는지</dt>
-                  <dd>목록 화면과 상세 리뷰 화면을 분리하고, 빠른 수정 컨트롤과 Jira 본문 편집에 필요한 표, 차트, 서식 흐름을 묶었습니다.</dd>
-                </div>
-                <div>
-                  <dt>어디까지 맡는지</dt>
-                  <dd>서브태스크를 추가할 때 AI 도움으로 제목, 설명, 완료 기준 초안을 일정한 형식으로 정리할 수 있게 했습니다.</dd>
-                </div>
-                <div>
-                  <dt>뭘 확인했는지</dt>
-                  <dd>일반 댓글, 진척도 댓글, 리뷰 댓글을 구분하고 최근 댓글과 첨부 기록을 기반으로 활동 여부를 다시 읽게 했습니다.</dd>
-                </div>
-              </dl>
+              <p class="project-note-band">만든 이유: 기존 Jira 화면은 기능이 많은 대신 하위 작업 여러 개를 빠르게 훑고 리뷰 지점을 찾기에는 이동과 클릭이 많았습니다.</p>
+              <div class="project-stack-line" aria-label="Jira Mini 기술스택과 구성">
+                <strong>기술스택 / 구성</strong>
+                <span>React UI, Jira 연동, 목록 빠른 수정, 본문 편집기, 댓글/첨부/최근 활동 표시</span>
+              </div>
+              <p class="project-gallery-title">핵심 기능</p>
               <section class="project-role-grid" aria-label="Jira Mini 핵심 기능">
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 1</p>
@@ -542,42 +479,21 @@
                   설명 가능한 형태로 묶고, 실거래 readiness는 별도 gate로 분리해 둔 분석 and 운영 보조 도구입니다.
                 </p>
               </div>
-              <p class="project-note-band">좋은 후보를 찾는 일과 실제 주문을 허용하는 일을 섞지 않도록 구조를 나눴습니다.</p>
-              <figure class="project-hero-media">
-                <img src="./assets/kiwom_research_lab_latest.png" alt="주식 분석기의 AI Research Lab 최신 화면" />
-                <figcaption>최신 AI Research Lab 화면으로, 왜 이 종목을 보고 있는지와 어떤 근거가 쌓였는지를 설명 가능한 형태로 모아둔 작업대입니다.</figcaption>
-              </figure>
-              <dl class="project-ledger">
-                <div>
-                  <dt>왜 만들었는지</dt>
-                  <dd>후보 탐색, 이벤트 해석, 장기 리서치, 실주문 준비 상태가 한 덩어리처럼 섞여 있으면 무엇이 참고 정보이고 무엇이 실행 조건인지 흐려졌습니다.</dd>
-                </div>
-                <div>
-                  <dt>어떤 기능인지</dt>
-                  <dd>종목 스캔, 추천 순위화, 이벤트 요약, 장기 리서치 보드, AI 설명 레이어, 실행 readiness 확인을 각각 분리한 주식 분석기입니다.</dd>
-                </div>
-                <div>
-                  <dt>어떻게 구현했는지</dt>
-                  <dd>Kiwoom OpenAPI, FastAPI, React UI를 묶고 scan snapshot and event cache를 저장한 뒤, long-term research와 AI Lab이 같은 바닥 데이터를 다르게 읽게 했습니다.</dd>
-                </div>
-                <div>
-                  <dt>어디까지 맡는지</dt>
-                  <dd>추천과 설명 기능은 강하게 만들되, 실제 주문은 execution gate가 readiness and risk를 다시 확인할 때만 이어지도록 분리했습니다.</dd>
-                </div>
-                <div>
-                  <dt>뭘 확인했는지</dt>
-                  <dd>추천 점수와 실주문 권한이 섞이지 않는지, watch-only 레이어가 order submit으로 바로 이어지지 않는지, summary and event data가 최신 상태로 반영되는지 확인했습니다.</dd>
-                </div>
-              </dl>
+              <p class="project-note-band">만든 이유: 후보 탐색, 이벤트 해석, 장기 리서치, 실주문 준비 상태가 한 덩어리처럼 섞이면 참고 정보와 실행 조건이 흐려졌습니다.</p>
+              <div class="project-stack-line" aria-label="주식 분석기 기술스택과 구성">
+                <strong>기술스택 / 구성</strong>
+                <span>Kiwoom OpenAPI, FastAPI, React UI, scan snapshot, event cache, AI Lab, execution gate</span>
+              </div>
+              <p class="project-gallery-title">핵심 기능</p>
               <section class="project-role-grid" aria-label="주식 분석기 세부 기능">
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 1</p>
-                  <h4>스캔 and 추천</h4>
+                  <h4>스캔과 추천</h4>
                   <p>가격 패턴, RS, quality를 기준으로 후보를 추리고 우선순위를 매깁니다. 결과는 스냅샷 API로 노출해 웹에서 빠르게 탐색하게 했습니다.</p>
                 </article>
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 2</p>
-                  <h4>장기 리서치 and AI Lab</h4>
+                  <h4>장기 리서치와 AI Lab</h4>
                   <p>뉴스 and 공시 이벤트를 evidence와 issue queue로 정리하고, 사람이 읽기 쉬운 설명 레이어를 별도로 둬 장기 판단에 쓰게 했습니다.</p>
                 </article>
                 <article class="project-role-card">
@@ -619,29 +535,12 @@
                   반복되지만 놓치면 손해가 생기는 일을 전용 도구로 나누었습니다.
                 </p>
               </div>
-              <dl class="project-ledger">
-                <div>
-                  <dt>왜 만들었는지</dt>
-                  <dd>매번 직접 검색하고 비교하고 다시 물어보는 방식은 결과가 흩어지고, 기준이 바뀌고, 좋은 후보나 문제 지점을 놓치기 쉬웠습니다.</dd>
-                </div>
-                <div>
-                  <dt>어떤 기능인지</dt>
-                  <dd>각 도메인에 맞는 수집기와 필터를 두고, 원본 데이터, 판단 기준, 결과 리포트를 남겨 사람이 바로 확인할 수 있게 정리합니다.</dd>
-                </div>
-                <div>
-                  <dt>어떻게 구현했는지</dt>
-                  <dd>raw DOM 수집, Discord 입력 채널, GitHub Search와 README 분석, 논문 지식 저장소, Python 품질 게이트처럼 목적별 입력층과 검증층을 따로 붙였습니다.</dd>
-                </div>
-                <div>
-                  <dt>어디까지 맡는지</dt>
-                  <dd>결정을 대신하는 자동화가 아니라, 사람이 판단하기 전에 필요한 후보 압축, 근거 정리, 오류 탐지를 먼저 해 주는 보조 도구입니다.</dd>
-                </div>
-                <div>
-                  <dt>뭘 확인했는지</dt>
-                  <dd>검색 결과 수집, 평균가 계산, 알림 조건, 원격 작업 라우팅, 관련 프로젝트 선별, 논문 근거 저장, 품질 리포트 생성 흐름을 확인했습니다.</dd>
-                </div>
-              </dl>
-              <p class="project-subsection-title">이 탭 안에는 아래 다섯 가지 자동화 기능이 같이 들어 있습니다.</p>
+              <p class="project-note-band">만든 이유: 매번 직접 검색하고 비교하고 다시 물어보는 방식은 결과가 흩어지고, 기준이 바뀌고, 좋은 후보나 문제 지점을 놓치기 쉬웠습니다.</p>
+              <div class="project-stack-line" aria-label="자동화 Agent 프로젝트 기술스택과 구성">
+                <strong>기술스택 / 구성</strong>
+                <span>raw DOM 수집, Discord 입력 채널, GitHub Search/README 분석, 논문 지식 저장소, Python quality gate</span>
+              </div>
+              <p class="project-gallery-title">핵심 기능</p>
               <section class="project-feature-grid" aria-label="일상생활 자동화 세부 기능">
                 <article class="project-feature-card">
                   <p class="project-breakdown-label">01</p>

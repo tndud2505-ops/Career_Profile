@@ -757,6 +757,29 @@ body[data-active-panel="projects"] .panel {
   line-height: 1.7;
 }
 
+.project-stack-line {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 18px;
+  padding: 12px 0;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+}
+
+.project-stack-line strong {
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.project-stack-line span {
+  color: var(--body);
+  font-size: 0.95rem;
+  line-height: 1.68;
+}
+
 .project-role-grid,
 .project-feature-grid,
 .project-gallery-grid {
@@ -1120,11 +1143,16 @@ body[data-active-panel="projects"] .panel {
   }
 
   .project-ledger div,
+  .project-stack-line,
   .project-breakdown,
   .project-screens,
   .project-feature-grid,
   .project-gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-stack-line {
+    gap: 6px;
   }
 
   .project-role-grid {
