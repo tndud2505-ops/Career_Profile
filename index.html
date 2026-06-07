@@ -288,7 +288,7 @@
               aria-selected="false"
             >
               <span>05</span>
-              일상생활 자동화
+              자동화 Agent
             </button>
           </aside>
 
@@ -453,12 +453,20 @@
               <p class="project-gallery-title">설명용 화면 예시</p>
               <div class="project-screens" aria-label="Jira Mini 실제 화면">
                 <figure>
-                  <img src="./assets/jira_review_workspace.png" alt="Jira Mini의 작업 목록과 상태 확인 화면" />
-                  <figcaption>작업공간 화면에서는 검색, 상태 필터, 상위 업무 접기/펼치기, 하위 작업 빠른 수정이 한 흐름으로 이어집니다.</figcaption>
+                  <img src="./assets/jira_workspace_list_focus.png" alt="Jira Mini의 검색과 하위 작업 목록 화면" />
+                  <figcaption>검색, 상태 필터, 상위 업무 접기/펼치기로 여러 하위 작업을 먼저 좁혀 봅니다.</figcaption>
                 </figure>
                 <figure>
-                  <img src="./assets/jira_review_issue_detail.png" alt="Jira Mini의 상세 리뷰 화면" />
-                  <figcaption>상세 화면에서는 본문 수정, 댓글 유형 선택, 첨부 확인, Jira 원본 이동을 한 자리에서 처리할 수 있습니다.</figcaption>
+                  <img src="./assets/jira_workspace_quick_edit_focus.png" alt="Jira Mini의 목록 빠른 수정 화면" />
+                  <figcaption>상태, 담당자, 보고자, 일정 같은 관리 필드는 목록 흐름 안에서 바로 바꿉니다.</figcaption>
+                </figure>
+                <figure>
+                  <img src="./assets/jira_issue_document_focus.png" alt="Jira Mini의 본문 편집과 문서 검토 화면" />
+                  <figcaption>상세 화면에서는 Jira 본문 서식, 표, 이미지 첨부를 보면서 수정과 검토를 이어갑니다.</figcaption>
+                </figure>
+                <figure>
+                  <img src="./assets/jira_issue_comment_focus.png" alt="Jira Mini의 댓글과 첨부 관리 화면" />
+                  <figcaption>일반, 진척도, 리뷰 댓글과 첨부 기록을 분리해 최근 활동을 빠르게 확인합니다.</figcaption>
                 </figure>
               </div>
             </article>
@@ -528,25 +536,24 @@
               hidden
             >
               <div class="project-copy">
-                <p class="project-kicker">생활형 반자동화 도구 묶음</p>
+                <p class="project-kicker">프로젝트·학습 반자동화 Agent / 중고 매물 검색</p>
                 <h3>여러 자동화 AGENT 프로젝트</h3>
                 <p>
-                  중고 매물 검색, 원격 Codex 작업, GitHub 프로젝트 탐색, 논문 정리, 코드 품질 리뷰처럼
-                  반복되지만 놓치면 손해가 생기는 일을 전용 도구로 나누었습니다.
+                  프로젝트 진행, 학습, 리서치, 코드 리뷰처럼 반복되는 작업은 Agent로 나누고,
+                  중고 매물 검색기는 가격 감시와 리포트 중심의 별도 도구로 분리했습니다.
                 </p>
               </div>
-              <p class="project-note-band">만든 이유: 매번 직접 검색하고 비교하고 다시 물어보는 방식은 결과가 흩어지고, 기준이 바뀌고, 좋은 후보나 문제 지점을 놓치기 쉬웠습니다.</p>
-              <div class="project-stack-line" aria-label="자동화 Agent 프로젝트 기술스택과 구성">
-                <strong>기술스택 / 구성</strong>
-                <span>raw DOM 수집, Discord 입력 채널, GitHub Search/README 분석, 논문 지식 저장소, Python quality gate</span>
-              </div>
-              <p class="project-gallery-title">핵심 기능</p>
-              <section class="project-feature-grid" aria-label="일상생활 자동화 세부 기능">
-                <article class="project-feature-card">
-                  <p class="project-breakdown-label">01</p>
+              <p class="project-note-band">만든 이유: 프로젝트 진행과 학습 과정에서 반복되는 실행, 검색, 정리, 리뷰를 매번 새로 설명하지 않도록 전용 Agent 흐름으로 나누었습니다.</p>
+              <section class="project-market-highlight" aria-label="중고나라 검색기 별도 프로젝트">
+                <div>
+                  <p class="project-breakdown-label">별도 도구</p>
                   <h4>중고나라 검색기</h4>
-                  <p>중고 사이트를 주기적으로 돌며 부품명, 가격, 본문, 링크를 모으고 평균가 리포트와 낮은 가격 매물 알림 후보를 만드는 검색 도구입니다.</p>
+                  <p>중고 사이트를 주기적으로 돌며 부품명, 가격, 본문, 링크를 모으고 평균가 리포트와 낮은 가격 매물 알림 후보를 만드는 가격 감시 도구입니다.</p>
                   <dl class="project-mini-ledger">
+                    <div>
+                      <dt>구성</dt>
+                      <dd>raw DOM 수집, 키워드 필터, 가격 정규화, 중복 제거, 평균가 리포트, 낮은 가격 후보 알림</dd>
+                    </div>
                     <div>
                       <dt>편한 점</dt>
                       <dd>사람이 매번 검색어를 바꿔가며 확인하지 않아도, 새 매물과 평균가보다 낮은 후보를 먼저 확인할 수 있습니다.</dd>
@@ -556,12 +563,23 @@
                       <dd>단순 키워드 검색이 아니라 DOM 원본에서 제목, 가격, 설명을 분리하고 중복과 불명확한 부품명을 필터링해 리포트로 정리합니다.</dd>
                     </div>
                   </dl>
-                </article>
+                </div>
+                <figure>
+                  <img src="./assets/used_market_radar_overview.png" alt="중고나라 검색기의 매물 수집과 평균가 비교 화면" />
+                  <figcaption>키워드별 매물을 수집하고 평균가, 기회 후보, 운영 메모를 한 화면에 묶은 예시입니다.</figcaption>
+                </figure>
+              </section>
+              <p class="project-gallery-title">프로젝트 및 학습 반자동화 Agent</p>
+              <section class="project-feature-grid project-feature-grid--agents" aria-label="프로젝트 및 학습 반자동화 Agent">
                 <article class="project-feature-card">
-                  <p class="project-breakdown-label">02</p>
+                  <p class="project-breakdown-label">01</p>
                   <h4>Discord Agent</h4>
                   <p>외부에서도 Discord 메시지로 Codex 작업을 요청하고, 실제 실행은 로컬 Codex 서버가 처리하도록 만든 원격 작업 도구입니다.</p>
                   <dl class="project-mini-ledger">
+                    <div>
+                      <dt>구성</dt>
+                      <dd>Discord 입력 채널, 로컬 Codex 서버, 프로젝트 연결, thread 재개, 첨부 저장, 실행 상태 추적</dd>
+                    </div>
                     <div>
                       <dt>편한 점</dt>
                       <dd>PC 앞에 있지 않아도 작업 요청, 첨부 전달, 결과 확인을 같은 채널에서 이어갈 수 있습니다.</dd>
@@ -573,10 +591,14 @@
                   </dl>
                 </article>
                 <article class="project-feature-card">
-                  <p class="project-breakdown-label">03</p>
+                  <p class="project-breakdown-label">02</p>
                   <h4>Git Researcher</h4>
                   <p>GitHub에서 AI agent, MCP, harness 관련 프로젝트를 찾을 때 관련도 높은 저장소만 남기도록 만든 조사 도구입니다.</p>
                   <dl class="project-mini-ledger">
+                    <div>
+                      <dt>구성</dt>
+                      <dd>GitHub Search API, README 원문 분석, 저장소 메타데이터, 제외 규칙, 키워드 라벨, 후보 기록</dd>
+                    </div>
                     <div>
                       <dt>편한 점</dt>
                       <dd>그냥 Codex에게 검색을 맡기는 것보다 검색 조건, 제외 규칙, README 근거, 저장소 메타데이터가 남아 결과를 다시 검토하기 쉽습니다.</dd>
@@ -588,10 +610,14 @@
                   </dl>
                 </article>
                 <article class="project-feature-card">
-                  <p class="project-breakdown-label">04</p>
+                  <p class="project-breakdown-label">03</p>
                   <h4>논문 에이전트</h4>
                   <p>논문을 한 번 묻고 끝내지 않고, 핵심 주장, 근거, 관련 개념, 다음 질문을 지식 저장소에 쌓아 다시 쓰게 만든 연구 보조 도구입니다.</p>
                   <dl class="project-mini-ledger">
+                    <div>
+                      <dt>구성</dt>
+                      <dd>PDF 요약, paper distill, openkb 지식 저장소, 개념 노트, 압축 근거, validator</dd>
+                    </div>
                     <div>
                       <dt>편한 점</dt>
                       <dd>논문마다 다시 처음부터 설명을 요청하지 않아도, 이전에 읽은 요약과 근거 노트를 바탕으로 다음 논문 비교와 초안 작성이 이어집니다.</dd>
@@ -603,10 +629,14 @@
                   </dl>
                 </article>
                 <article class="project-feature-card">
-                  <p class="project-breakdown-label">05</p>
+                  <p class="project-breakdown-label">04</p>
                   <h4>Review Agent</h4>
                   <p>AI로 만든 Python 프로그램의 코드 품질을 올리기 위해 lint, 의존성, dead code를 한 번에 검사하는 리뷰 에이전트입니다.</p>
                   <dl class="project-mini-ledger">
+                    <div>
+                      <dt>구성</dt>
+                      <dd>Ruff lint, deptry 의존성 검사, vulture dead code 탐지, 중복 경고 필터, 콘솔/JSON 리포트</dd>
+                    </div>
                     <div>
                       <dt>무엇을 봄</dt>
                       <dd>Ruff로 문법과 스타일 문제를 잡고, deptry로 빠진 의존성이나 안 쓰는 패키지를 찾고, vulture로 실행되지 않는 죽은 코드를 표시합니다.</dd>

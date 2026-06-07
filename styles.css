@@ -817,6 +817,45 @@ body[data-active-panel="projects"] .panel {
   font-size: 0.94rem;
 }
 
+.project-market-highlight {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
+  gap: 22px;
+  align-items: start;
+  padding: 18px 0 22px;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+}
+
+.project-market-highlight h4 {
+  margin: 0 0 8px;
+  font-size: 1.26rem;
+  line-height: 1.42;
+}
+
+.project-market-highlight p {
+  margin: 0;
+  color: var(--body);
+  font-size: 0.95rem;
+  line-height: 1.72;
+}
+
+.project-market-highlight figure {
+  min-width: 0;
+  margin: 0;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.34);
+  border: 1px solid var(--line);
+}
+
+.project-market-highlight img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: top center;
+  background: var(--paper-strong);
+  border: 1px solid rgba(28, 33, 29, 0.15);
+}
+
 .project-mini-ledger {
   display: grid;
   gap: 0;
@@ -1144,6 +1183,7 @@ body[data-active-panel="projects"] .panel {
 
   .project-ledger div,
   .project-stack-line,
+  .project-market-highlight,
   .project-breakdown,
   .project-screens,
   .project-feature-grid,
