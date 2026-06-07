@@ -13,7 +13,7 @@
     <meta property="og:title" content="김수영 | System Records" />
     <meta
       property="og:description"
-      content="원격 운영, 생활형 자동화, MCU 학습 도구, Jira 리뷰 도구, 주식 분석기를 구조와 화면으로 정리한 기록입니다."
+      content="원격 운영, 프로젝트 자동화, 중고매물 검색, MCU 학습 도구, Jira 리뷰 도구, 주식 분석기를 구조와 화면으로 정리한 기록입니다."
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ko_KR" />
@@ -290,6 +290,18 @@
               <span>05</span>
               자동화 Agent
             </button>
+            <button
+              id="project-tab-market"
+              class="project-button"
+              type="button"
+              role="tab"
+              data-project="market"
+              aria-controls="project-panel-market"
+              aria-selected="false"
+            >
+              <span>06</span>
+              중고매물 Agent
+            </button>
           </aside>
 
           <div class="project-stage">
@@ -309,7 +321,7 @@
                   흘러가다 사라지지 않고 issue, discussion, decision, approval, evidence로 남습니다.
                 </p>
               </div>
-              <p class="project-note-band">만든 이유: AI 작업이 여러 갈래로 흩어지면 지금 무엇이 막혔는지, 누가 확인해야 하는지, 언제 사람이 개입해야 하는지 다시 찾기 어려웠습니다.</p>
+              <p class="project-note-band">AI 작업이 여러 갈래로 흩어지면 지금 무엇이 막혔는지, 누가 확인해야 하는지, 언제 사람이 개입해야 하는지 다시 찾기 어려웠습니다.</p>
               <div class="project-stack-line" aria-label="Codex Team 기술스택과 구성">
                 <strong>기술스택 / 구성</strong>
                 <span>Codex thread 운영, 역할 보드, issue/discussion/decision 흐름, approval, evidence 기록</span>
@@ -361,7 +373,7 @@
                   반영되는 흐름을 보여주기 위한 학습용 프로젝트입니다.
                 </p>
               </div>
-              <p class="project-note-band">만든 이유: 실제 자동차 개발 아이템을 가상 환경에서 다뤄볼 수 있도록, 데이터시트와 실제 코드 기반으로 디버깅하면서 전압과 동작 반응을 확인하는 가상 교육환경을 만들었습니다.</p>
+              <p class="project-note-band">실제 자동차 개발 아이템을 가상 환경에서 다뤄볼 수 있도록, 데이터시트와 실제 코드 기반으로 디버깅하면서 전압과 동작 반응을 확인하는 가상 교육환경을 만들었습니다.</p>
               <div class="project-stack-line" aria-label="Virtual MCU Lab 기술스택과 구성">
                 <strong>기술스택 / 구성</strong>
                 <span>웹 UI, C 코드 에디터, 가상 MCU 상태 모델, schematic, register, graph, log 표시</span>
@@ -417,7 +429,7 @@
                   최근 활동 확인을 같은 화면에서 이어가도록 만든 보조 도구입니다.
                 </p>
               </div>
-              <p class="project-note-band">만든 이유: 기존 Jira 화면의 무거운 부분은 덜어내고 필요한 기능만 살려, 프로젝트 이슈 관리와 작업 진행상황 확인을 리뷰어와 사용자 모두 편하게 할 수 있는 앱을 만들었습니다.</p>
+              <p class="project-note-band">기존 Jira 화면의 무거운 부분은 덜어내고 필요한 기능만 살려, 프로젝트 이슈 관리와 작업 진행상황 확인을 리뷰어와 사용자 모두 편하게 할 수 있는 앱을 만들었습니다.</p>
               <div class="project-stack-line" aria-label="Jira Mini 기술스택과 구성">
                 <strong>기술스택 / 구성</strong>
                 <span>React UI, Jira 연동, 목록 빠른 수정, 본문 편집기, 댓글/첨부/최근 활동 표시</span>
@@ -457,12 +469,12 @@
                   <figcaption>검색, 상태 필터, 상위 업무 접기/펼치기로 여러 하위 작업을 먼저 좁혀 봅니다.</figcaption>
                 </figure>
                 <figure>
-                  <img src="./assets/jira_workspace_quick_edit_focus.png" alt="Jira Mini의 목록 빠른 수정 화면" />
-                  <figcaption>상태, 담당자, 보고자, 일정 같은 관리 필드는 목록 흐름 안에서 바로 바꿉니다.</figcaption>
+                  <img src="./assets/jira_review_workspace.png" alt="Jira Mini의 하위 작업 추가와 목록 관리 화면" />
+                  <figcaption>목록 화면에서 하위 추가 버튼을 바로 눌러 서브태스크 초안 흐름으로 이어가고, 상태와 일정도 같은 자리에서 확인합니다.</figcaption>
                 </figure>
                 <figure>
-                  <img src="./assets/jira_issue_document_focus.png" alt="Jira Mini의 본문 편집과 문서 검토 화면" />
-                  <figcaption>상세 화면에서는 Jira 본문 서식, 표, 이미지 첨부를 보면서 수정과 검토를 이어갑니다.</figcaption>
+                  <img src="./assets/jira_review_issue_detail.png" alt="Jira Mini의 상세 작업 검토 화면" />
+                  <figcaption>상세 화면에서는 상태, 담당자, 일정, 본문, 첨부, 댓글 영역을 함께 보며 검토 흐름을 이어갑니다.</figcaption>
                 </figure>
                 <figure>
                   <img src="./assets/jira_issue_comment_focus.png" alt="Jira Mini의 댓글과 첨부 관리 화면" />
@@ -487,7 +499,7 @@
                   설명 가능한 형태로 묶고, 실거래 readiness는 별도 gate로 분리해 둔 분석 and 운영 보조 도구입니다.
                 </p>
               </div>
-              <p class="project-note-band">만든 이유: 후보 탐색, 이벤트 해석, 장기 리서치, 실주문 준비 상태가 한 덩어리처럼 섞이면 참고 정보와 실행 조건이 흐려졌습니다.</p>
+              <p class="project-note-band">후보 탐색, 이벤트 해석, 장기 리서치, 실주문 준비 상태가 한 덩어리처럼 섞이면 참고 정보와 실행 조건이 흐려졌습니다.</p>
               <div class="project-stack-line" aria-label="주식 분석기 기술스택과 구성">
                 <strong>기술스택 / 구성</strong>
                 <span>Kiwoom OpenAPI, FastAPI, React UI, scan snapshot, event cache, AI Lab, execution gate</span>
@@ -536,39 +548,13 @@
               hidden
             >
               <div class="project-copy">
-                <p class="project-kicker">프로젝트·학습 반자동화 Agent / 중고 매물 검색</p>
+                <p class="project-kicker">프로젝트·학습 반자동화 Agent</p>
                 <h3>여러 자동화 AGENT 프로젝트</h3>
                 <p>
-                  프로젝트 진행, 학습, 리서치, 코드 리뷰처럼 반복되는 작업은 Agent로 나누고,
-                  중고 매물 검색기는 가격 감시와 리포트 중심의 별도 도구로 분리했습니다.
+                  프로젝트 진행, 학습, 리서치, 코드 리뷰처럼 반복되는 작업을 전용 Agent 흐름으로 나눈 기록입니다.
                 </p>
               </div>
-              <p class="project-note-band">만든 이유: 프로젝트 진행과 학습 과정에서 반복되는 실행, 검색, 정리, 리뷰를 매번 새로 설명하지 않도록 전용 Agent 흐름으로 나누었습니다.</p>
-              <section class="project-market-highlight" aria-label="중고나라 검색기 별도 프로젝트">
-                <div>
-                  <p class="project-breakdown-label">별도 도구</p>
-                  <h4>중고나라 검색기</h4>
-                  <p>중고 사이트를 주기적으로 돌며 부품명, 가격, 본문, 링크를 모으고 평균가 리포트와 낮은 가격 매물 알림 후보를 만드는 가격 감시 도구입니다.</p>
-                  <dl class="project-mini-ledger">
-                    <div>
-                      <dt>구성</dt>
-                      <dd>raw DOM 수집, 키워드 필터, 가격 정규화, 중복 제거, 평균가 리포트, 낮은 가격 후보 알림</dd>
-                    </div>
-                    <div>
-                      <dt>편한 점</dt>
-                      <dd>사람이 매번 검색어를 바꿔가며 확인하지 않아도, 새 매물과 평균가보다 낮은 후보를 먼저 확인할 수 있습니다.</dd>
-                    </div>
-                    <div>
-                      <dt>차이점</dt>
-                      <dd>단순 키워드 검색이 아니라 DOM 원본에서 제목, 가격, 설명을 분리하고 중복과 불명확한 부품명을 필터링해 리포트로 정리합니다.</dd>
-                    </div>
-                  </dl>
-                </div>
-                <figure>
-                  <img src="./assets/used_market_radar_overview.png" alt="중고나라 검색기의 매물 수집과 평균가 비교 화면" />
-                  <figcaption>키워드별 매물을 수집하고 평균가, 기회 후보, 운영 메모를 한 화면에 묶은 예시입니다.</figcaption>
-                </figure>
-              </section>
+              <p class="project-note-band">프로젝트 진행과 학습 과정에서 반복되는 실행, 검색, 정리, 리뷰를 매번 새로 설명하지 않도록 전용 Agent 흐름으로 나누었습니다.</p>
               <p class="project-gallery-title">프로젝트 및 학습 반자동화 Agent</p>
               <section class="project-feature-grid project-feature-grid--agents" aria-label="프로젝트 및 학습 반자동화 Agent">
                 <article class="project-feature-card">
@@ -647,6 +633,49 @@
                     </div>
                   </dl>
                 </article>
+              </section>
+            </article>
+
+            <article
+              id="project-panel-market"
+              class="project-detail"
+              data-project="market"
+              role="tabpanel"
+              aria-labelledby="project-tab-market"
+              hidden
+            >
+              <div class="project-copy">
+                <p class="project-kicker">중고 매물 가격 감시 / 리포트 자동화</p>
+                <h3>중고매물 AGENT</h3>
+                <p>
+                  반복해서 확인해야 하는 중고 부품 매물을 수집하고, 가격 기준과 후보 판단을 리포트로 남기는 별도 도구입니다.
+                </p>
+              </div>
+              <p class="project-note-band">중고 부품은 좋은 매물이 짧게 지나가고 가격 기준도 매번 흔들리기 쉬워, 사람이 계속 검색하지 않아도 새 매물과 낮은 가격 후보를 먼저 확인할 수 있게 만들었습니다.</p>
+              <section class="project-market-highlight" aria-label="중고매물 Agent 설명">
+                <div>
+                  <p class="project-breakdown-label">별도 프로젝트</p>
+                  <h4>중고나라 검색기</h4>
+                  <p>중고 사이트를 주기적으로 돌며 부품명, 가격, 본문, 링크를 모으고 평균가 리포트와 낮은 가격 매물 알림 후보를 만드는 가격 감시 도구입니다.</p>
+                  <dl class="project-mini-ledger">
+                    <div>
+                      <dt>구성</dt>
+                      <dd>raw DOM 수집, 키워드 필터, 가격 정규화, 중복 제거, 평균가 리포트, 낮은 가격 후보 알림</dd>
+                    </div>
+                    <div>
+                      <dt>편한 점</dt>
+                      <dd>사람이 매번 검색어를 바꿔가며 확인하지 않아도, 새 매물과 평균가보다 낮은 후보를 먼저 확인할 수 있습니다.</dd>
+                    </div>
+                    <div>
+                      <dt>차이점</dt>
+                      <dd>단순 키워드 검색이 아니라 DOM 원본에서 제목, 가격, 설명을 분리하고 중복과 불명확한 부품명을 필터링해 리포트로 정리합니다.</dd>
+                    </div>
+                  </dl>
+                </div>
+                <figure>
+                  <img src="./assets/used_market_radar_overview.png" alt="중고나라 검색기의 매물 수집과 평균가 비교 화면" />
+                  <figcaption>키워드별 매물을 수집하고 평균가, 기회 후보, 운영 메모를 한 화면에 묶은 예시입니다.</figcaption>
+                </figure>
               </section>
             </article>
           </div>

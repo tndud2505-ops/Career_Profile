@@ -967,6 +967,10 @@ body[data-active-panel="projects"] .panel {
   grid-template-columns: 1fr;
 }
 
+.project-detail[data-project="jira"] .project-screens {
+  grid-template-columns: 1fr;
+}
+
 .project-screens--single img,
 .project-detail[data-project="stock"] .project-hero-media img,
 .project-detail[data-project="stock"] .project-screens img,
