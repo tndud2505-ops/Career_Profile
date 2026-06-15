@@ -288,6 +288,18 @@
               주식 분석기
             </button>
             <button
+              id="project-tab-market-search"
+              class="project-button"
+              type="button"
+              role="tab"
+              data-project="market-search"
+              aria-controls="project-panel-market-search"
+              aria-selected="false"
+            >
+              <span>05</span>
+              시장결 종목검색
+            </button>
+            <button
               id="project-tab-daily"
               class="project-button"
               type="button"
@@ -296,7 +308,7 @@
               aria-controls="project-panel-daily"
               aria-selected="false"
             >
-              <span>05</span>
+              <span>06</span>
               자동화 Agent
             </button>
             <button
@@ -308,7 +320,7 @@
               aria-controls="project-panel-market"
               aria-selected="false"
             >
-              <span>06</span>
+              <span>07</span>
               중고매물 Agent
             </button>
           </aside>
@@ -544,6 +556,63 @@
                 <figure>
                   <img src="./assets/kiwom_autotrade_latest.png" alt="주식 분석기의 최신 자동매매 운영 화면" />
                   <figcaption>자동매매 운영 화면은 로그인 상태, 스캔 갱신 여부, 주문 전송 잠금 같은 실행 조건을 따로 보여줘 분석과 주문을 분리합니다.</figcaption>
+                </figure>
+              </div>
+            </article>
+
+            <article
+              id="project-panel-market-search"
+              class="project-detail"
+              data-project="market-search"
+              role="tabpanel"
+              aria-labelledby="project-tab-market-search"
+              hidden
+            >
+              <div class="project-copy">
+                <p class="project-kicker">공개형 한국 주식 종목 검색 사이트</p>
+                <h3>시장결 종목검색</h3>
+                <p>
+                  종목명 검색, 테마와 산업군 빠른 선택, 필터값 비교, 종목 상세 차트 확인까지 한 화면에서 이어가도록
+                  정리한 공개형 주식 검색 사이트입니다. 내부 운영형 분석 도구와 달리 처음 들어온 사람도 검색과 비교
+                  흐름을 바로 이해할 수 있게 분리한 프로젝트입니다.
+                </p>
+              </div>
+              <p class="project-note-band">검색어, 테마, 산업군, 필터값이 여러 단계로 흩어지면 어떤 종목을 어떻게 좁혀야 하는지 처음 보는 사람은 바로 판단하기 어려웠습니다.</p>
+              <div class="project-stack-line" aria-label="시장결 종목검색 기술스택과 구성">
+                <strong>기술스택 / 구성</strong>
+                <span>React UI, 종목 검색 API, 테마/산업군 quick filter, 필터 조합, 종목 상세 차트</span>
+              </div>
+              <p class="project-gallery-title">핵심 기능</p>
+              <section class="project-role-grid" aria-label="시장결 종목검색 세부 기능">
+                <article class="project-role-card">
+                  <p class="project-breakdown-label">기능 1</p>
+                  <h4>빠른 종목 검색과 검색 제안</h4>
+                  <p>종목명이나 코드, 테마 키워드를 입력하면 바로 검색 결과와 가까운 제안을 보여줘서 첫 탐색 진입을 가볍게 만들었습니다.</p>
+                </article>
+                <article class="project-role-card">
+                  <p class="project-breakdown-label">기능 2</p>
+                  <h4>테마·산업군 빠른 축소</h4>
+                  <p>테마 버튼과 산업군 칩을 분리해 두고, 결과 표와 연결해서 후보 범위를 한 번에 줄일 수 있게 구성했습니다.</p>
+                </article>
+                <article class="project-role-card">
+                  <p class="project-breakdown-label">기능 3</p>
+                  <h4>공개형 종목 상세 차트</h4>
+                  <p>종목 상세 화면에서는 차트, 이동평균선, 박스 상하단, 필터 근거를 같이 보여줘서 검색과 비교 흐름이 상세 판단으로 자연스럽게 이어집니다.</p>
+                </article>
+              </section>
+              <p class="project-gallery-title">설명용 화면 예시</p>
+              <div class="project-screens" aria-label="시장결 종목검색 화면 예시">
+                <figure>
+                  <img src="./assets/market_search_home_latest.png" alt="시장결 종목검색 메인 검색 화면" />
+                  <figcaption>메인 검색 화면에서 종목 검색창, 테마와 산업군 빠른 탐색, 필터 공간을 위에서 아래로 바로 이해할 수 있게 정리했습니다.</figcaption>
+                </figure>
+                <figure>
+                  <img src="./assets/market_search_results_latest.png" alt="시장결 종목검색 반도체 결과 화면" />
+                  <figcaption>테마를 선택하면 검색 제안, 적용된 필터, 종목 비교 표가 함께 보여서 결과를 좁혀가는 흐름이 한 번에 이어집니다.</figcaption>
+                </figure>
+                <figure>
+                  <img src="./assets/market_search_detail_latest.png" alt="시장결 종목검색 종목 상세 화면" />
+                  <figcaption>종목 상세에서는 120일 차트, 이동평균선, 박스 상하단, 필터 근거를 같이 보여줘서 공개 검색 사이트에서도 비교 기준을 설명할 수 있게 했습니다.</figcaption>
                 </figure>
               </div>
             </article>
