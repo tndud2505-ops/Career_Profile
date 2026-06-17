@@ -264,6 +264,18 @@
               Virtual MCU Lab
             </button>
             <button
+              id="project-tab-train-gallery"
+              class="project-button"
+              type="button"
+              role="tab"
+              data-project="train-gallery"
+              aria-controls="project-panel-train-gallery"
+              aria-selected="false"
+            >
+              <span>03</span>
+              Train Gallery
+            </button>
+            <button
               id="project-tab-jira"
               class="project-button"
               type="button"
@@ -272,7 +284,7 @@
               aria-controls="project-panel-jira"
               aria-selected="false"
             >
-              <span>03</span>
+              <span>04</span>
               Jira Mini
             </button>
             <button
@@ -284,7 +296,7 @@
               aria-controls="project-panel-stock"
               aria-selected="false"
             >
-              <span>04</span>
+              <span>05</span>
               주식 분석기
             </button>
             <button
@@ -296,7 +308,7 @@
               aria-controls="project-panel-market-search"
               aria-selected="false"
             >
-              <span>05</span>
+              <span>06</span>
               시장결 종목검색
             </button>
             <button
@@ -308,7 +320,7 @@
               aria-controls="project-panel-daily"
               aria-selected="false"
             >
-              <span>06</span>
+              <span>07</span>
               자동화 Agent
             </button>
             <button
@@ -320,7 +332,7 @@
               aria-controls="project-panel-market"
               aria-selected="false"
             >
-              <span>07</span>
+              <span>08</span>
               중고매물 Agent
             </button>
           </aside>
@@ -430,6 +442,65 @@
                 <figure>
                   <img src="./assets/virtual_mcu_register_deck.png" alt="Virtual MCU Lab register and graph 화면" />
                   <figcaption>register, pin, graph 화면은 실행 중 바뀌는 값을 추적하면서 하드웨어 반응 원리를 설명하는 데 쓰입니다.</figcaption>
+                </figure>
+              </div>
+            </article>
+
+            <article
+              id="project-panel-train-gallery"
+              class="project-detail"
+              data-project="train-gallery"
+              role="tabpanel"
+              aria-labelledby="project-tab-train-gallery"
+              hidden
+            >
+              <div class="project-copy">
+                <p class="project-kicker">로컬 퍼스트 운동 영상 기록 앱</p>
+                <h3>TRAIN GALLERY</h3>
+                <p>
+                  촬영한 운동 영상과 가져온 영상을 날짜 기준으로 묶고, 선택한 클립과 자막, 하루·월·연 단위 하이라이트 export까지 한 흐름으로 이어지게 만든 모바일 앱입니다.
+                  원본 영상을 클라우드로 올리지 않고, 로컬 SQLite와 선택형 미디어 접근만으로 기록과 편집 흐름을 구성했습니다.
+                </p>
+              </div>
+              <p class="project-note-band">
+                운동 기록 앱은 화면만 예쁘게 만드는 일보다 로컬 미디어 접근, 캘린더 정리, 클립 저장, 공유 시트 연결이 끊기지 않는 것이 더 중요했습니다.
+                Android 릴리즈 APK 기준으로 Capture, Calendar, Detail, clip export, day/month/year highlight export까지 로컬 검증 기록을 남겼습니다.
+              </p>
+              <div class="project-stack-line" aria-label="Train Gallery 기술스택과 구성">
+                <strong>기술스택 / 구성</strong>
+                <span>Expo SDK 56, React Native, expo-camera, expo-sqlite, expo-media-library, native video export bridge</span>
+              </div>
+              <p class="project-gallery-title">핵심 기능</p>
+              <section class="project-role-grid" aria-label="Train Gallery 핵심 기능">
+                <article class="project-role-card">
+                  <p class="project-breakdown-label">기능 1</p>
+                  <h4>선택형 가져오기와 촬영 기록</h4>
+                  <p>갤러리에서 고른 영상만 가져오고, 앱 안에서 촬영한 영상도 날짜 기준으로 바로 묶어 기록합니다. 원본 전체를 스캔하지 않고 필요한 미디어만 다룹니다.</p>
+                </article>
+                <article class="project-role-card">
+                  <p class="project-breakdown-label">기능 2</p>
+                  <h4>달력 중심 기록 정리</h4>
+                  <p>운동 영상을 날짜 단위로 모으고, 월·연 단위 누적 흐름까지 같은 화면에서 이어서 봅니다. 어떤 날에 무엇이 남았는지 빠르게 다시 찾을 수 있게 만들었습니다.</p>
+                </article>
+                <article class="project-role-card">
+                  <p class="project-breakdown-label">기능 3</p>
+                  <h4>클립, 자막, 하이라이트 export</h4>
+                  <p>선택한 구간을 클립으로 저장하고 자막을 얹은 뒤 공유 시트로 넘길 수 있게 했습니다. 하루 운동, 월별, 연도별 highlight도 앱 안에서 바로 export 흐름으로 연결했습니다.</p>
+                </article>
+              </section>
+              <p class="project-gallery-title">실제 화면</p>
+              <div class="project-screens" aria-label="Train Gallery 실제 화면">
+                <figure>
+                  <img src="./assets/train_gallery_record_latest.png" alt="Train Gallery 촬영 화면" />
+                  <figcaption>기록 시작 화면에서 오늘 운동 카드, 촬영 버튼, 최근 가져온 항목을 한 화면에 묶어 바로 기록 흐름으로 들어가게 구성했습니다.</figcaption>
+                </figure>
+                <figure>
+                  <img src="./assets/train_gallery_calendar_latest.png" alt="Train Gallery 달력 화면" />
+                  <figcaption>달력 화면에서는 날짜별 기록 수, 썸네일, 이동 흐름을 함께 보여줘서 운동 기록을 목록이 아니라 캘린더 맥락으로 다시 찾을 수 있습니다.</figcaption>
+                </figure>
+                <figure>
+                  <img src="./assets/train_gallery_detail_latest.png" alt="Train Gallery 상세 편집 화면" />
+                  <figcaption>상세 화면에서 선택 구간, 자막, 하루 브이로그 요약까지 이어서 확인하며 클립과 highlight export를 같은 작업 맥락에서 처리합니다.</figcaption>
                 </figure>
               </div>
             </article>
