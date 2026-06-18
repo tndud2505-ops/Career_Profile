@@ -982,6 +982,11 @@ body[data-active-panel="projects"] .panel {
   grid-template-columns: 1fr;
 }
 
+.project-detail[data-project="train-gallery"] .project-screens img {
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
 .project-screens--single img,
 .project-detail[data-project="stock"] .project-hero-media img,
 .project-detail[data-project="stock"] .project-screens img,

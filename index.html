@@ -502,6 +502,10 @@
                   <img src="./assets/train_gallery_detail_latest.png" alt="Train Gallery 상세 편집 화면" />
                   <figcaption>상세 화면에서 선택 구간, 자막, 하루 브이로그 요약까지 이어서 확인하며 클립과 highlight export를 같은 작업 맥락에서 처리합니다.</figcaption>
                 </figure>
+                <figure>
+                  <img src="./assets/train_gallery_export_latest.png" alt="Train Gallery 하이라이트 export 화면" />
+                  <figcaption>day highlight export 화면까지 같이 넣어, 기록 정리에서 끝나지 않고 실제 결과물을 꺼내는 흐름도 바로 보이게 했습니다.</figcaption>
+                </figure>
               </div>
             </article>
 
@@ -584,49 +588,41 @@
               hidden
             >
               <div class="project-copy">
-                <p class="project-kicker">한국 주식 스캔 and 리서치 도구</p>
-                <h3>주식 단기 장기 분석 및 자동 매매 도구</h3>
+                <p class="project-kicker">로컬 자동매매 운영 워크벤치</p>
+                <h3>KIWOM 자동매매 운영면</h3>
                 <p>
-                  단순 종목 조회기가 아니라 가격 패턴과 RS로 후보를 좁히고, 뉴스 and 공시 이벤트를
-                  설명 가능한 형태로 묶고, 실거래 readiness는 별도 gate로 분리해 둔 분석 and 운영 보조 도구입니다.
+                  키움 OpenAPI 기반의 로컬 자동매매 운영 워크벤치입니다. 공개형 검색 사이트와 분리해,
+                  로컬 KIWOM 화면에서는 실행 후보 상태, readiness gate, 차단 사유, 보유/체결 흐름을 한 자리에서 검토하도록 구성했습니다.
                 </p>
               </div>
-              <p class="project-note-band">후보 탐색, 이벤트 해석, 장기 리서치, 실주문 준비 상태가 한 덩어리처럼 섞이면 참고 정보와 실행 조건이 흐려졌습니다.</p>
+              <p class="project-note-band">후보 탐색 정보와 실주문 조건이 한 화면에서 섞이면 왜 대기인지, 왜 차단됐는지, 지금 무엇을 눌러도 되는지 바로 읽기 어려웠습니다.</p>
               <div class="project-stack-line" aria-label="주식 분석기 기술스택과 구성">
                 <strong>기술스택 / 구성</strong>
-                <span>Kiwoom OpenAPI, FastAPI, React UI, scan snapshot, event cache, AI Lab, execution gate</span>
+                <span>Kiwoom OpenAPI, PyQt desktop UI, candidate snapshot, readiness gate, position state, order log</span>
               </div>
               <p class="project-gallery-title">핵심 기능</p>
               <section class="project-role-grid" aria-label="주식 분석기 세부 기능">
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 1</p>
-                  <h4>스캔과 추천</h4>
-                  <p>가격 패턴, RS, quality를 기준으로 후보를 추리고 우선순위를 매깁니다. 결과는 스냅샷 API로 노출해 웹에서 빠르게 탐색하게 했습니다.</p>
+                  <h4>실행 후보 상태 보드</h4>
+                  <p>signal, setup, execution, CTX, preclose 상태를 한 표에 모아 자동매매 후보를 넓게 보는 화면이 아니라 실행 전 검토 보드처럼 읽히게 했습니다.</p>
                 </article>
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 2</p>
-                  <h4>장기 리서치와 AI Lab</h4>
-                  <p>뉴스 and 공시 이벤트를 evidence와 issue queue로 정리하고, 사람이 읽기 쉬운 설명 레이어를 별도로 둬 장기 판단에 쓰게 했습니다.</p>
+                  <h4>차단 사유와 readiness 게이트</h4>
+                  <p>unsupported setup, execution status blocked, context 약화 같은 이유를 block memo로 남겨서 분석 결과가 바로 주문 버튼으로 이어지지 않게 분리했습니다.</p>
                 </article>
                 <article class="project-role-card">
                   <p class="project-breakdown-label">기능 3</p>
-                  <h4>실행 가드레일</h4>
-                  <p>pending order, live sync, readiness를 다시 확인하는 실행 게이트를 따로 두어 분석 화면이 바로 주문 화면이 되지 않게 했습니다.</p>
+                  <h4>보유·체결·운영 로그</h4>
+                  <p>보유 포지션, 최근 체결, 운영 로그를 같은 탭 안에 두어 현재 상태 확인과 사후 복기를 한 화면에서 이어갈 수 있게 구성했습니다.</p>
                 </article>
               </section>
               <p class="project-gallery-title">설명용 화면 예시</p>
-              <div class="project-screens" aria-label="주식 분석기 화면 예시">
+              <div class="project-screens project-screens--single" aria-label="KIWOM 로컬 자동매매 운영 화면">
                 <figure>
-                  <img src="./assets/kiwom_research_lab_latest.png" alt="주식 분석기의 최신 AI Research Lab 화면" />
-                  <figcaption>AI Research Lab에서는 뉴스, 공시, 벤치마크 프롬프트, 저장된 원문 경로까지 묶어서 장기 리서치 근거를 남깁니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/kiwom_stock_detail_latest.png" alt="주식 분석기의 최신 종목 상세 화면" />
-                  <figcaption>종목 상세에서는 차트, 이벤트 리스크, AI 인텔 요약을 함께 보여줘서 종목 하나를 읽는 시간을 줄입니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/kiwom_autotrade_latest.png" alt="주식 분석기의 최신 자동매매 운영 화면" />
-                  <figcaption>자동매매 운영 화면은 로그인 상태, 스캔 갱신 여부, 주문 전송 잠금 같은 실행 조건을 따로 보여줘 분석과 주문을 분리합니다.</figcaption>
+                  <img src="./assets/kiwom_autotrade_latest.png" alt="KIWOM 로컬 데스크톱 자동매매 운영 화면" />
+                  <figcaption>로컬 KIWOM 자동매매 화면은 후보 상태, execution, CTX, block memo, 보유 포지션, 최근 체결 로그를 한 화면에 묶어 운영 판단과 주문 실행을 분리합니다.</figcaption>
                 </figure>
               </div>
             </article>
