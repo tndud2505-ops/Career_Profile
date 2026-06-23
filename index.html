@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>김수영 | System Records</title>
+    <title>김수영 | Portfolio</title>
     <meta
       name="description"
-      content="흩어진 작업과 아이디어를 실제로 만져볼 수 있는 도구로 정리하는 개발자 김수영의 포트폴리오입니다."
+      content="자동차 SW, AUTOSAR, Python 도구 개발과 개인 프로젝트를 정리한 김수영의 포트폴리오입니다."
     />
     <meta name="author" content="김수영" />
     <meta name="theme-color" content="#f4f2ed" />
-    <meta property="og:title" content="김수영 | System Records" />
+    <meta property="og:title" content="김수영 | Portfolio" />
     <meta
       property="og:description"
-      content="원격 운영, 프로젝트 자동화, 중고매물 검색, MCU 학습 도구, Jira 리뷰 도구, 주식 분석기를 구조와 화면으로 정리한 기록입니다."
+      content="자동차 SW, 개인 도구, K Stock, MCU 학습 환경을 정리한 포트폴리오입니다."
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ko_KR" />
@@ -39,7 +39,7 @@
         <span class="brand-mark">KSY</span>
         <span>
           <strong>김수영</strong>
-          <small>system records</small>
+          <small>portfolio</small>
         </span>
       </a>
 
@@ -87,9 +87,9 @@
       <section id="top" class="hero" aria-label="포트폴리오 개요">
         <div class="hero-copy">
           <p class="eyebrow">김수영 포트폴리오</p>
-          <h1>주어진 일만 하지 않고 항상 발전하는 개발자입니다.</h1>
-          <p>자동차 전장 SW, AUTOSAR, 모터 제어, Python 기반 도구 개발을 하고 있습니다.</p>
-          <a class="hero-link" href="#projects">개인프로젝트 보기</a>
+          <h1>자동차 SW와 도구를 만듭니다.</h1>
+          <p>AUTOSAR, 모터 제어, Python 도구 개발 기록.</p>
+          <a class="hero-link" href="#projects">프로젝트 보기</a>
         </div>
       </section>
 
@@ -105,7 +105,7 @@
           <p class="section-number">02</p>
           <div>
             <p class="eyebrow">실무 기록</p>
-            <h2>실무 기록입니다.</h2>
+            <h2>실무 기록</h2>
           </div>
         </div>
 
@@ -232,23 +232,59 @@
           <p class="section-number">03</p>
           <div>
             <p class="eyebrow">개인프로젝트</p>
-            <h2>개인 프로젝트 모음입니다.</h2>
+            <h2>개인프로젝트</h2>
           </div>
         </div>
 
         <section class="project-lab" aria-label="개인 프로젝트">
           <aside class="project-index" aria-label="프로젝트 목록" role="tablist">
-            <p class="index-label">Project archive</p>
+            <p class="index-label">Projects</p>
+            <button
+              id="project-tab-market-search"
+              class="project-button is-active"
+              type="button"
+              role="tab"
+              data-project="market-search"
+              aria-controls="project-panel-market-search"
+              aria-selected="true"
+            >
+              <span>01</span>
+              K Stock
+            </button>
+            <button
+              id="project-tab-train-gallery"
+              class="project-button"
+              type="button"
+              role="tab"
+              data-project="train-gallery"
+              aria-controls="project-panel-train-gallery"
+              aria-selected="false"
+            >
+              <span>02</span>
+              Train Gallery
+            </button>
+            <button
+              id="project-tab-stock"
+              class="project-button"
+              type="button"
+              role="tab"
+              data-project="stock"
+              aria-controls="project-panel-stock"
+              aria-selected="false"
+            >
+              <span>03</span>
+              KIWOM 자동매매
+            </button>
             <button
               id="project-tab-codex"
-              class="project-button is-active"
+              class="project-button"
               type="button"
               role="tab"
               data-project="codex"
               aria-controls="project-panel-codex"
-              aria-selected="true"
+              aria-selected="false"
             >
-              <span>01</span>
+              <span>04</span>
               Codex Team
             </button>
             <button
@@ -260,20 +296,8 @@
               aria-controls="project-panel-mcu"
               aria-selected="false"
             >
-              <span>02</span>
+              <span>05</span>
               Virtual MCU Lab
-            </button>
-            <button
-              id="project-tab-train-gallery"
-              class="project-button"
-              type="button"
-              role="tab"
-              data-project="train-gallery"
-              aria-controls="project-panel-train-gallery"
-              aria-selected="false"
-            >
-              <span>03</span>
-              Train Gallery
             </button>
             <button
               id="project-tab-jira"
@@ -284,32 +308,8 @@
               aria-controls="project-panel-jira"
               aria-selected="false"
             >
-              <span>04</span>
-              Jira Mini
-            </button>
-            <button
-              id="project-tab-stock"
-              class="project-button"
-              type="button"
-              role="tab"
-              data-project="stock"
-              aria-controls="project-panel-stock"
-              aria-selected="false"
-            >
-              <span>05</span>
-              주식 분석기
-            </button>
-            <button
-              id="project-tab-market-search"
-              class="project-button"
-              type="button"
-              role="tab"
-              data-project="market-search"
-              aria-controls="project-panel-market-search"
-              aria-selected="false"
-            >
               <span>06</span>
-              시장결 종목검색
+              Jira Mini
             </button>
             <button
               id="project-tab-daily"
@@ -339,53 +339,41 @@
 
           <div class="project-stage">
             <article
-              id="project-panel-codex"
+              id="project-panel-market-search"
               class="project-detail is-active"
-              data-project="codex"
+              data-project="market-search"
               role="tabpanel"
-              aria-labelledby="project-tab-codex"
+              aria-labelledby="project-tab-market-search"
             >
               <div class="project-copy">
-                <p class="project-kicker">로컬 에이전트 운영 콘솔</p>
-                <h3>CODEX TEAM</h3>
+                <p class="project-kicker">주식 분석 사이트</p>
+                <h3>K STOCK</h3>
                 <p>
-                  이 프로젝트는 에이전트를 여러 개 붙여 놓은 데모가 아니라, 누가 요청했고 누가 막혔고
-                  어떤 검토가 필요한지 한눈에 보이게 만든 로컬 운영 콘솔입니다. 결과는 채팅으로
-                  흘러가다 사라지지 않고 issue, discussion, decision, approval, evidence로 남습니다.
+                  종목 검색, 점수 비교, 산업군 흐름을 제공하는 주식 분석 사이트입니다.
                 </p>
               </div>
-              <p class="project-note-band">AI 작업이 여러 갈래로 흩어지면 지금 무엇이 막혔는지, 누가 확인해야 하는지, 언제 사람이 개입해야 하는지 다시 찾기 어려웠습니다.</p>
-              <div class="project-stack-line" aria-label="Codex Team 기술스택과 구성">
-                <strong>기술스택 / 구성</strong>
-                <span>Codex thread 운영, 역할 보드, issue/discussion/decision 흐름, approval, evidence 기록</span>
+              <p class="project-note-band">검색어, 테마, 산업군, 필터값이 여러 단계로 흩어지면 어떤 종목을 어떻게 좁혀야 하는지 처음 보는 사람은 바로 판단하기 어려웠습니다.</p>
+              <div class="project-stack-line" aria-label="시장결 종목검색 배포 링크">
+                <strong>사이트</strong>
+                <span><a href="https://kstockclock.com/" target="_blank" rel="noreferrer">kstockclock.com</a></span>
               </div>
-              <p class="project-gallery-title">역할 구조</p>
-              <section class="project-role-grid" aria-label="Codex Team 역할 구조">
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">역할 1</p>
-                  <h4>Operator</h4>
-                  <p>전체 구현보다 개입 시점과 위험을 봅니다. 언제 승인하고 언제 보류할지, 어떤 검토가 먼저인지 판단하는 자리입니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">역할 2</p>
-                  <h4>Chief</h4>
-                  <p>요청을 해석하고 팀을 나눕니다. issue, meeting, staffing, escalation이 생기면 누가 이어받을지와 어떤 후속 조치가 필요한지 결정합니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">역할 3</p>
-                  <h4>Specialists / Review</h4>
-                  <p>planner, implementer, tester, reviewer가 좁은 역할로 나뉘어 일하고 결과는 approval과 evidence까지 남겨 재진입 가능한 기록으로 바뀝니다.</p>
-                </article>
-              </section>
-              <p class="project-gallery-title">설명용 화면 예시</p>
-              <div class="project-screens" aria-label="Codex Team 화면 예시">
+              <div class="project-stack-line" aria-label="시장결 종목검색 기술스택과 구성">
+                <strong>기능</strong>
+                <span>종목 검색, 테마·산업군 필터, 상세 차트</span>
+              </div>
+              <p class="project-gallery-title">화면</p>
+              <div class="project-screens" aria-label="시장결 종목검색 화면 예시">
                 <figure>
-                  <img src="./assets/codexteam_organization_latest.png" alt="Codex Team 최신 organization 화면" />
-                  <figcaption>조직 설계 탭에서 chief, tester, reviewer 같은 역할을 어떻게 배치했는지와 부족한 역할이 무엇인지 바로 읽을 수 있습니다.</figcaption>
+                  <img src="./assets/market_search_home_latest.png" alt="시장결 종목검색 메인 검색 화면" />
+                  <figcaption>메인 검색 화면에서 종목 검색창, 테마와 산업군 빠른 탐색, 필터 공간을 위에서 아래로 바로 이해할 수 있게 정리했습니다.</figcaption>
                 </figure>
                 <figure>
-                  <img src="./assets/codexteam_activity_latest.png" alt="Codex Team 최신 activity 화면" />
-                  <figcaption>활동 기록 탭에서는 에이전트 추가, 인수인계, escalation, review 흔적이 시간순으로 이어져 사람과 AI가 어떻게 소통했는지 보입니다.</figcaption>
+                  <img src="./assets/market_search_results_latest.png" alt="시장결 종목검색 반도체 결과 화면" />
+                  <figcaption>테마를 선택하면 검색 제안, 적용된 필터, 종목 비교 표가 함께 보여서 결과를 좁혀가는 흐름이 한 번에 이어집니다.</figcaption>
+                </figure>
+                <figure>
+                  <img src="./assets/market_search_detail_latest.png" alt="시장결 종목검색 종목 상세 화면" />
+                  <figcaption>종목 상세에서는 120일 차트, 이동평균선, 박스 상하단, 필터 근거를 같이 보여줘서 공개 검색 사이트에서도 비교 기준을 설명할 수 있게 했습니다.</figcaption>
                 </figure>
               </div>
             </article>
@@ -402,13 +390,12 @@
                 <p class="project-kicker">웹 기반 MCU 가상화 학습 환경</p>
                 <h3>VIRTUAL MCU LAB</h3>
                 <p>
-                  브라우저에서 C 코드를 실행해 보고, 그 결과가 GPIO, register, graph, log에 동시에
-                  반영되는 흐름을 보여주기 위한 학습용 프로젝트입니다.
+                  브라우저에서 C 코드를 실행하고 GPIO, register, graph, log 변화를 함께 보는 학습용 MCU 시뮬레이터입니다.
                 </p>
               </div>
               <p class="project-note-band">실제 자동차 개발 아이템을 가상 환경에서 다뤄볼 수 있도록, 데이터시트와 실제 코드 기반으로 디버깅하면서 전압과 동작 반응을 확인하는 가상 교육환경을 만들었습니다.</p>
               <div class="project-stack-line" aria-label="Virtual MCU Lab 기술스택과 구성">
-                <strong>기술스택 / 구성</strong>
+                <strong>스택</strong>
                 <span>웹 UI, C 코드 에디터, 가상 MCU 상태 모델, schematic, register, graph, log 표시</span>
               </div>
               <p class="project-gallery-title">핵심 기능</p>
@@ -429,7 +416,7 @@
                   <p>실행 결과를 log로만 끝내지 않고, 왜 이런 반응이 나왔는지 화면 요소별로 다시 읽을 수 있게 만들었습니다.</p>
                 </article>
               </section>
-              <p class="project-gallery-title">설명용 화면 예시</p>
+              <p class="project-gallery-title">화면</p>
               <div class="project-screens" aria-label="Virtual MCU Lab 실제 화면">
                 <figure>
                   <img src="./assets/virtual_mcu_home.png" alt="Virtual MCU Lab의 메인 진입 화면" />
@@ -458,8 +445,7 @@
                 <p class="project-kicker">로컬 퍼스트 운동 영상 기록 앱</p>
                 <h3>TRAIN GALLERY</h3>
                 <p>
-                  촬영한 운동 영상과 가져온 영상을 날짜 기준으로 묶고, 선택한 클립과 자막, 하루·월·연 단위 하이라이트 export까지 한 흐름으로 이어지게 만든 모바일 앱입니다.
-                  원본 영상을 클라우드로 올리지 않고, 로컬 SQLite와 선택형 미디어 접근만으로 기록과 편집 흐름을 구성했습니다.
+                  운동 영상을 날짜별로 기록하고 클립·하이라이트 export를 제공하는 앱입니다.
                 </p>
               </div>
               <p class="project-note-band">
@@ -467,7 +453,7 @@
                 Android 릴리즈 APK 기준으로 Capture, Calendar, Detail, clip export, day/month/year highlight export까지 로컬 검증 기록을 남겼습니다.
               </p>
               <div class="project-stack-line" aria-label="Train Gallery 기술스택과 구성">
-                <strong>기술스택 / 구성</strong>
+                <strong>스택</strong>
                 <span>Expo SDK 56, React Native, expo-camera, expo-sqlite, expo-media-library, native video export bridge</span>
               </div>
               <p class="project-gallery-title">핵심 기능</p>
@@ -488,7 +474,7 @@
                   <p>선택한 구간을 클립으로 저장하고 자막을 얹은 뒤 공유 시트로 넘길 수 있게 했습니다. 하루 운동, 월별, 연도별 highlight도 앱 안에서 바로 export 흐름으로 연결했습니다.</p>
                 </article>
               </section>
-              <p class="project-gallery-title">실제 화면</p>
+              <p class="project-gallery-title">화면</p>
               <div class="project-screens" aria-label="Train Gallery 실제 화면">
                 <figure>
                   <img src="./assets/train_gallery_record_latest.png" alt="Train Gallery 촬영 화면" />
@@ -521,13 +507,12 @@
                 <p class="project-kicker">Jira 경량 작업공간 / 리뷰 관리</p>
                 <h3>JIRA MINI</h3>
                 <p>
-                  상위 업무와 하위 작업을 한눈에 펼쳐 보고, 검색, 본문 수정, 댓글 기록,
-                  최근 활동 확인을 같은 화면에서 이어가도록 만든 보조 도구입니다.
+                  검색, 빠른 수정, 댓글, 첨부 검토를 한 화면에서 처리하는 Jira 보조 도구입니다.
                 </p>
               </div>
               <p class="project-note-band">기존 Jira 화면의 무거운 부분은 덜어내고 필요한 기능만 살려, 프로젝트 이슈 관리와 작업 진행상황 확인을 리뷰어와 사용자 모두 편하게 할 수 있는 앱을 만들었습니다.</p>
               <div class="project-stack-line" aria-label="Jira Mini 기술스택과 구성">
-                <strong>기술스택 / 구성</strong>
+                <strong>스택</strong>
                 <span>React UI, Jira 연동, 목록 빠른 수정, 본문 편집기, 댓글/첨부/최근 활동 표시</span>
               </div>
               <p class="project-gallery-title">핵심 기능</p>
@@ -558,7 +543,7 @@
                   <p>일반, 진척도, 리뷰 댓글을 나누어 남기고 최근 활동 기록을 기반으로 업데이트 여부를 빠르게 판단합니다.</p>
                 </article>
               </section>
-              <p class="project-gallery-title">설명용 화면 예시</p>
+              <p class="project-gallery-title">화면</p>
               <div class="project-screens" aria-label="Jira Mini 실제 화면">
                 <figure>
                   <img src="./assets/jira_workspace_list_focus.png" alt="Jira Mini의 검색과 하위 작업 목록 화면" />
@@ -589,15 +574,14 @@
             >
               <div class="project-copy">
                 <p class="project-kicker">로컬 자동매매 운영 워크벤치</p>
-                <h3>KIWOM 자동매매 운영면</h3>
+                <h3>KIWOM x 자동매매</h3>
                 <p>
-                  키움 OpenAPI 기반의 로컬 자동매매 운영 워크벤치입니다. 공개형 검색 사이트와 분리해,
-                  로컬 KIWOM 화면에서는 실행 후보 상태, readiness gate, 차단 사유, 보유/체결 흐름을 한 자리에서 검토하도록 구성했습니다.
+                  키움 OpenAPI 기반 자동매매 운영 도구입니다. 실행 후보, 차단 사유, 보유·체결 흐름을 분리해 보여줍니다.
                 </p>
               </div>
               <p class="project-note-band">후보 탐색 정보와 실주문 조건이 한 화면에서 섞이면 왜 대기인지, 왜 차단됐는지, 지금 무엇을 눌러도 되는지 바로 읽기 어려웠습니다.</p>
               <div class="project-stack-line" aria-label="주식 분석기 기술스택과 구성">
-                <strong>기술스택 / 구성</strong>
+                <strong>스택</strong>
                 <span>Kiwoom OpenAPI, PyQt desktop UI, candidate snapshot, readiness gate, position state, order log</span>
               </div>
               <p class="project-gallery-title">핵심 기능</p>
@@ -618,7 +602,7 @@
                   <p>보유 포지션, 최근 체결, 운영 로그를 같은 탭 안에 두어 현재 상태 확인과 사후 복기를 한 화면에서 이어갈 수 있게 구성했습니다.</p>
                 </article>
               </section>
-              <p class="project-gallery-title">설명용 화면 예시</p>
+              <p class="project-gallery-title">화면</p>
               <div class="project-screens project-screens--single" aria-label="KIWOM 로컬 자동매매 운영 화면">
                 <figure>
                   <img src="./assets/kiwom_autotrade_latest.png" alt="KIWOM 로컬 데스크톱 자동매매 운영 화면" />
@@ -628,58 +612,52 @@
             </article>
 
             <article
-              id="project-panel-market-search"
+              id="project-panel-codex"
               class="project-detail"
-              data-project="market-search"
+              data-project="codex"
               role="tabpanel"
-              aria-labelledby="project-tab-market-search"
+              aria-labelledby="project-tab-codex"
               hidden
             >
               <div class="project-copy">
-                <p class="project-kicker">공개형 한국 주식 종목 검색 사이트</p>
-                <h3>시장결 종목검색</h3>
+                <p class="project-kicker">로컬 에이전트 운영 콘솔</p>
+                <h3>CODEX TEAM</h3>
                 <p>
-                  종목명 검색, 테마와 산업군 빠른 선택, 필터값 비교, 종목 상세 차트 확인까지 한 화면에서 이어가도록
-                  정리한 공개형 주식 검색 사이트입니다. 내부 운영형 분석 도구와 달리 처음 들어온 사람도 검색과 비교
-                  흐름을 바로 이해할 수 있게 분리한 프로젝트입니다.
+                  요청, 승인, 검토, 근거를 한 화면에서 관리하는 로컬 AI 작업 콘솔입니다.
                 </p>
               </div>
-              <p class="project-note-band">검색어, 테마, 산업군, 필터값이 여러 단계로 흩어지면 어떤 종목을 어떻게 좁혀야 하는지 처음 보는 사람은 바로 판단하기 어려웠습니다.</p>
-              <div class="project-stack-line" aria-label="시장결 종목검색 기술스택과 구성">
-                <strong>기술스택 / 구성</strong>
-                <span>React UI, 종목 검색 API, 테마/산업군 quick filter, 필터 조합, 종목 상세 차트</span>
+              <p class="project-note-band">AI 작업이 여러 갈래로 흩어지면 지금 무엇이 막혔는지, 누가 확인해야 하는지, 언제 사람이 개입해야 하는지 다시 찾기 어려웠습니다.</p>
+              <div class="project-stack-line" aria-label="Codex Team 기술스택과 구성">
+                <strong>스택</strong>
+                <span>Codex thread 운영, 역할 보드, issue/discussion/decision 흐름, approval, evidence 기록</span>
               </div>
-              <p class="project-gallery-title">핵심 기능</p>
-              <section class="project-role-grid" aria-label="시장결 종목검색 세부 기능">
+              <p class="project-gallery-title">역할 구조</p>
+              <section class="project-role-grid" aria-label="Codex Team 역할 구조">
                 <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 1</p>
-                  <h4>빠른 종목 검색과 검색 제안</h4>
-                  <p>종목명이나 코드, 테마 키워드를 입력하면 바로 검색 결과와 가까운 제안을 보여줘서 첫 탐색 진입을 가볍게 만들었습니다.</p>
+                  <p class="project-breakdown-label">역할 1</p>
+                  <h4>Operator</h4>
+                  <p>전체 구현보다 개입 시점과 위험을 봅니다. 언제 승인하고 언제 보류할지, 어떤 검토가 먼저인지 판단하는 자리입니다.</p>
                 </article>
                 <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 2</p>
-                  <h4>테마·산업군 빠른 축소</h4>
-                  <p>테마 버튼과 산업군 칩을 분리해 두고, 결과 표와 연결해서 후보 범위를 한 번에 줄일 수 있게 구성했습니다.</p>
+                  <p class="project-breakdown-label">역할 2</p>
+                  <h4>Chief</h4>
+                  <p>요청을 해석하고 팀을 나눕니다. issue, meeting, staffing, escalation이 생기면 누가 이어받을지와 어떤 후속 조치가 필요한지 결정합니다.</p>
                 </article>
                 <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 3</p>
-                  <h4>공개형 종목 상세 차트</h4>
-                  <p>종목 상세 화면에서는 차트, 이동평균선, 박스 상하단, 필터 근거를 같이 보여줘서 검색과 비교 흐름이 상세 판단으로 자연스럽게 이어집니다.</p>
+                  <p class="project-breakdown-label">역할 3</p>
+                  <h4>Specialists / Review</h4>
+                  <p>planner, implementer, tester, reviewer가 좁은 역할로 나뉘어 일하고 결과는 approval과 evidence까지 남겨 재진입 가능한 기록으로 바뀝니다.</p>
                 </article>
               </section>
-              <p class="project-gallery-title">설명용 화면 예시</p>
-              <div class="project-screens" aria-label="시장결 종목검색 화면 예시">
+              <p class="project-gallery-title">화면</p>
+              <div class="project-screens" aria-label="Codex Team 화면 예시">
                 <figure>
-                  <img src="./assets/market_search_home_latest.png" alt="시장결 종목검색 메인 검색 화면" />
-                  <figcaption>메인 검색 화면에서 종목 검색창, 테마와 산업군 빠른 탐색, 필터 공간을 위에서 아래로 바로 이해할 수 있게 정리했습니다.</figcaption>
+                  <img src="./assets/codexteam_organization_latest.png" alt="Codex Team 최신 organization 화면" />
+                  <figcaption>조직 설계 탭에서 chief, tester, reviewer 같은 역할을 어떻게 배치했는지와 부족한 역할이 무엇인지 바로 읽을 수 있습니다.</figcaption>
                 </figure>
                 <figure>
-                  <img src="./assets/market_search_results_latest.png" alt="시장결 종목검색 반도체 결과 화면" />
-                  <figcaption>테마를 선택하면 검색 제안, 적용된 필터, 종목 비교 표가 함께 보여서 결과를 좁혀가는 흐름이 한 번에 이어집니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/market_search_detail_latest.png" alt="시장결 종목검색 종목 상세 화면" />
-                  <figcaption>종목 상세에서는 120일 차트, 이동평균선, 박스 상하단, 필터 근거를 같이 보여줘서 공개 검색 사이트에서도 비교 기준을 설명할 수 있게 했습니다.</figcaption>
+                  <img src="./assets/codexteam_activity_latest.png" alt="Codex Team 최신 activity 화면" />
+                  <figcaption>활동 기록 탭에서는 에이전트 추가, 인수인계, escalation, review 흔적이 시간순으로 이어져 사람과 AI가 어떻게 소통했는지 보입니다.</figcaption>
                 </figure>
               </div>
             </article>
@@ -694,9 +672,9 @@
             >
               <div class="project-copy">
                 <p class="project-kicker">프로젝트·학습 반자동화 Agent</p>
-                <h3>여러 자동화 AGENT 프로젝트</h3>
+                <h3>자동화 AGENT</h3>
                 <p>
-                  프로젝트 진행, 학습, 리서치, 코드 리뷰처럼 반복되는 작업을 전용 Agent 흐름으로 나눈 기록입니다.
+                  반복되는 프로젝트·학습 작업을 Agent 흐름으로 나눈 기록입니다.
                 </p>
               </div>
               <p class="project-note-band">프로젝트 진행과 학습 과정에서 반복되는 실행, 검색, 정리, 리뷰를 매번 새로 설명하지 않도록 전용 Agent 흐름으로 나누었습니다.</p>
@@ -793,7 +771,7 @@
                 <p class="project-kicker">중고 매물 가격 감시 / 리포트 자동화</p>
                 <h3>중고매물 AGENT</h3>
                 <p>
-                  반복해서 확인해야 하는 중고 부품 매물을 수집하고, 가격 기준과 후보 판단을 리포트로 남기는 별도 도구입니다.
+                  중고 부품 매물을 모아 가격 기준과 후보 판단을 리포트로 남기는 도구입니다.
                 </p>
               </div>
               <p class="project-note-band">중고 부품은 좋은 매물이 짧게 지나가고 가격 기준도 매번 흔들리기 쉬워, 사람이 계속 검색하지 않아도 새 매물과 낮은 가격 후보를 먼저 확인할 수 있게 만들었습니다.</p>
@@ -831,7 +809,7 @@
 
     <footer class="site-footer">
       <div class="footer-copy">
-        <p>System Records · Design, implement, verify</p>
+        <p>김수영 Portfolio</p>
       </div>
     </footer>
 
@@ -1001,8 +979,8 @@
             return;
           }
 
-          activatePanel("intro");
-          activateProject("codex");
+          activatePanel("projects");
+          activateProject("market-search");
         }
 
         window.addEventListener("hashchange", () => applyRoute({ scroll: true }));
