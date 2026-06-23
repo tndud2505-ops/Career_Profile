@@ -764,13 +764,15 @@ body[data-active-panel="projects"] .panel {
 }
 
 .project-summary-box {
+  display: grid;
+  gap: 6px;
   padding: 12px 14px;
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid var(--line);
 }
 
 .project-summary-box p {
-  margin: 0 0 8px;
+  margin: 0;
   color: var(--ink);
   font-size: 0.88rem;
 }
@@ -888,6 +890,7 @@ body[data-active-panel="projects"] .panel {
 .project-market-highlight figure {
   min-width: 0;
   margin: 0;
+  max-width: 420px;
   padding: 8px;
   background: rgba(255, 255, 255, 0.34);
   border: 1px solid var(--line);
@@ -982,12 +985,14 @@ body[data-active-panel="projects"] .panel {
 
 .project-screens {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(2, minmax(260px, 320px));
+  justify-content: start;
+  gap: 16px 18px;
   margin-top: 2px;
 }
 
 .project-screens figure {
+  width: 100%;
   min-width: 0;
   margin: 0;
   padding: 8px;
@@ -1012,11 +1017,11 @@ body[data-active-panel="projects"] .panel {
 }
 
 .project-screens--single {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 620px);
 }
 
 .project-detail[data-project="jira"] .project-screens {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 420px);
 }
 
 .project-detail[data-project="train-gallery"] .project-screens img {
