@@ -551,7 +551,9 @@ body[data-active-panel="projects"] .panel {
 }
 
 .scope-list {
-  display: none;
+  display: grid;
+  gap: 0;
+  margin: 6px 0 0;
 }
 
 .scope-list div {

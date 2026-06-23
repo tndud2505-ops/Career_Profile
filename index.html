@@ -119,8 +119,8 @@
               <h3>모베이스 ASEC</h3>
               <p class="role">아키텍처 설계실 · R&amp;D / 책임연구원</p>
               <p>
-                AUTOSAR 기반 자동 코드 생성 툴 프로그램을 개발하고 있습니다. ARXML 분석, Python 기반 툴 개발,
-                WSL/GCC 기반 단위 검증과 자동 테스트 환경 설계를 함께 다룹니다.
+                AUTOSAR 기반 자동 코드 생성 툴 프로그램을 개발하고 있습니다. ARXML 입력 정리부터
+                코드 생성 결과 검증, WSL/GCC 기반 테스트 환경까지 이어지는 흐름을 설계하고 구현합니다.
               </p>
               <dl class="scope-list">
                 <div>
@@ -128,14 +128,16 @@
                   <dd>AUTOSAR 기반 자동 코드 생성 툴 프로그램</dd>
                 </div>
                 <div>
-                  <dt>업무 역량</dt>
-                  <dd>
-                    <ul>
-                      <li>Python 기반 툴 개발</li>
-                      <li>WSL/GCC 기반 단위 유닛 검증 및 자동 테스트 환경 설계·구현</li>
-                      <li>AUTOSAR ARXML 분석 및 코드 설계</li>
-                    </ul>
-                  </dd>
+                  <dt>직접 범위</dt>
+                  <dd>Python 기반 툴 개발, 입력 정리, 생성 결과 검증, 자동 테스트 환경 구성</dd>
+                </div>
+                <div>
+                  <dt>핵심 역할</dt>
+                  <dd>ARXML 해석과 코드 생성, 검증 반복 흐름을 하나의 운영 경로로 연결해 확인 가능한 구조로 정리</dd>
+                </div>
+                <div>
+                  <dt>진행 흐름</dt>
+                  <dd>입력과 생성, 검증 경계를 분리하고 실패 지점을 다시 확인하기 쉬운 테스트 중심 흐름으로 운영했습니다.</dd>
                 </div>
               </dl>
             </div>
@@ -151,7 +153,7 @@
               <p class="role">전장 SW 설계팀 / 연구원</p>
               <p>
                 Steering Wheel Column Module, Power Seat Unit, 통합제어기 선행과제 개발을 진행했습니다.
-                AUTOSAR Mobile Gene, MATLAB/Simulink MBD, DC motor 제어와 기능 안전 문서 작업을 다뤘습니다.
+                AUTOSAR 기반 구조 설계, 모터 제어 SW 개발, 진단과 통신 검증, 기능 안전 문서 작업을 함께 다뤘습니다.
               </p>
               <dl class="scope-list">
                 <div>
@@ -166,15 +168,16 @@
                   </dd>
                 </div>
                 <div>
-                  <dt>업무 역량</dt>
-                  <dd>
-                    <ul>
-                      <li>AUTOSAR Mobile Gene 사용</li>
-                      <li>MATLAB/Simulink 기반 MBD 코드 설계 및 사양 분석</li>
-                      <li>MATLAB 기반 모델 검증 및 시뮬레이션</li>
-                      <li>DC motor 제어 이론 이해 및 관련 하드웨어 디버깅</li>
-                    </ul>
-                  </dd>
+                  <dt>직접 범위</dt>
+                  <dd>기능 구현, 제어 로직 문서화, 진단과 통신 검증, 기능 안전 대응, 결과물 정리</dd>
+                </div>
+                <div>
+                  <dt>핵심 역할</dt>
+                  <dd>모터와 바디 제어 로직 구현, AUTOSAR 구조 안의 실동작 검증, 시뮬레이션과 디버깅 결과 연결</dd>
+                </div>
+                <div>
+                  <dt>진행 흐름</dt>
+                  <dd>기능 구현, 진단 확인, 검증 문서, 안전 문서를 분리하지 않고 실제 개발 흐름 안에서 함께 관리했습니다.</dd>
                 </div>
               </dl>
             </div>
@@ -190,7 +193,7 @@
               <p class="role">회로2팀 소프트웨어 담당 / 사원</p>
               <p>
                 한온 냉매 밸브 액추에이터와 PT 센서 액추에이터 개발을 담당했습니다.
-                MCU 변경에 따른 프로그램 재설계, 공정 매칭, 고객 요구 사양 협의를 경험했습니다.
+                MCU 변경에 따른 프로그램 재설계, 공정 매칭, 고객 요구 사양 협의와 양산 대응을 함께 경험했습니다.
               </p>
               <dl class="scope-list">
                 <div>
@@ -204,15 +207,16 @@
                   </dd>
                 </div>
                 <div>
-                  <dt>업무 역량</dt>
-                  <dd>
-                    <ul>
-                      <li>PMSM 모터 제어 이론 이해</li>
-                      <li>Motor Driver SW 분석 및 디버깅</li>
-                      <li>180도 통전, 90도 통전 등 인버터 제어 기반 모터 제어</li>
-                      <li>고객사 요구 사양 협의</li>
-                    </ul>
-                  </dd>
+                  <dt>직접 범위</dt>
+                  <dd>펌웨어 분석과 디버깅, MCU 변경 대응, 프로그램 재설계, 공정 매칭, 고객 요구 사양 협의</dd>
+                </div>
+                <div>
+                  <dt>핵심 역할</dt>
+                  <dd>PMSM, BLDC, DC 모터 제어 로직을 실제 액추에이터 제품 코드와 연결하고 양산 대응까지 이어갔습니다.</dd>
+                </div>
+                <div>
+                  <dt>진행 흐름</dt>
+                  <dd>제어 이론 검토, Motor Driver SW 분석, 인버터 제어 디버깅, 공정 반영까지 한 흐름으로 묶어 대응했습니다.</dd>
                 </div>
               </dl>
             </div>
