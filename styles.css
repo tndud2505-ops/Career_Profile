@@ -235,7 +235,7 @@ a:focus-visible {
   display: grid;
   gap: 10px;
   align-self: start;
-  width: min(100%, 560px);
+  width: min(100%, 1120px);
   min-width: 0;
 }
 
@@ -350,10 +350,12 @@ a:focus-visible {
 }
 
 .hero h1 {
-  max-width: 12ch;
+  max-width: none;
   font-family: var(--sans);
-  font-size: clamp(1.95rem, 3.2vw, 2.85rem);
+  font-size: clamp(2rem, 2.8vw, 2.8rem);
   line-height: 1.04;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
 }
 
 .hero p,
@@ -369,7 +371,7 @@ a:focus-visible {
 }
 
 .hero-copy > p {
-  max-width: 24ch;
+  max-width: 56ch;
   font-size: 0.88rem;
 }
 
@@ -1023,7 +1025,7 @@ body[data-active-panel="projects"] .panel {
 }
 
 .project-detail[data-project="jira"] .project-screens {
-  grid-template-columns: minmax(0, 420px);
+  grid-template-columns: repeat(2, minmax(280px, 420px));
 }
 
 .project-detail[data-project="train-gallery"] .project-screens img {
@@ -1074,6 +1076,7 @@ body[data-active-panel="projects"] .panel {
   .hero h1 {
     max-width: 100%;
     font-size: clamp(2.5rem, 6vw, 3.6rem);
+    white-space: normal;
   }
 
   .project-lab {
@@ -1145,6 +1148,7 @@ body[data-active-panel="projects"] .panel {
     max-width: 100%;
     font-size: 1.95rem;
     line-height: 1.1;
+    white-space: normal;
   }
 
   .hero-copy {
@@ -1241,6 +1245,10 @@ body[data-active-panel="projects"] .panel {
   }
 
   .project-role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-detail[data-project="jira"] .project-screens {
     grid-template-columns: 1fr;
   }
 
