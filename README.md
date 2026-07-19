@@ -14,7 +14,7 @@
 - index.html: Profile(캐릭터 초상과 소개), Experience, Projects(선형 기록 목록), Profile 내 GitHub·email
 - styles.css: light editorial design tokens, responsive layout, accessibility states, divider-led record lists
 - script.js: mobile menu and current section highlighting
-- projects/: Virtual MCU, K Stock, Train Gallery, Auto Trading, Codex Team, Jira Opsidian, 일상 자동화, 중고 매물 상세 페이지
+- projects/: Virtual MCU, K Stock, Train Gallery, Auto Trading, Questora, Codex Team, Jira Opsidian, 중고 매물 상세 페이지
 - 각 프로젝트 상세 페이지는 프로젝트별 제목을 유지하면서 `Overview` → `Problem` → `Approach` → `Screen evidence` 순서로 구성합니다.
 - assets/: 실제 프로젝트 화면 캡처
 
