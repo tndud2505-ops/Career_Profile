@@ -821,9 +821,7 @@ h4 {
   gap: 18px;
 }
 .case-gallery figure {
-  padding: 10px;
-  background: var(--surface);
-  border: 1px solid var(--line);
+  padding: 0;
 }
 .case-gallery figure:first-child {
   grid-column: 1 / -1;
@@ -832,8 +830,6 @@ h4 {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: contain;
-  background: #fff;
-  border: 1px solid var(--line);
 }
 .case-gallery figcaption {
   padding: 9px 2px 0;
