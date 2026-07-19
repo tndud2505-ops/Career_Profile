@@ -811,34 +811,37 @@ h4 {
   counter-increment: flow;
 }
 .case-section-content ol li::before {
-  content: counter(flow, decimal-leading-zero) "  ";
+  content: counter(flow, decimal) ".  ";
   color: var(--accent);
   font-family: var(--mono);
   font-size: 0.72rem;
 }
-.case-points {
+.case-bullets {
   display: grid;
   gap: 0;
   margin: 2px 0 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--line-strong);
+  border-top: 1px solid var(--line);
 }
-.case-points li {
-  display: grid;
-  grid-template-columns: 150px minmax(0, 1fr);
-  gap: 18px;
-  padding: 9px 0;
+.case-bullets li {
+  position: relative;
+  padding: 11px 0 11px 18px;
   color: var(--muted);
   font-size: 0.86rem;
   border-bottom: 1px solid var(--line);
 }
-.case-points li strong {
-  color: var(--text);
-  font-size: 0.72rem;
+.case-bullets li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
   font-family: var(--mono);
+  font-weight: 700;
+}
+.case-bullets li strong {
+  color: var(--text);
   font-weight: 600;
-  letter-spacing: 0.03em;
 }
 .case-gallery {
   display: grid;
@@ -1026,7 +1029,7 @@ h4 {
     font-size: 1.45rem;
   }
   .record-points li,
-  .case-points li,
+  .case-bullets li,
   .record-bullets li,
   .case-evidence-steps li {
     grid-template-columns: 1fr;
