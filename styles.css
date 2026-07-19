@@ -795,7 +795,6 @@ h4 {
 .case-section-content > p {
   color: var(--muted);
 }
-.case-section-content ul,
 .case-section-content ol {
   display: grid;
   gap: 8px;
@@ -815,33 +814,6 @@ h4 {
   color: var(--accent);
   font-family: var(--mono);
   font-size: 0.72rem;
-}
-.case-bullets {
-  display: grid;
-  gap: 0;
-  margin: 2px 0 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--line);
-}
-.case-bullets li {
-  position: relative;
-  padding: 11px 0 11px 18px;
-  color: var(--muted);
-  font-size: 0.86rem;
-  border-bottom: 1px solid var(--line);
-}
-.case-bullets li::before {
-  content: "-";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
-  font-family: var(--mono);
-  font-weight: 700;
-}
-.case-bullets li strong {
-  color: var(--text);
-  font-weight: 600;
 }
 .case-gallery {
   display: grid;
@@ -1029,7 +1001,6 @@ h4 {
     font-size: 1.45rem;
   }
   .record-points li,
-  .case-bullets li,
   .record-bullets li,
   .case-evidence-steps li {
     grid-template-columns: 1fr;
