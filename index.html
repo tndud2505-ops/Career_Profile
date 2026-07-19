@@ -2,1061 +2,617 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>김수영 | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>김수영 | Automotive Software Engineer &amp; Tool Builder</title>
     <meta
       name="description"
-      content="자동차 SW 개발과 AI를 활용한 앱, 사이트, 편의 도구를 만드는 김수영의 포트폴리오입니다."
+      content="AUTOSAR와 모터 제어 기반 자동차 임베디드 소프트웨어 실무부터 Python 자동화, 웹 서비스와 개발 도구까지 직접 구현한 김수영의 포트폴리오입니다."
     />
     <meta name="author" content="김수영" />
-    <meta name="theme-color" content="#f4f2ed" />
-    <meta property="og:title" content="김수영 | Portfolio" />
+    <link rel="canonical" href="https://tndud2505-ops.github.io/portfolio/" />
+    <meta name="theme-color" content="#f7f7f5" />
+    <meta
+      property="og:title"
+      content="김수영 | Automotive Software Engineer &amp; Tool Builder"
+    />
     <meta
       property="og:description"
-      content="자동차 SW 개발과 AI를 활용한 앱, 사이트, 편의 도구를 정리한 포트폴리오입니다."
+      content="자동차 임베디드 소프트웨어와 반복되는 개발·검증 흐름을 도구와 제품으로 구조화합니다."
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ko_KR" />
-    <meta property="og:image" content="./site_preview.png" />
+    <meta
+      property="og:url"
+      content="https://tndud2505-ops.github.io/portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://tndud2505-ops.github.io/portfolio/assets/virtual_mcu_editor.png"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231c211d'/%3E%3Ctext x='32' y='38' text-anchor='middle' font-size='15' font-family='monospace' font-weight='700' fill='%23fbfaf6'%3EKSY%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23315d4b'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-size='18' font-family='Arial,sans-serif' font-weight='700' fill='white'%3EKSY%3C/text%3E%3C/svg%3E"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260719g" />
+    <script src="./script.js?v=20260719i" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">본문으로 건너뛰기</a>
-
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="처음으로">
-        <span class="brand-mark">KSY</span>
-        <span>
-          <strong>김수영</strong>
-          <small>portfolio</small>
-        </span>
-      </a>
-
-      <nav class="tab-nav" aria-label="주요 화면" role="tablist">
-        <button
-          id="tab-intro"
-          class="tab-button is-active"
-          type="button"
-          role="tab"
-          data-panel="intro"
-          aria-controls="panel-intro"
-          aria-selected="true"
+      <div class="container header-inner">
+        <a class="brand" href="#profile" aria-label="김수영 포트폴리오 처음으로"
+          ><span class="brand-mark brand-photo"
+            ><img src="./assets/profile-focus-photo.png" alt="" /></span
+          ><span class="brand-copy"
+            ><strong>김수영</strong
+            ><small>Automotive Software Engineer</small></span
+          ></a
         >
-          <span>01</span>
-          소개
-        </button>
         <button
-          id="tab-career"
-          class="tab-button"
+          class="menu-toggle"
           type="button"
-          role="tab"
-          data-panel="career"
-          aria-controls="panel-career"
-          aria-selected="false"
+          aria-expanded="false"
+          aria-label="메뉴 열기"
+          aria-controls="site-menu"
         >
-          <span>02</span>
-          실무 기록
+          메뉴
         </button>
-        <button
-          id="tab-projects"
-          class="tab-button"
-          type="button"
-          role="tab"
-          data-panel="projects"
-          aria-controls="panel-projects"
-          aria-selected="false"
-        >
-          <span>03</span>
-          개인프로젝트
-        </button>
-      </nav>
+        <nav id="site-menu" class="site-nav is-collapsed" aria-label="주요 메뉴">
+          <a href="#profile">Profile</a><a href="#experience">Experience</a
+          ><a href="#projects">Projects</a>
+        </nav>
+      </div>
     </header>
 
-    <main id="content" class="site-main">
-      <section id="top" class="hero" aria-label="포트폴리오 개요">
-        <div class="hero-copy">
-          <p class="eyebrow">김수영 포트폴리오</p>
-          <h1>자동차 SW 개발과 AI를 활용한 앱, 사이트, 편의 도구를 개발합니다.</h1>
-          <p>AUTOSAR, 모터 제어, Python 자동화부터 실제 배포 서비스까지 직접 구현하고 정리합니다.</p>
-          <a class="hero-link" href="#projects">프로젝트 보기</a>
+    <main id="content">
+      <section
+        id="profile"
+        class="hero section-shell"
+        aria-labelledby="profile-title"
+      >
+        <div class="container">
+          <div class="section-intro">
+            <h2 id="profile-title" class="eyebrow">Profile</h2>
+          </div>
+          <div class="profile-intro">
+          <figure class="profile-intro-photo">
+            <img
+              src="./assets/profile-focus-photo.png"
+              width="1254"
+              height="1254"
+              alt="야외 코트에서 슛에 집중하는 뒷모습"
+              fetchpriority="high"
+            />
+          </figure>
+          <div class="profile-intro-copy">
+            <p class="profile-greeting">안녕하세요.</p>
+            <h1 id="hero-title">
+              자동차 SW 개발 및 다양한 프로젝트를 스스로 공부하며 진행하고
+              있습니다.
+            </h1>
+            <dl class="profile-contact-list">
+              <div>
+                <dt>GitHub</dt>
+                <dd>
+                  <a
+                    class="profile-text-link"
+                    href="https://github.com/tndud2505-ops"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >github.com/tndud2505-ops <span aria-hidden="true">↗</span
+                    ><span class="sr-only"> 새 창</span></a
+                  >
+                </dd>
+              </div>
+              <div>
+                <dt>Email</dt>
+                <dd>
+                  <a class="profile-text-link" href="mailto:tndud2505@naver.com"
+                    >tndud2505@naver.com</a
+                  >
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
         </div>
       </section>
 
       <section
-        id="panel-career"
-        class="panel"
-        data-panel="career"
-        role="tabpanel"
-        aria-labelledby="tab-career"
-        hidden
+        id="experience"
+        class="section-shell section-muted"
+        aria-labelledby="experience-title"
       >
-        <div class="section-head">
-          <p class="section-number">02</p>
-          <div>
-            <p class="eyebrow">실무 기록</p>
-            <h2>실무 기록</h2>
+        <div class="container">
+          <div class="section-intro">
+            <h2 id="experience-title" class="eyebrow">Experience</h2>
+          </div>
+          <div class="record-list">
+            <article class="record-item experience-record">
+              <div class="record-index">
+                <time datetime="2026-01">2026.01 ~ 재직중</time>
+              </div>
+              <div class="record-main">
+                <div class="record-heading">
+                  <h3>MOBASE ASEC</h3>
+                  <p class="record-role">
+                    아키텍처 설계실 · R&amp;D · 책임연구원
+                  </p>
+                </div>
+                <div class="record-groups">
+                  <div class="record-group">
+                    <h4>진행 프로젝트</h4>
+                    <ul class="record-bullets">
+                      <li>
+                        <strong>오토사 기반 자동 코드 생성 툴 프로그램</strong>
+                      </li>
+                      <li><strong>업무 대시보드 설계 및 배포</strong></li>
+                    </ul>
+                  </div>
+                  <div class="record-group">
+                    <h4>업무 관련 자격사항</h4>
+                    <ul class="record-bullets">
+                      <li><span>파이썬 기반 툴 개발 능력</span></li>
+                      <li>
+                        <span
+                          >WSL·GCC 기반 단위·유닛 검증 능력 및 자동 테스트 환경
+                          설계·구현 능력</span
+                        >
+                      </li>
+                      <li><span>AUTOSAR ARXML 분석 및 코드 설계 능력</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="record-item experience-record">
+              <div class="record-index">
+                <time datetime="2023-10">2023.10 ~ 2026.01<br />2년 4개월</time>
+              </div>
+              <div class="record-main">
+                <div class="record-heading">
+                  <h3>LS Automotive</h3>
+                  <p class="record-role">전장 SW 설계팀 · 연구원</p>
+                </div>
+                <div class="record-groups">
+                  <div class="record-group">
+                    <h4>진행 프로젝트</h4>
+                    <ul class="record-bullets">
+                      <li>
+                        <strong
+                          >Steering Wheel Column Module Control (Platform
+                          1.0)</strong
+                        ><span
+                          >현대 요구 사양에 맞춰 GL3, JK, CV 차종 SCM 개발</span
+                        >
+                      </li>
+                      <li>
+                        <strong
+                          >Steering Wheel Column Module Control (Platform
+                          2.0)</strong
+                        ><span
+                          >현대 요구 사양(Platform 2.0)에 맞춰 JW, RS4 차종 SCM
+                          개발</span
+                        >
+                      </li>
+                      <li>
+                        <strong>Power Seat Unit Control (Platform 2.0)</strong
+                        ><span
+                          >JW PE·CE 차종 PSU 아이템 개발, 디버깅, 기능 구현 및
+                          ASIL-A 기능 안전 기술 문서 작성</span
+                        >
+                      </li>
+                      <li>
+                        <strong>통합제어기 선행과제</strong
+                        ><span
+                          >시트·램프·카메라 상태를 모니터링하고 명령을 제어하는
+                          통합 제어기 개발</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="record-group">
+                    <h4>업무 관련 자격사항</h4>
+                    <ul class="record-bullets">
+                      <li><span>AUTOSAR Mobile GENE 사용 능력</span></li>
+                      <li>
+                        <span
+                          >MATLAB Simulink 기반 MBD 코드 설계 및 사양 분석
+                          능력</span
+                        >
+                      </li>
+                      <li>
+                        <span>MATLAB 기반 모델 검증 및 시뮬레이션 능력</span>
+                      </li>
+                      <li>
+                        <span>DC Motor 제어 이론과 관련 HW 디버깅 능력</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="record-item experience-record">
+              <div class="record-index">
+                <time datetime="2022-03">2022.03 ~ 2023.06<br />1년 4개월</time>
+              </div>
+              <div class="record-main">
+                <div class="record-heading">
+                  <h3>동아전기부품</h3>
+                  <p class="record-role">
+                    회로2팀 소프트웨어 담당 · 사원 2년차
+                  </p>
+                </div>
+                <div class="record-groups">
+                  <div class="record-group">
+                    <h4>진행 프로젝트</h4>
+                    <ul class="record-bullets">
+                      <li>
+                        <strong>한온 냉매 밸브 액추에이터 1세대</strong
+                        ><span
+                          >반도체 공급 이슈에 따른 P사 제품 대체, 국내 최초 냉매
+                          밸브 액추에이터 개발 및 공정 매칭 완료</span
+                        >
+                      </li>
+                      <li>
+                        <strong>한온 냉매 밸브 액추에이터 2세대</strong
+                        ><span
+                          >MCU 공급 이슈에 대응해 MCU 변경, 프로그램 재설계 및
+                          공정 매칭 완료</span
+                        >
+                      </li>
+                      <li>
+                        <strong>PT 센서 액추에이터</strong
+                        ><span
+                          >온도·압력 조건에서 에너지 변환 효율이 높은 위치로
+                          니들 밸브를 제어하는 선행 제품 개발</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="record-group">
+                    <h4>아이템 관련 설명</h4>
+                    <ul class="record-bullets">
+                      <li>
+                        <span
+                          >H사 히트펌프 시스템에 들어가 냉매 유량을 조절하고,
+                          상위 제어기가 정한 각도로 이동하는 액추에이터</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="record-group">
+                    <h4>업무 관련 자격사항</h4>
+                    <ul class="record-bullets">
+                      <li>
+                        <span
+                          >PMSM 모터 제어 이론, Motor Driver SW 분석·디버깅,
+                          180°·90° 통전 인버터 제어</span
+                        >
+                      </li>
+                      <li><span>고객사 요구 사양 협의 능력</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-
-        <section class="career-records" aria-label="회사별 실무 기록">
-          <article class="career-record">
-            <div class="career-copy">
-              <div class="career-meta">
-                <span>회사</span>
-                <time>2026.01 - 현재</time>
-              </div>
-              <h3>모베이스 ASEC</h3>
-              <p class="role">아키텍처 설계실 · R&amp;D / 책임연구원</p>
-              <p>
-                AUTOSAR 기반 자동 코드 생성 툴 프로그램을 개발하고 있습니다. ARXML 입력 정리부터
-                코드 생성 결과 검증, WSL/GCC 기반 테스트 환경까지 이어지는 흐름을 설계하고 구현합니다.
-              </p>
-              <dl class="scope-list">
-                <div>
-                  <dt>진행 프로젝트</dt>
-                  <dd>AUTOSAR 기반 자동 코드 생성 툴 프로그램</dd>
-                </div>
-                <div>
-                  <dt>직접 범위</dt>
-                  <dd>Python 기반 툴 개발, 입력 정리, 생성 결과 검증, 자동 테스트 환경 구성</dd>
-                </div>
-                <div>
-                  <dt>핵심 역할</dt>
-                  <dd>ARXML 해석과 코드 생성, 검증 반복 흐름을 하나의 운영 경로로 연결해 확인 가능한 구조로 정리</dd>
-                </div>
-                <div>
-                  <dt>진행 흐름</dt>
-                  <dd>입력과 생성, 검증 경계를 분리하고 실패 지점을 다시 확인하기 쉬운 테스트 중심 흐름으로 운영했습니다.</dd>
-                </div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="career-record">
-            <div class="career-copy">
-              <div class="career-meta">
-                <span>회사</span>
-                <time>2023.10 - 2026.01</time>
-              </div>
-              <h3>LS Automotive</h3>
-              <p class="role">전장 SW 설계팀 / 연구원</p>
-              <p>
-                Steering Wheel Column Module, Power Seat Unit, 통합제어기 선행과제 개발을 진행했습니다.
-                AUTOSAR 기반 구조 설계, 모터 제어 SW 개발, 진단과 통신 검증, 기능 안전 문서 작업을 함께 다뤘습니다.
-              </p>
-              <dl class="scope-list">
-                <div>
-                  <dt>진행 프로젝트</dt>
-                  <dd>
-                    <ul>
-                      <li>Steering Wheel Column Module Control Platform 1.0: GL3, JK 등 차종 SCM 개발</li>
-                      <li>Steering Wheel Column Module Control Platform 2.0: JW, RS4 차종 SCM 개발</li>
-                      <li>Power Seat Unit Control Platform 2.0: JW PE, CE 차종 PSU 디버깅, 기능 구현, ASIL-A 기능 안전 문서 작성</li>
-                      <li>통합제어기 선행과제: 시트, 램프, 카메라 상태 모니터링 및 명령 제어 과제</li>
-                    </ul>
-                  </dd>
-                </div>
-                <div>
-                  <dt>직접 범위</dt>
-                  <dd>기능 구현, 제어 로직 문서화, 진단과 통신 검증, 기능 안전 대응, 결과물 정리</dd>
-                </div>
-                <div>
-                  <dt>핵심 역할</dt>
-                  <dd>모터와 바디 제어 로직 구현, AUTOSAR 구조 안의 실동작 검증, 시뮬레이션과 디버깅 결과 연결</dd>
-                </div>
-                <div>
-                  <dt>진행 흐름</dt>
-                  <dd>기능 구현, 진단 확인, 검증 문서, 안전 문서를 분리하지 않고 실제 개발 흐름 안에서 함께 관리했습니다.</dd>
-                </div>
-              </dl>
-            </div>
-          </article>
-
-          <article class="career-record">
-            <div class="career-copy">
-              <div class="career-meta">
-                <span>회사</span>
-                <time>2022.03 - 2023.06</time>
-              </div>
-              <h3>동아전기부품</h3>
-              <p class="role">회로2팀 소프트웨어 담당 / 사원</p>
-              <p>
-                한온 냉매 밸브 액추에이터와 PT 센서 액추에이터 개발을 담당했습니다.
-                MCU 변경에 따른 프로그램 재설계, 공정 매칭, 고객 요구 사양 협의와 양산 대응을 함께 경험했습니다.
-              </p>
-              <dl class="scope-list">
-                <div>
-                  <dt>진행 프로젝트</dt>
-                  <dd>
-                    <ul>
-                      <li>한온 냉매 밸브 액추에이터 1세대: 반도체 공급 이슈에 따른 대체 제품 개발 및 공정 매칭</li>
-                      <li>한온 냉매 밸브 액추에이터 2세대: MCU 공급 이슈 대응을 위한 MCU 변경, 프로그램 재설계, 공정 매칭</li>
-                      <li>PT 센서 액추에이터: 온도와 압력 조건에 맞춰 니들 밸브 위치를 제어하는 선행 제품 개발</li>
-                    </ul>
-                  </dd>
-                </div>
-                <div>
-                  <dt>직접 범위</dt>
-                  <dd>펌웨어 분석과 디버깅, MCU 변경 대응, 프로그램 재설계, 공정 매칭, 고객 요구 사양 협의</dd>
-                </div>
-                <div>
-                  <dt>핵심 역할</dt>
-                  <dd>PMSM, BLDC, DC 모터 제어 로직을 실제 액추에이터 제품 코드와 연결하고 양산 대응까지 이어갔습니다.</dd>
-                </div>
-                <div>
-                  <dt>진행 흐름</dt>
-                  <dd>제어 이론 검토, Motor Driver SW 분석, 인버터 제어 디버깅, 공정 반영까지 한 흐름으로 묶어 대응했습니다.</dd>
-                </div>
-              </dl>
-            </div>
-          </article>
-        </section>
       </section>
 
       <section
-        id="panel-projects"
-        class="panel"
-        data-panel="projects"
-        role="tabpanel"
-        aria-labelledby="tab-projects"
-        hidden
+        id="projects"
+        class="section-shell"
+        aria-labelledby="projects-title"
       >
-        <div class="section-head project-head">
-          <p class="section-number">03</p>
-          <div>
-            <p class="eyebrow">개인프로젝트</p>
-            <h2>개인프로젝트</h2>
+        <div class="container">
+          <div class="section-intro projects-intro">
+            <h2 id="projects-title" class="eyebrow">Project</h2>
           </div>
-        </div>
 
-        <section class="project-lab" aria-label="개인 프로젝트">
-          <aside class="project-index" aria-label="프로젝트 목록" role="tablist">
-            <p class="index-label">Projects</p>
+          <div class="project-tabs" role="tablist" aria-label="프로젝트 분류">
             <button
-              id="project-tab-market-search"
-              class="project-button is-active"
+              id="project-tab-all"
+              class="project-tab is-active"
               type="button"
               role="tab"
-              data-project="market-search"
-              aria-controls="project-panel-market-search"
               aria-selected="true"
+              aria-controls="project-panel"
+              data-project-filter="all"
             >
-              <span>01</span>
-              K Stock
+              전체
             </button>
             <button
-              id="project-tab-train-gallery"
-              class="project-button"
+              id="project-tab-product"
+              class="project-tab"
               type="button"
               role="tab"
-              data-project="train-gallery"
-              aria-controls="project-panel-train-gallery"
               aria-selected="false"
+              aria-controls="project-panel"
+              data-project-filter="product"
             >
-              <span>02</span>
-              Train Gallery
+              제품·서비스
             </button>
             <button
-              id="project-tab-stock"
-              class="project-button"
+              id="project-tab-tool"
+              class="project-tab"
               type="button"
               role="tab"
-              data-project="stock"
-              aria-controls="project-panel-stock"
               aria-selected="false"
+              aria-controls="project-panel"
+              data-project-filter="tool"
             >
-              <span>03</span>
-              Auto Tarding
+              개발 도구
             </button>
             <button
-              id="project-tab-codex"
-              class="project-button"
+              id="project-tab-automation"
+              class="project-tab"
               type="button"
               role="tab"
-              data-project="codex"
-              aria-controls="project-panel-codex"
               aria-selected="false"
+              aria-controls="project-panel"
+              data-project-filter="automation"
             >
-              <span>04</span>
-              Codex Team
+              자동화
             </button>
-            <button
-              id="project-tab-mcu"
-              class="project-button"
-              type="button"
-              role="tab"
-              data-project="mcu"
-              aria-controls="project-panel-mcu"
-              aria-selected="false"
-            >
-              <span>05</span>
-              Virtual MCU Education
-            </button>
-            <button
-              id="project-tab-jira"
-              class="project-button"
-              type="button"
-              role="tab"
-              data-project="jira"
-              aria-controls="project-panel-jira"
-              aria-selected="false"
-            >
-              <span>06</span>
-              Jira Mini
-            </button>
-            <button
-              id="project-tab-daily"
-              class="project-button"
-              type="button"
-              role="tab"
-              data-project="daily"
-              aria-controls="project-panel-daily"
-              aria-selected="false"
-            >
-              <span>07</span>
-              일상 생활 자동화 에이전트
-            </button>
-            <button
-              id="project-tab-market"
-              class="project-button"
-              type="button"
-              role="tab"
-              data-project="market"
-              aria-controls="project-panel-market"
-              aria-selected="false"
-            >
-              <span>08</span>
-              중고 매물 수집 에이전트
-            </button>
-          </aside>
+          </div>
 
-          <div class="project-stage">
-            <article
-              id="project-panel-market-search"
-              class="project-detail is-active"
-              data-project="market-search"
-              role="tabpanel"
-              aria-labelledby="project-tab-market-search"
-            >
-              <div class="project-copy">
-                <p class="project-kicker">주식 분석 사이트</p>
-                <h3>K STOCK</h3>
+          <div
+            id="project-panel"
+            class="project-card-grid"
+            role="tabpanel"
+            aria-labelledby="project-tab-all"
+            aria-live="polite"
+          >
+            <article class="project-card" data-project-category="product">
+              <a
+                class="project-card-media"
+                href="./projects/k-stock.html"
+                aria-label="K Stock 상세 보기"
+              >
+                <img
+                  src="./assets/market_search_detail_latest.png"
+                  width="1200"
+                  height="760"
+                  alt="K Stock 종목 상세 차트 화면"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project-card-body">
+                <p class="project-card-meta">01 · PRODUCT · LIVE</p>
+                <h3>K Stock</h3>
                 <p>
-                  종목 검색, 점수 비교, 산업군 흐름을 제공하는 주식 분석 사이트입니다.
+                  종목 검색, 점수 비교, 산업군 흐름을 한 화면에서 확인하는 읽기
+                  전용 서비스입니다.
                 </p>
-              </div>
-              <div class="project-summary-box" aria-label="K Stock 사용자 설명">
-                <p>사용자 입장에서는 이런 서비스입니다.</p>
-                <ul class="project-summary-list">
-                  <li>종목명만 알아도 테마, 산업군, 필터를 따라가며 후보를 빠르게 좁힐 수 있습니다.</li>
-                  <li>검색 결과와 상세 차트를 같은 흐름에서 확인해 비교 기준을 바로 이어서 볼 수 있습니다.</li>
-                  <li>설치 없이 접속해 참고할 수 있는 읽기 전용 공개 사이트입니다.</li>
-                </ul>
-              </div>
-              <p class="project-note-band">검색어, 테마, 산업군, 필터값이 여러 단계로 흩어지면 어떤 종목을 어떻게 좁혀야 하는지 처음 보는 사람은 바로 판단하기 어려웠습니다.</p>
-              <div class="project-stack-line" aria-label="시장결 종목검색 배포 링크">
-                <strong>사이트</strong>
-                <span><a href="https://kstockclock.com/" target="_blank" rel="noreferrer">kstockclock.com</a></span>
-              </div>
-              <div class="project-stack-line" aria-label="시장결 종목검색 기술스택과 구성">
-                <strong>기능</strong>
-                <span>종목 검색, 테마·산업군 필터, 상세 차트</span>
-              </div>
-              <p class="project-gallery-title">화면</p>
-              <div class="project-screens" aria-label="시장결 종목검색 화면 예시">
-                <figure>
-                  <img src="./assets/market_search_home_latest.png" alt="시장결 종목검색 메인 검색 화면" />
-                  <figcaption>메인 검색 화면에서 종목 검색창, 테마와 산업군 빠른 탐색, 필터 공간을 위에서 아래로 바로 이해할 수 있게 정리했습니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/market_search_results_latest.png" alt="시장결 종목검색 반도체 결과 화면" />
-                  <figcaption>테마를 선택하면 검색 제안, 적용된 필터, 종목 비교 표가 함께 보여서 결과를 좁혀가는 흐름이 한 번에 이어집니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/market_search_detail_latest.png" alt="시장결 종목검색 종목 상세 화면" />
-                  <figcaption>종목 상세에서는 120일 차트, 이동평균선, 박스 상하단, 필터 근거를 같이 보여줘서 공개 검색 사이트에서도 비교 기준을 설명할 수 있게 했습니다.</figcaption>
-                </figure>
+                <div class="project-card-actions">
+                  <a
+                    href="https://kstockclock.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live site ↗</a
+                  ><a href="./projects/k-stock.html">Detail →</a>
+                </div>
               </div>
             </article>
 
-            <article
-              id="project-panel-mcu"
-              class="project-detail"
-              data-project="mcu"
-              role="tabpanel"
-              aria-labelledby="project-tab-mcu"
-              hidden
-            >
-              <div class="project-copy">
-                <p class="project-kicker">웹 기반 MCU 가상화 학습 환경</p>
-                <h3>VIRTUAL MCU EDUCATION</h3>
+            <article class="project-card" data-project-category="product">
+              <a
+                class="project-card-media"
+                href="./projects/virtual-mcu.html"
+                aria-label="Virtual MCU Training Environment 상세 보기"
+              >
+                <img
+                  src="./assets/virtual_mcu_editor.png"
+                  width="1200"
+                  height="760"
+                  alt="Virtual MCU 코드 편집기와 실행 결과 화면"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project-card-body">
+                <p class="project-card-meta">02 · PRODUCT · LIVE</p>
+                <h3>Virtual MCU Training Environment</h3>
                 <p>
-                  브라우저에서 C 코드를 실행하고 GPIO, register, graph, log 변화를 함께 보는 학습용 MCU 시뮬레이터입니다.
+                  브라우저에서 C 코드 실행과 GPIO·register·graph·log 변화를
+                  연결해 보는 학습 도구입니다.
                 </p>
-              </div>
-              <div class="project-summary-box" aria-label="Virtual MCU Lab 사용자 설명">
-                <p>사용자 입장에서는 하드웨어 없이 MCU 동작을 같이 보며 배우는 학습 도구입니다.</p>
-                <ul class="project-summary-list">
-                  <li>브라우저에서 코드를 바꾸고 바로 실행해 반응 차이를 확인할 수 있습니다.</li>
-                  <li>회로, register, graph, log가 한 화면에 연결되어 보여서 학습 흐름이 끊기지 않습니다.</li>
-                  <li>실습 장비가 없어도 동작 원리를 단계별로 확인할 수 있게 구성했습니다.</li>
-                </ul>
-              </div>
-              <p class="project-note-band">실제 자동차 개발 아이템을 가상 환경에서 다뤄볼 수 있도록, 데이터시트와 실제 코드 기반으로 디버깅하면서 전압과 동작 반응을 확인하는 가상 교육환경을 만들었습니다.</p>
-              <div class="project-stack-line" aria-label="Virtual MCU Lab 기술스택과 구성">
-                <strong>스택</strong>
-                <span>웹 UI, C 코드 에디터, 가상 MCU 상태 모델, schematic, register, graph, log 표시</span>
-              </div>
-              <p class="project-gallery-title">핵심 기능</p>
-              <section class="project-role-grid" aria-label="Virtual MCU Lab 핵심 기능">
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 1</p>
-                  <h4>코드 작성과 실행</h4>
-                  <p>브라우저 안에서 코드를 바로 바꾸고 실행해 결과를 확인할 수 있습니다. 코드를 바꿨을 때 하드웨어 반응이 어떻게 달라지는지가 바로 이어집니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 2</p>
-                  <h4>회로와 상태 시각화</h4>
-                  <p>schematic, pin 상태, register 값, graph를 따로 보지 않고 한 자리에서 연결해 보이게 했습니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 3</p>
-                  <h4>설명용 학습 루프</h4>
-                  <p>실행 결과를 log로만 끝내지 않고, 왜 이런 반응이 나왔는지 화면 요소별로 다시 읽을 수 있게 만들었습니다.</p>
-                </article>
-              </section>
-              <p class="project-gallery-title">화면</p>
-              <div class="project-screens" aria-label="Virtual MCU Lab 실제 화면">
-                <figure>
-                  <img src="./assets/virtual_mcu_home.png" alt="Virtual MCU Lab의 메인 진입 화면" />
-                  <figcaption>메인 화면에서는 어떤 실습을 시작할지 고르고, 바로 코드 실행 화면으로 넘어가게 구성했습니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/virtual_mcu_editor.png" alt="Virtual MCU Lab의 코드 편집 and 실행 화면" />
-                  <figcaption>코드 편집기와 실행 결과가 붙어 있어, 수정한 코드가 어떤 반응을 만들었는지 바로 확인할 수 있습니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/virtual_mcu_register_deck.png" alt="Virtual MCU Lab register and graph 화면" />
-                  <figcaption>register, pin, graph 화면은 실행 중 바뀌는 값을 추적하면서 하드웨어 반응 원리를 설명하는 데 쓰입니다.</figcaption>
-                </figure>
+                <div class="project-card-actions">
+                  <a
+                    href="https://virtual-mcu-training-env.pages.dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Live demo ↗</a
+                  ><a href="./projects/virtual-mcu.html">Detail →</a>
+                </div>
               </div>
             </article>
 
-            <article
-              id="project-panel-train-gallery"
-              class="project-detail"
-              data-project="train-gallery"
-              role="tabpanel"
-              aria-labelledby="project-tab-train-gallery"
-              hidden
-            >
-              <div class="project-copy">
-                <p class="project-kicker">로컬 퍼스트 운동 영상 기록 앱</p>
-                <h3>TRAIN GALLERY</h3>
+            <article class="project-card" data-project-category="product">
+              <a
+                class="project-card-media"
+                href="./projects/train-gallery.html"
+                aria-label="Train Gallery 상세 보기"
+              >
+                <img
+                  src="./assets/train_gallery_calendar_latest.png"
+                  width="1200"
+                  height="760"
+                  alt="Train Gallery 운동 기록 캘린더 화면"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project-card-body">
+                <p class="project-card-meta">03 · LOCAL-FIRST APP</p>
+                <h3>Train Gallery</h3>
                 <p>
-                  운동 영상을 날짜별로 기록하고 클립·하이라이트 export를 제공하는 앱입니다.
+                  운동 영상을 날짜별로 기록하고 클립과 하이라이트 export까지
+                  이어지는 앱입니다.
                 </p>
-              </div>
-              <div class="project-summary-box" aria-label="Train Gallery 사용자 설명">
-                <p>사용자 입장에서는 운동 영상을 기록하고 다시 꺼내 쓰기 쉽게 만든 앱입니다.</p>
-                <ul class="project-summary-list">
-                  <li>날짜별로 영상을 모아 두어 어떤 날 어떤 운동을 했는지 다시 찾기 쉽습니다.</li>
-                  <li>필요한 구간만 클립으로 잘라 저장하고 하이라이트 결과물까지 바로 만들 수 있습니다.</li>
-                  <li>로컬 중심 구조라 필요한 영상만 골라 관리하고 export 흐름까지 이어갈 수 있습니다.</li>
-                </ul>
-              </div>
-              <p class="project-note-band">
-                운동 기록 앱은 화면만 예쁘게 만드는 일보다 로컬 미디어 접근, 캘린더 정리, 클립 저장, 공유 시트 연결이 끊기지 않는 것이 더 중요했습니다.
-                Android 릴리즈 APK 기준으로 Capture, Calendar, Detail, clip export, day/month/year highlight export까지 로컬 검증 기록을 남겼습니다.
-              </p>
-              <div class="project-stack-line" aria-label="Train Gallery 기술스택과 구성">
-                <strong>스택</strong>
-                <span>Expo SDK 56, React Native, expo-camera, expo-sqlite, expo-media-library, native video export bridge</span>
-              </div>
-              <p class="project-gallery-title">핵심 기능</p>
-              <section class="project-role-grid" aria-label="Train Gallery 핵심 기능">
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 1</p>
-                  <h4>선택형 가져오기와 촬영 기록</h4>
-                  <p>갤러리에서 고른 영상만 가져오고, 앱 안에서 촬영한 영상도 날짜 기준으로 바로 묶어 기록합니다. 원본 전체를 스캔하지 않고 필요한 미디어만 다룹니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 2</p>
-                  <h4>달력 중심 기록 정리</h4>
-                  <p>운동 영상을 날짜 단위로 모으고, 월·연 단위 누적 흐름까지 같은 화면에서 이어서 봅니다. 어떤 날에 무엇이 남았는지 빠르게 다시 찾을 수 있게 만들었습니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 3</p>
-                  <h4>클립, 자막, 하이라이트 export</h4>
-                  <p>선택한 구간을 클립으로 저장하고 자막을 얹은 뒤 공유 시트로 넘길 수 있게 했습니다. 하루 운동, 월별, 연도별 highlight도 앱 안에서 바로 export 흐름으로 연결했습니다.</p>
-                </article>
-              </section>
-              <p class="project-gallery-title">화면</p>
-              <div class="project-screens" aria-label="Train Gallery 실제 화면">
-                <figure>
-                  <img src="./assets/train_gallery_record_latest.png" alt="Train Gallery 촬영 화면" />
-                  <figcaption>기록 시작 화면에서 오늘 운동 카드, 촬영 버튼, 최근 가져온 항목을 한 화면에 묶어 바로 기록 흐름으로 들어가게 구성했습니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/train_gallery_calendar_latest.png" alt="Train Gallery 달력 화면" />
-                  <figcaption>달력 화면에서는 날짜별 기록 수, 썸네일, 이동 흐름을 함께 보여줘서 운동 기록을 목록이 아니라 캘린더 맥락으로 다시 찾을 수 있습니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/train_gallery_detail_latest.png" alt="Train Gallery 상세 편집 화면" />
-                  <figcaption>상세 화면에서 선택 구간, 자막, 하루 브이로그 요약까지 이어서 확인하며 클립과 highlight export를 같은 작업 맥락에서 처리합니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/train_gallery_export_latest.png" alt="Train Gallery 하이라이트 export 화면" />
-                  <figcaption>day highlight export 화면까지 같이 넣어, 기록 정리에서 끝나지 않고 실제 결과물을 꺼내는 흐름도 바로 보이게 했습니다.</figcaption>
-                </figure>
+                <div class="project-card-actions">
+                  <a href="./projects/train-gallery.html">Detail →</a>
+                </div>
               </div>
             </article>
 
-            <article
-              id="project-panel-jira"
-              class="project-detail"
-              data-project="jira"
-              role="tabpanel"
-              aria-labelledby="project-tab-jira"
-              hidden
-            >
-              <div class="project-copy">
-                <p class="project-kicker">Jira 경량 작업공간 / 리뷰 관리</p>
-                <h3>JIRA MINI</h3>
+            <article class="project-card" data-project-category="automation">
+              <a
+                class="project-card-media"
+                href="./projects/auto-trading.html"
+                aria-label="Auto Trading 상세 보기"
+              >
+                <img
+                  src="./assets/kiwom_autotrade_latest.png"
+                  width="1200"
+                  height="760"
+                  alt="Auto Trading 후보 상태와 운영 로그 화면"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project-card-body">
+                <p class="project-card-meta">04 · AUTOMATION · PRIVATE</p>
+                <h3>Auto Trading</h3>
                 <p>
-                  검색, 빠른 수정, 댓글, 첨부 검토를 한 화면에서 처리하는 Jira 보조 도구입니다.
+                  실행 후보, 차단 사유, 보유·체결 흐름을 분리해 검토하는 로컬
+                  운영 워크벤치입니다.
                 </p>
-              </div>
-              <div class="project-summary-box" aria-label="Jira Mini 사용자 설명">
-                <p>사용자 입장에서는 Jira에서 자주 하는 작업만 가볍게 묶어 둔 보조 작업공간입니다.</p>
-                <ul class="project-summary-list">
-                  <li>이슈를 찾고 상태를 확인하는 흐름을 한 화면에서 빠르게 이어갈 수 있습니다.</li>
-                  <li>목록에서 바로 담당자, 상태, 일정 등을 수정해 상세 화면 이동을 줄였습니다.</li>
-                  <li>본문, 댓글, 첨부 확인까지 이어져 리뷰와 관리 작업을 덜 끊기게 만듭니다.</li>
-                </ul>
-              </div>
-              <p class="project-note-band">기존 Jira 화면의 무거운 부분은 덜어내고 필요한 기능만 살려, 프로젝트 이슈 관리와 작업 진행상황 확인을 리뷰어와 사용자 모두 편하게 할 수 있는 앱을 만들었습니다.</p>
-              <div class="project-stack-line" aria-label="Jira Mini 기술스택과 구성">
-                <strong>스택</strong>
-                <span>React UI, Jira 연동, 목록 빠른 수정, 본문 편집기, 댓글/첨부/최근 활동 표시</span>
-              </div>
-              <p class="project-gallery-title">핵심 기능</p>
-              <section class="project-role-grid" aria-label="Jira Mini 핵심 기능">
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 1</p>
-                  <h4>검색과 목록 가시성 강화</h4>
-                  <p>업무명, 담당자, 상태를 기준으로 찾고 상위 업무를 접고 펼치며 여러 하위 작업의 진행 흐름을 한눈에 봅니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 2</p>
-                  <h4>목록에서 바로 수정</h4>
-                  <p>상태, 담당자, 보고자, 일정 같은 관리 필드는 상세 페이지로 이동하지 않고 목록 흐름 안에서 바로 바꿀 수 있습니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 3</p>
-                  <h4>본문 편집과 첨부 검토</h4>
-                  <p>상세 화면에서는 Jira 본문 서식, 표, 차트, 이미지 첨부를 보면서 수정과 검토를 같은 맥락에서 진행합니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 4</p>
-                  <h4>AI 서브태스크 초안</h4>
-                  <p>하위 작업을 추가할 때 AI가 제목, 상세 내용, 완료 기준을 일정한 형식으로 정리해 작업 품질 편차를 줄입니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 5</p>
-                  <h4>댓글 기반 진척 확인</h4>
-                  <p>일반, 진척도, 리뷰 댓글을 나누어 남기고 최근 활동 기록을 기반으로 업데이트 여부를 빠르게 판단합니다.</p>
-                </article>
-              </section>
-              <p class="project-gallery-title">화면</p>
-              <div class="project-screens" aria-label="Jira Mini 실제 화면">
-                <figure>
-                  <img src="./assets/jira_workspace_list_focus.png" alt="Jira Mini의 검색과 하위 작업 목록 화면" />
-                  <figcaption>검색, 상태 필터, 상위 업무 접기/펼치기로 여러 하위 작업을 먼저 좁혀 봅니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/jira_review_workspace.png" alt="Jira Mini의 하위 작업 추가와 목록 관리 화면" />
-                  <figcaption>목록 화면에서 하위 추가 버튼을 바로 눌러 서브태스크 초안 흐름으로 이어가고, 상태와 일정도 같은 자리에서 확인합니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/jira_review_issue_detail.png" alt="Jira Mini의 상세 작업 검토 화면" />
-                  <figcaption>상세 화면에서는 상태, 담당자, 일정, 본문, 첨부, 댓글 영역을 함께 보며 검토 흐름을 이어갑니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/jira_issue_comment_focus.png" alt="Jira Mini의 댓글과 첨부 관리 화면" />
-                  <figcaption>일반, 진척도, 리뷰 댓글과 첨부 기록을 분리해 최근 활동을 빠르게 확인합니다.</figcaption>
-                </figure>
+                <div class="project-card-actions">
+                  <a href="./projects/auto-trading.html">Detail →</a>
+                </div>
               </div>
             </article>
 
-            <article
-              id="project-panel-stock"
-              class="project-detail"
-              data-project="stock"
-              role="tabpanel"
-              aria-labelledby="project-tab-stock"
-              hidden
-            >
-              <div class="project-copy">
-                <p class="project-kicker">로컬 자동매매 운영 워크벤치</p>
-                <h3>AUTO TARDING</h3>
+            <article class="project-card" data-project-category="tool">
+              <a
+                class="project-card-media"
+                href="./projects/codex-team.html"
+                aria-label="Codex Team 상세 보기"
+              >
+                <img
+                  src="./assets/codexteam_activity_latest.png"
+                  width="1200"
+                  height="760"
+                  alt="Codex Team 에이전트 활동 기록 화면"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project-card-body">
+                <p class="project-card-meta">05 · AGENT CONSOLE</p>
+                <h3>Codex Team</h3>
                 <p>
-                  키움 OpenAPI 기반 자동매매 운영 도구입니다. 실행 후보, 차단 사유, 보유·체결 흐름을 분리해 보여줍니다.
+                  요청, 승인, 검토, 근거를 역할별로 나눠 관리하는 로컬 AI 작업
+                  콘솔입니다.
                 </p>
-              </div>
-              <div class="project-summary-box" aria-label="Auto Tarding 사용자 설명">
-                <p>사용자 입장에서는 자동매매를 바로 실행하기보다 현재 상태를 먼저 이해하게 돕는 운영 도구입니다.</p>
-                <ul class="project-summary-list">
-                  <li>실행 후보가 왜 대기인지, 왜 차단됐는지 한 화면에서 바로 확인할 수 있습니다.</li>
-                  <li>보유 종목과 최근 체결 내역을 함께 보여줘 운영 판단 흐름을 끊지 않습니다.</li>
-                  <li>추천 화면과 실제 실행 판단을 분리해 로컬에서 신중하게 검토하도록 구성했습니다.</li>
-                </ul>
-              </div>
-              <p class="project-note-band">후보 탐색 정보와 실주문 조건이 한 화면에서 섞이면 왜 대기인지, 왜 차단됐는지, 지금 무엇을 눌러도 되는지 바로 읽기 어려웠습니다.</p>
-              <div class="project-stack-line" aria-label="주식 분석기 기술스택과 구성">
-                <strong>스택</strong>
-                <span>Kiwoom OpenAPI, PyQt desktop UI, candidate snapshot, readiness gate, position state, order log</span>
-              </div>
-              <p class="project-gallery-title">핵심 기능</p>
-              <section class="project-role-grid" aria-label="주식 분석기 세부 기능">
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 1</p>
-                  <h4>실행 후보 상태 보드</h4>
-                  <p>signal, setup, execution, CTX, preclose 상태를 한 표에 모아 자동매매 후보를 넓게 보는 화면이 아니라 실행 전 검토 보드처럼 읽히게 했습니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 2</p>
-                  <h4>차단 사유와 readiness 게이트</h4>
-                  <p>unsupported setup, execution status blocked, context 약화 같은 이유를 block memo로 남겨서 분석 결과가 바로 주문 버튼으로 이어지지 않게 분리했습니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">기능 3</p>
-                  <h4>보유·체결·운영 로그</h4>
-                  <p>보유 포지션, 최근 체결, 운영 로그를 같은 탭 안에 두어 현재 상태 확인과 사후 복기를 한 화면에서 이어갈 수 있게 구성했습니다.</p>
-                </article>
-              </section>
-              <p class="project-gallery-title">화면</p>
-              <div class="project-screens project-screens--single" aria-label="KIWOM 로컬 자동매매 운영 화면">
-                <figure>
-                  <img src="./assets/kiwom_autotrade_latest.png" alt="KIWOM 로컬 데스크톱 자동매매 운영 화면" />
-                  <figcaption>로컬 KIWOM 자동매매 화면은 후보 상태, execution, CTX, block memo, 보유 포지션, 최근 체결 로그를 한 화면에 묶어 운영 판단과 주문 실행을 분리합니다.</figcaption>
-                </figure>
+                <div class="project-card-actions">
+                  <a href="./projects/codex-team.html">Detail →</a>
+                </div>
               </div>
             </article>
 
-            <article
-              id="project-panel-codex"
-              class="project-detail"
-              data-project="codex"
-              role="tabpanel"
-              aria-labelledby="project-tab-codex"
-              hidden
-            >
-              <div class="project-copy">
-                <p class="project-kicker">로컬 에이전트 운영 콘솔</p>
-                <h3>CODEX TEAM</h3>
+            <article class="project-card" data-project-category="tool">
+              <a
+                class="project-card-media"
+                href="./projects/jira-mini.html"
+                aria-label="Jira Mini 상세 보기"
+              >
+                <img
+                  src="./assets/jira_review_workspace.png"
+                  width="1200"
+                  height="760"
+                  alt="Jira Mini 이슈 목록과 리뷰 작업공간 화면"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project-card-body">
+                <p class="project-card-meta">06 · REVIEW WORKSPACE</p>
+                <h3>Jira Mini</h3>
                 <p>
-                  요청, 승인, 검토, 근거를 한 화면에서 관리하는 로컬 AI 작업 콘솔입니다.
+                  검색, 빠른 수정, 본문·댓글·첨부 검토를 한 화면에서 처리하는
+                  경량 작업공간입니다.
                 </p>
-              </div>
-              <div class="project-summary-box" aria-label="Codex Team 사용자 설명">
-                <p>사용자 입장에서는 여러 AI 작업을 배분하고 확인하는 운영 콘솔입니다.</p>
-                <ul class="project-summary-list">
-                  <li>누가 어떤 작업을 맡았는지와 지금 막힌 지점을 한 자리에서 파악할 수 있습니다.</li>
-                  <li>승인, 인수인계, 검토 흔적이 남아 중간에 다시 들어와도 흐름을 잃지 않습니다.</li>
-                  <li>사람 판단과 AI 실행을 분리해 로컬 작업을 더 안정적으로 관리하게 돕습니다.</li>
-                </ul>
-              </div>
-              <p class="project-note-band">AI 작업이 여러 갈래로 흩어지면 지금 무엇이 막혔는지, 누가 확인해야 하는지, 언제 사람이 개입해야 하는지 다시 찾기 어려웠습니다.</p>
-              <div class="project-stack-line" aria-label="Codex Team 기술스택과 구성">
-                <strong>스택</strong>
-                <span>Codex thread 운영, 역할 보드, issue/discussion/decision 흐름, approval, evidence 기록</span>
-              </div>
-              <p class="project-gallery-title">역할 구조</p>
-              <section class="project-role-grid" aria-label="Codex Team 역할 구조">
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">역할 1</p>
-                  <h4>Operator</h4>
-                  <p>전체 구현보다 개입 시점과 위험을 봅니다. 언제 승인하고 언제 보류할지, 어떤 검토가 먼저인지 판단하는 자리입니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">역할 2</p>
-                  <h4>Chief</h4>
-                  <p>요청을 해석하고 팀을 나눕니다. issue, meeting, staffing, escalation이 생기면 누가 이어받을지와 어떤 후속 조치가 필요한지 결정합니다.</p>
-                </article>
-                <article class="project-role-card">
-                  <p class="project-breakdown-label">역할 3</p>
-                  <h4>Specialists / Review</h4>
-                  <p>planner, implementer, tester, reviewer가 좁은 역할로 나뉘어 일하고 결과는 approval과 evidence까지 남겨 재진입 가능한 기록으로 바뀝니다.</p>
-                </article>
-              </section>
-              <p class="project-gallery-title">화면</p>
-              <div class="project-screens" aria-label="Codex Team 화면 예시">
-                <figure>
-                  <img src="./assets/codexteam_organization_latest.png" alt="Codex Team 최신 organization 화면" />
-                  <figcaption>조직 설계 탭에서 chief, tester, reviewer 같은 역할을 어떻게 배치했는지와 부족한 역할이 무엇인지 바로 읽을 수 있습니다.</figcaption>
-                </figure>
-                <figure>
-                  <img src="./assets/codexteam_activity_latest.png" alt="Codex Team 최신 activity 화면" />
-                  <figcaption>활동 기록 탭에서는 에이전트 추가, 인수인계, escalation, review 흔적이 시간순으로 이어져 사람과 AI가 어떻게 소통했는지 보입니다.</figcaption>
-                </figure>
+                <div class="project-card-actions">
+                  <a href="./projects/jira-mini.html">Detail →</a>
+                </div>
               </div>
             </article>
 
-            <article
-              id="project-panel-daily"
-              class="project-detail"
-              data-project="daily"
-              role="tabpanel"
-              aria-labelledby="project-tab-daily"
-              hidden
-            >
-              <div class="project-copy">
-                <p class="project-kicker">일상 생활 자동화 흐름</p>
+            <article class="project-card" data-project-category="automation">
+              <a
+                class="project-card-media"
+                href="./projects/daily-automation.html"
+                aria-label="일상 생활 자동화 에이전트 상세 보기"
+              >
+                <img
+                  src="./assets/discord_agent_panel.png"
+                  width="1200"
+                  height="760"
+                  alt="Discord Agent 요청과 실행 상태 화면"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project-card-body">
+                <p class="project-card-meta">07 · DAILY AUTOMATION</p>
                 <h3>일상 생활 자동화 에이전트</h3>
                 <p>
-                  프로젝트 진행과 학습 과정에서 반복되는 실행, 검색, 정리, 리뷰를 Agent 흐름으로 나눈 기록입니다.
+                  실행, 검색, 정리, 리뷰를 역할별 Agent 흐름으로 나눠 다시 쓰기
+                  쉽게 만든 프로젝트입니다.
                 </p>
+                <div class="project-card-actions">
+                  <a href="./projects/daily-automation.html">Detail →</a>
+                </div>
               </div>
-              <div class="project-summary-box" aria-label="일상 생활 자동화 에이전트 설명">
-                <p>사용자 입장에서는 반복 작업을 역할별로 나눠 다시 쓰기 쉽게 만든 묶음입니다.</p>
-                <ul class="project-summary-list">
-                  <li>Discord Agent로 외부 요청과 결과 확인을 같은 채널에서 이어갈 수 있습니다.</li>
-                  <li>Git Researcher로 GitHub 조사 후보를 좁히고 관련 저장소를 정리합니다.</li>
-                  <li>논문 에이전트로 요약과 지식 축적 흐름을 이어가며 다시 검색 비용을 줄입니다.</li>
-                  <li>Review Agent로 lint, 의존성, dead code 점검을 한 번에 확인합니다.</li>
-                </ul>
-              </div>
-              <p class="project-gallery-title">일상 생활 자동화 에이전트</p>
-              <section class="project-feature-grid project-feature-grid--agents" aria-label="일상 생활 자동화 에이전트">
-                <article class="project-feature-card">
-                  <p class="project-breakdown-label">01</p>
-                  <h4>Discord Agent</h4>
-                  <p>외부에서도 Discord 메시지로 Codex 작업을 요청하고, 실제 실행은 로컬 Codex 서버가 처리하도록 만든 원격 작업 도구입니다.</p>
-                  <dl class="project-mini-ledger">
-                    <div>
-                      <dt>구성</dt>
-                      <dd>Discord 입력 채널, 로컬 Codex 서버, 프로젝트 연결, thread 재개, 첨부 저장, 실행 상태 추적</dd>
-                    </div>
-                    <div>
-                      <dt>편한 점</dt>
-                      <dd>PC 앞에 있지 않아도 작업 요청, 첨부 전달, 결과 확인을 같은 채널에서 이어갈 수 있습니다.</dd>
-                    </div>
-                    <div>
-                      <dt>차이점</dt>
-                      <dd>Discord는 입력과 승인 창만 맡고, 프로젝트 연결, thread 재개, 파일 저장, 실행 상태 추적은 로컬 서버가 관리합니다.</dd>
-                    </div>
-                  </dl>
-                </article>
-                <article class="project-feature-card">
-                  <p class="project-breakdown-label">02</p>
-                  <h4>Git Researcher</h4>
-                  <p>GitHub에서 AI agent, MCP, harness 관련 프로젝트를 찾을 때 관련도 높은 저장소만 남기도록 만든 조사 도구입니다.</p>
-                  <dl class="project-mini-ledger">
-                    <div>
-                      <dt>구성</dt>
-                      <dd>GitHub Search API, README 원문 분석, 저장소 메타데이터, 제외 규칙, 키워드 라벨, 후보 기록</dd>
-                    </div>
-                    <div>
-                      <dt>편한 점</dt>
-                      <dd>그냥 Codex에게 검색을 맡기는 것보다 검색 조건, 제외 규칙, README 근거, 저장소 메타데이터가 남아 결과를 다시 검토하기 쉽습니다.</dd>
-                    </div>
-                    <div>
-                      <dt>차이점</dt>
-                      <dd>`fork:false`, star 기준, 최근 업데이트, 반복 제외, README 키워드 라벨을 같이 적용해 유명하지만 무관한 repo와 오래된 후보를 줄입니다.</dd>
-                    </div>
-                  </dl>
-                </article>
-                <article class="project-feature-card">
-                  <p class="project-breakdown-label">03</p>
-                  <h4>논문 에이전트</h4>
-                  <p>논문을 한 번 묻고 끝내지 않고, 핵심 주장, 근거, 관련 개념, 다음 질문을 지식 저장소에 쌓아 다시 쓰게 만든 연구 보조 도구입니다.</p>
-                  <dl class="project-mini-ledger">
-                    <div>
-                      <dt>구성</dt>
-                      <dd>PDF 요약, paper distill, openkb 지식 저장소, 개념 노트, 압축 근거, validator</dd>
-                    </div>
-                    <div>
-                      <dt>편한 점</dt>
-                      <dd>논문마다 다시 처음부터 설명을 요청하지 않아도, 이전에 읽은 요약과 근거 노트를 바탕으로 다음 논문 비교와 초안 작성이 이어집니다.</dd>
-                    </div>
-                    <div>
-                      <dt>차이점</dt>
-                      <dd>PDF 요약만 하는 것이 아니라 검색 세션, 개념 노트, 압축 근거, 챕터 상태를 나누어 저장하고 validator로 누락을 확인합니다.</dd>
-                    </div>
-                  </dl>
-                </article>
-                <article class="project-feature-card">
-                  <p class="project-breakdown-label">04</p>
-                  <h4>Review Agent</h4>
-                  <p>AI로 만든 Python 프로그램의 코드 품질을 올리기 위해 lint, 의존성, dead code를 한 번에 검사하는 리뷰 에이전트입니다.</p>
-                  <dl class="project-mini-ledger">
-                    <div>
-                      <dt>구성</dt>
-                      <dd>Ruff lint, deptry 의존성 검사, vulture dead code 탐지, 중복 경고 필터, 콘솔/JSON 리포트</dd>
-                    </div>
-                    <div>
-                      <dt>무엇을 봄</dt>
-                      <dd>Ruff로 문법과 스타일 문제를 잡고, deptry로 빠진 의존성이나 안 쓰는 패키지를 찾고, vulture로 실행되지 않는 죽은 코드를 표시합니다.</dd>
-                    </div>
-                    <div>
-                      <dt>차이점</dt>
-                      <dd>여러 도구 결과를 한 리포트로 묶고, Ruff와 겹치는 vulture 경고는 숨겨 사람이 실제로 고칠 문제에 집중하게 합니다.</dd>
-                    </div>
-                  </dl>
-                </article>
-              </section>
             </article>
 
-            <article
-              id="project-panel-market"
-              class="project-detail"
-              data-project="market"
-              role="tabpanel"
-              aria-labelledby="project-tab-market"
-              hidden
-            >
-              <div class="project-copy">
-                <p class="project-kicker">중고 매물 가격 감시 / 리포트 자동화</p>
+            <article class="project-card" data-project-category="automation">
+              <a
+                class="project-card-media"
+                href="./projects/used-market-agent.html"
+                aria-label="중고 매물 수집 에이전트 상세 보기"
+              >
+                <img
+                  src="./assets/used_market_radar_overview.png"
+                  width="1200"
+                  height="760"
+                  alt="중고 매물 가격 감시 리포트 화면"
+                  loading="lazy"
+                />
+              </a>
+              <div class="project-card-body">
+                <p class="project-card-meta">08 · MARKET AUTOMATION</p>
                 <h3>중고 매물 수집 에이전트</h3>
                 <p>
-                  중고 부품 매물을 모아 가격 기준과 후보 판단을 리포트로 남기는 도구입니다.
+                  중고 부품 매물을 수집해 가격 기준과 낮은 가격 후보를 리포트로
+                  남기는 도구입니다.
                 </p>
-              </div>
-              <div class="project-summary-box" aria-label="중고 매물 수집 에이전트 사용자 설명">
-                <p>사용자 입장에서는 매물을 계속 직접 검색하지 않아도 가격 기준을 먼저 정리해 주는 도구입니다.</p>
-                <ul class="project-summary-list">
-                  <li>새 매물과 평균가보다 낮은 후보를 먼저 확인할 수 있습니다.</li>
-                  <li>가격, 설명, 링크를 같이 정리해 다시 비교할 때 검색을 반복하지 않아도 됩니다.</li>
-                  <li>키워드 검색 결과를 그대로 두지 않고 리포트 형태로 묶어 판단 흐름을 남깁니다.</li>
-                </ul>
-              </div>
-              <p class="project-note-band">중고 부품은 좋은 매물이 짧게 지나가고 가격 기준도 매번 흔들리기 쉬워, 사람이 계속 검색하지 않아도 새 매물과 낮은 가격 후보를 먼저 확인할 수 있게 만들었습니다.</p>
-              <section class="project-market-highlight" aria-label="중고 매물 수집 에이전트 설명">
-                <div>
-                  <p class="project-breakdown-label">별도 프로젝트</p>
-                  <h4>중고나라 검색기</h4>
-                  <p>중고 사이트를 주기적으로 돌며 부품명, 가격, 본문, 링크를 모으고 평균가 리포트와 낮은 가격 매물 알림 후보를 만드는 가격 감시 도구입니다.</p>
-                  <dl class="project-mini-ledger">
-                    <div>
-                      <dt>구성</dt>
-                      <dd>raw DOM 수집, 키워드 필터, 가격 정규화, 중복 제거, 평균가 리포트, 낮은 가격 후보 알림</dd>
-                    </div>
-                    <div>
-                      <dt>편한 점</dt>
-                      <dd>사람이 매번 검색어를 바꿔가며 확인하지 않아도, 새 매물과 평균가보다 낮은 후보를 먼저 확인할 수 있습니다.</dd>
-                    </div>
-                    <div>
-                      <dt>차이점</dt>
-                      <dd>단순 키워드 검색이 아니라 DOM 원본에서 제목, 가격, 설명을 분리하고 중복과 불명확한 부품명을 필터링해 리포트로 정리합니다.</dd>
-                    </div>
-                  </dl>
+                <div class="project-card-actions">
+                  <a href="./projects/used-market-agent.html">Detail →</a>
                 </div>
-                <figure>
-                  <img src="./assets/used_market_radar_overview.png" alt="중고나라 검색기의 매물 수집과 평균가 비교 화면" />
-                  <figcaption>키워드별 매물을 수집하고 평균가, 기회 후보, 운영 메모를 한 화면에 묶은 예시입니다.</figcaption>
-                </figure>
-              </section>
+              </div>
             </article>
           </div>
-        </section>
+        </div>
       </section>
-
     </main>
-
     <footer class="site-footer">
-      <div class="footer-copy">
+      <div class="container footer-inner">
         <p>김수영 Portfolio</p>
+        <p>
+          <span>© <span id="current-year">2026</span></span
+          ><a
+            href="https://github.com/tndud2505-ops"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub<span class="sr-only"> 새 창</span></a
+          >
+        </p>
       </div>
     </footer>
-
-    <script>
-      (() => {
-        const buttons = Array.from(document.querySelectorAll(".tab-button"));
-        const panels = Array.from(document.querySelectorAll(".panel"));
-        const projectButtons = Array.from(document.querySelectorAll(".project-button"));
-        const projectDetails = Array.from(document.querySelectorAll(".project-detail"));
-        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-        function scrollToPanel(panelName, immediate = false) {
-          if (panelName === "intro") {
-            const hero = document.getElementById("top");
-            if (!hero) return;
-
-            requestAnimationFrame(() => {
-              hero.scrollIntoView({
-                block: "start",
-                behavior: reducedMotion || immediate ? "auto" : "smooth",
-              });
-            });
-            return;
-          }
-
-          const panel = panels.find((item) => item.dataset.panel === panelName);
-          if (!panel) return;
-
-          requestAnimationFrame(() => {
-            panel.scrollIntoView({
-              block: "start",
-              behavior: reducedMotion || immediate ? "auto" : "smooth",
-            });
-          });
-        }
-
-        function activatePanel(panelName) {
-          document.body.dataset.activePanel = panelName;
-
-          buttons.forEach((button) => {
-            const active = button.dataset.panel === panelName;
-            button.classList.toggle("is-active", active);
-            button.setAttribute("aria-selected", String(active));
-            button.setAttribute("tabindex", active ? "0" : "-1");
-          });
-
-          panels.forEach((panel) => {
-            const active = panel.dataset.panel === panelName;
-            panel.classList.toggle("is-active", active);
-            panel.hidden = !active;
-          });
-        }
-
-        function revealProjectButton(button, immediate = false) {
-          const rail = button.closest(".project-index");
-          if (!rail || rail.scrollWidth <= rail.clientWidth) return;
-
-          const padding = 12;
-          const left = button.offsetLeft;
-          const right = left + button.offsetWidth;
-          const visibleLeft = rail.scrollLeft;
-          const visibleRight = visibleLeft + rail.clientWidth;
-          let target = null;
-
-          if (left < visibleLeft + padding) {
-            target = Math.max(0, left - padding);
-          } else if (right > visibleRight - padding) {
-            target = Math.min(rail.scrollWidth - rail.clientWidth, right - rail.clientWidth + padding);
-          }
-
-          if (target !== null) {
-            rail.scrollTo({
-              left: target,
-              behavior: reducedMotion || immediate ? "auto" : "smooth",
-            });
-          }
-        }
-
-        function activateProject(projectName, immediate = false) {
-          projectButtons.forEach((button) => {
-            const active = button.dataset.project === projectName;
-            button.classList.toggle("is-active", active);
-            button.setAttribute("aria-selected", String(active));
-            button.setAttribute("tabindex", active ? "0" : "-1");
-            if (active) requestAnimationFrame(() => revealProjectButton(button, immediate));
-          });
-
-          projectDetails.forEach((detail) => {
-            const active = detail.dataset.project === projectName;
-            detail.classList.toggle("is-active", active);
-            detail.hidden = !active;
-          });
-        }
-
-        buttons.forEach((button) => {
-          button.addEventListener("click", () => {
-            activatePanel(button.dataset.panel);
-            history.replaceState(null, "", `#${button.dataset.panel}`);
-            scrollToPanel(button.dataset.panel);
-          });
-        });
-
-        projectButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            activatePanel("projects");
-            activateProject(button.dataset.project);
-            history.replaceState(null, "", `#project-${button.dataset.project}`);
-            scrollToPanel("projects");
-          });
-        });
-
-        function bindRovingTabs(tabButtons, onActivate) {
-          tabButtons.forEach((button, index) => {
-            button.addEventListener("keydown", (event) => {
-              const forward = event.key === "ArrowRight" || event.key === "ArrowDown";
-              const backward = event.key === "ArrowLeft" || event.key === "ArrowUp";
-              const first = event.key === "Home";
-              const last = event.key === "End";
-
-              if (!forward && !backward && !first && !last) return;
-              event.preventDefault();
-
-              let nextIndex = index;
-              if (forward) nextIndex = (index + 1) % tabButtons.length;
-              if (backward) nextIndex = (index - 1 + tabButtons.length) % tabButtons.length;
-              if (first) nextIndex = 0;
-              if (last) nextIndex = tabButtons.length - 1;
-
-              const nextButton = tabButtons[nextIndex];
-              nextButton.focus();
-              onActivate(nextButton);
-            });
-          });
-        }
-
-        bindRovingTabs(buttons, (button) => {
-          activatePanel(button.dataset.panel);
-          history.replaceState(null, "", `#${button.dataset.panel}`);
-          scrollToPanel(button.dataset.panel);
-        });
-
-        bindRovingTabs(projectButtons, (button) => {
-          activatePanel("projects");
-          activateProject(button.dataset.project);
-          history.replaceState(null, "", `#project-${button.dataset.project}`);
-          scrollToPanel("projects");
-        });
-
-        function applyRoute(options = {}) {
-          const hash = decodeURIComponent(location.hash.replace("#", ""));
-          const shouldScroll = options.scroll ?? Boolean(hash);
-          const immediate = options.immediate ?? false;
-
-          if (hash.startsWith("project-")) {
-            const projectName = hash.replace("project-", "");
-            if (projectButtons.some((button) => button.dataset.project === projectName)) {
-              activatePanel("projects");
-              activateProject(projectName, immediate);
-              if (shouldScroll) scrollToPanel("projects", immediate);
-              return;
-            }
-          }
-
-          if (buttons.some((button) => button.dataset.panel === hash)) {
-            activatePanel(hash);
-            if (shouldScroll) scrollToPanel(hash, immediate);
-            return;
-          }
-
-          activatePanel("projects");
-          activateProject("market-search");
-        }
-
-        window.addEventListener("hashchange", () => applyRoute({ scroll: true }));
-        applyRoute({ scroll: Boolean(location.hash), immediate: true });
-        window.addEventListener("load", () => {
-          if (location.hash) applyRoute({ scroll: true, immediate: true });
-        });
-      })();
-    </script>
   </body>
 </html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>K Stock | 김수영</title>
+    <meta name="description" content="국내 주식의 검색·필터·비교·차트 분석을 하나의 탐색 흐름으로 연결한 K Stock 사례 연구입니다." />
+    <link rel="canonical" href="https://tndud2505-ops.github.io/portfolio/projects/k-stock.html" />
+    <meta property="og:title" content="K Stock | 김수영" />
+    <meta property="og:description" content="검색, 테마·산업군 필터, 후보 비교, 상세 차트를 연결한 읽기 전용 데이터 제품." />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://tndud2505-ops.github.io/portfolio/assets/market_search_detail_latest.png" />
+    <link rel="stylesheet" href="../styles.css?v=20260719e" />
+    <script src="../script.js?v=20260719i" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">본문으로 건너뛰기</a>
+    <header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html#profile" aria-label="김수영 포트폴리오 처음으로"><span class="brand-mark">KSY</span><span class="brand-copy"><strong>김수영</strong><small>Automotive Software Engineer</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">메뉴</button><nav id="site-menu" class="site-nav" aria-label="주요 메뉴"><a href="../index.html#profile">Profile</a><a href="../index.html#experience">Experience</a><a href="../index.html#projects">Projects</a></nav></div></header>
+      <section class="case-hero case-hero--title"><div class="container"><h1>K Stock</h1></div></section>
+      <section class="container case-section"><h2>Overview</h2><div class="case-section-content"><p>검색어, 테마와 산업군 필터, 비교 표, 상세 차트를 한 흐름으로 연결했습니다. 사용자는 설치 없이 접속해 후보를 좁히고 차트와 필터 근거를 확인할 수 있습니다.</p></div></section>
+      <section class="container case-section"><h2>Problem</h2><div class="case-section-content"><p>검색 결과, 테마 탐색, 비교와 상세 분석이 각각 분리되면 어떤 기준으로 후보를 좁혔는지 다시 이어 보기 어렵습니다. 화면마다 다른 판단을 요구하지 않도록 탐색 순서를 정리할 필요가 있었습니다.</p></div></section>
+      <section class="container case-section"><h2>Approach</h2><div class="case-section-content"><p>첫 화면에서 검색과 주제 탐색을 열어 두고, 선택 조건이 결과와 상세 화면에 계속 남도록 구성했습니다. 가격 흐름만 단독으로 보지 않고 거래량과 필터 근거를 함께 확인할 수 있게 해, 후보를 참고·비교하는 과정을 한 방향으로 이어갔습니다.</p><ol><li>종목명 검색 또는 테마·산업군 탐색으로 시작합니다.</li><li>quick filter와 비교 조건으로 후보 범위를 좁힙니다.</li><li>검색 결과와 비교 표에서 같은 기준으로 후보를 확인합니다.</li><li>상세 차트에서 가격 흐름·거래량·필터 근거를 다시 검토합니다.</li></ol><ul class="case-points"><li><strong>검색 우선 구조</strong><span>React 기반 검색 UI와 검색 제안으로 탐색의 첫 단계를 가볍게 열었습니다.</span></li><li><strong>조건 유지</strong><span>테마·산업군·필터 조건이 결과와 상세 화면까지 이어져 판단 기준을 다시 찾기 쉽습니다.</span></li><li><strong>차트 품질 확인</strong><span>가격 변화만 강조하지 않고 거래량 등 보조 지표와 필터 근거를 함께 보여 줍니다.</span></li><li><strong>기술 스택</strong><span>React 기반 화면에 반응형 레이아웃, 비교 표, 상세 차트 화면을 연결했습니다.</span></li></ul></div></section>
+      <section class="container case-section">
+        <h2>Screen evidence</h2>
+        <div class="case-section-content">
+          <p>Approach에서 정리한 탐색 순서가 화면에서 어떻게 이어지는지 검색 시작점부터 비교 결과, 상세 차트 순서로 확인할 수 있습니다.</p>
+          <ol class="case-evidence-steps">
+            <li><strong>01 검색·탐색</strong><span>종목명이나 테마·산업군을 선택해 탐색을 시작하고, 다음 화면에서 이어 볼 기준을 만듭니다.</span></li>
+            <li><strong>02 조건·비교</strong><span>필터와 quick filter를 적용해 후보를 좁힌 뒤, 같은 기준을 유지한 비교 표에서 결과를 확인합니다.</span></li>
+            <li><strong>03 상세 검토</strong><span>상세 차트에서 가격 흐름·거래량·필터 근거를 함께 확인해 앞 단계의 선택을 다시 검토합니다.</span></li>
+          </ol>
+          <div class="case-gallery">
+            <figure><img src="../assets/market_search_home_latest.png" width="800" height="560" alt="K Stock 검색어와 테마·산업군 탐색 화면" loading="lazy" /><figcaption><strong>검색·탐색</strong> 종목명 검색과 테마·산업군 진입점을 한 화면에 두어, 비교할 후보를 찾는 첫 단계를 빠르게 시작합니다.</figcaption></figure>
+            <figure><img src="../assets/market_search_results_latest.png" width="800" height="560" alt="K Stock 필터 조건과 비교 표 화면" loading="lazy" /><figcaption><strong>조건·비교</strong> 선택한 필터와 후보 목록을 함께 보여 주어, 같은 기준으로 결과를 좁히고 비교할 수 있습니다.</figcaption></figure>
+            <figure><img src="../assets/market_search_detail_latest.png" width="1200" height="760" alt="K Stock 가격 흐름과 거래량, 필터 근거를 확인하는 상세 차트 화면" loading="lazy" /><figcaption><strong>상세 검토</strong> 가격 흐름과 거래량, 필터 근거를 한 화면에서 읽어 앞 단계에서 선택한 후보를 참고용으로 다시 확인합니다.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+      <section class="container"><div class="case-cta"><a class="button button-primary" href="https://kstockclock.com/" target="_blank" rel="noopener noreferrer">실제 서비스 열기 <span aria-hidden="true">↗</span><span class="sr-only"> 새 창</span></a><a class="text-link" href="../index.html#projects">대표 프로젝트로 돌아가기 <span aria-hidden="true">→</span></a></div></section>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><p>김수영 Portfolio</p><p><span>© <span id="current-year">2026</span></span><a href="https://github.com/tndud2505-ops" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> 새 창</span></a></p></div></footer>
+  </body>
+</html>

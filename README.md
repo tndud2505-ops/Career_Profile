@@ -1,56 +1,25 @@
-# portfolio_site 안내
+# Portfolio site
 
-## 이 폴더의 역할
+김수영의 공개 포트폴리오 정적 웹사이트입니다. index.html, styles.css, script.js, assets/, projects/만으로 동작하며 React나 번들러를 사용하지 않습니다.
 
-이 폴더는 김수영 포트폴리오의 실제 정적 웹사이트 소스입니다.
+## Local preview
 
-포함 파일:
+    cd C:\DeVelop\Career_Management\_deploy_portfolio
+    python -m http.server 4280
 
-- `index.html`
-- `styles.css`
-- `assets/`
-- `.nojekyll`
-- `run_local_preview.bat`
+브라우저에서 http://127.0.0.1:4280 을 엽니다.
 
-## 바로 확인하는 방법
+## Structure
 
-### 방법 1. 실행 스크립트 사용
+- index.html: Profile(캐릭터 초상과 소개), Experience, Projects(선형 기록 목록), Profile 내 GitHub·email
+- styles.css: light editorial design tokens, responsive layout, accessibility states, divider-led record lists
+- script.js: mobile menu and current section highlighting
+- projects/: Virtual MCU, K Stock, Train Gallery, Auto Trading, Codex Team, Jira Mini, 일상 자동화, 중고 매물 상세 페이지
+- 각 프로젝트 상세 페이지는 프로젝트별 제목을 유지하면서 `Overview` → `Problem` → `Approach` → `Screen evidence` 순서로 구성합니다.
+- assets/: 실제 프로젝트 화면 캡처
 
-같은 폴더의 `run_local_preview.bat` 실행
+외부 원본 프로젝트 사이트는 이 저장소에서 수정하지 않습니다.
 
-### 방법 2. 직접 실행
-
-PowerShell에서:
-
-```powershell
-cd C:\DeVelop\Career_Management\final_portfolio_package\portfolio_site
-python -m http.server 4280
-```
-
-브라우저에서:
-
-```text
-http://127.0.0.1:4280
-```
-
-## 업로드 용도
-
-이 사이트는 정적 파일 기반이라 아래 서비스에 바로 업로드할 수 있습니다.
-
-- GitHub Pages
-- Netlify
-- Vercel 정적 배포
-- Cloudflare Pages
-
-## 현재 구성 의도
-
-- 이 폴더에는 실제 서비스에 필요한 파일만 남깁니다.
-- QA 캡처, 브라우저 프로필, 리뷰 스냅샷, 미사용 자산은 패키지에서 제거했습니다.
-- 추가 원고와 배포 문서는 바깥 `../docs/`와 `../deliverables/`를 기준으로 봅니다.
-
-## 추후 확장 방향
-
-- 프로젝트 상세 페이지 분리
-- 영문 페이지 추가
-- 블로그 글과 상호 링크
-- 연락처/링크드인/깃허브 연결
+- Virtual MCU: https://virtual-mcu-training-env.pages.dev/
+- K Stock: https://kstockclock.com/
+- GitHub: https://github.com/tndud2505-ops
