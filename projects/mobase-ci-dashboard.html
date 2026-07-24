@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MOBASE CI 리포트 대시보드 | 김수영 Portfolio</title>
+    <meta name="description" content="CI 배포 시 생성되는 테스트 결과, 실행 이력, coverage 추이를 한 화면에 정리한 리포트 대시보드입니다." />
+    <link rel="canonical" href="https://tndud2505-ops.github.io/Career_Profile/projects/mobase-ci-dashboard.html" />
+    <link rel="stylesheet" href="../styles.css?v=20260719j" />
+    <script src="../script.js?v=20260719i" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">본문으로 건너뛰기</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html#profile" aria-label="김수영 포트폴리오 처음으로">
+          <span class="brand-mark brand-photo"><img src="../assets/profile-header-thumb.png" width="40" height="40" alt="" /></span><span class="brand-copy"><strong>김수영</strong><small>Automotive Software Engineer</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="sr-only">메뉴</span><span aria-hidden="true">☰</span></button>
+        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴"><a href="../index.html#profile">Profile</a><a href="../index.html#experience">Experience</a><a href="../index.html#projects">Projects</a></nav>
+      </div>
+    </header>
+    <main id="content" class="case-study">
+      <section class="case-hero case-hero--title">
+        <div class="container">
+          <p class="eyebrow">MOBASE ASEC · CI / Test Report</p>
+          <h1>CI 리포트 대시보드</h1>
+        </div>
+      </section>
+      <section class="container case-section">
+        <h2>Overview</h2>
+        <div class="case-section-content">
+          <p>CI 배포 시 생성되는 리포트를 실행 이력, 모듈, 테스트 결과, coverage 추이 단위로 정리해 현재 품질 상태를 한 화면에서 확인하도록 구성했습니다.</p>
+        </div>
+      </section>
+      <section class="container case-section">
+        <h2>Problem</h2>
+        <div class="case-section-content">
+          <p>배포마다 테스트 리포트가 쌓여도 결과 파일이 흩어져 있으면 실패 위치와 coverage 변화를 빠르게 파악하기 어렵습니다. 최근 실행과 모듈별 상태를 같은 기준으로 비교할 화면이 필요했습니다.</p>
+        </div>
+      </section>
+      <section class="container case-section">
+        <h2>Approach</h2>
+        <div class="case-section-content">
+          <p>CI 실행 결과를 배포 단위로 묶고, 테스트 결과와 추이를 같은 탐색 흐름에 배치했습니다.</p>
+          <ol>
+            <li>CI 배포 시 생성된 리포트를 실행 시각과 변경 정보 기준으로 구분합니다.</li>
+            <li>CAN·IO·NVM·MW Manager 등 모듈과 GTest·GUI 결과를 함께 탐색합니다.</li>
+            <li>pass·fail 요약과 개별 테스트 목록을 연결해 실패 위치를 좁힙니다.</li>
+            <li>line·function coverage와 최근 실행 추이를 비교해 품질 변화를 확인합니다.</li>
+          </ol>
+        </div>
+      </section>
+      <section class="container case-section">
+        <h2>Screen evidence</h2>
+        <div class="case-section-content">
+          <p>사용자가 제공한 화면을 바탕으로 공개 가능한 대시보드 구조만 설명합니다. 실제 저장소, 파이프라인 구성과 내부 기준값은 공개하지 않습니다.</p>
+          <div class="case-gallery">
+            <figure>
+              <img src="../assets/mobase_ci_report_dashboard.png" width="1913" height="918" alt="CI 실행 선택, 모듈 목록, GUI 테스트 결과, coverage 추이와 테스트 목록을 한 화면에 보여주는 리포트 대시보드" loading="lazy" />
+              <figcaption>배포 실행 선택 → 모듈 확인 → 테스트 결과와 coverage 추이 비교를 한 화면에서 이어가는 대시보드입니다.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="container">
+        <div class="case-cta"><a class="button button-primary" href="../index.html#experience">Experience로 돌아가기 <span aria-hidden="true">→</span></a><a class="text-link" href="../index.html#projects">Projects로 돌아가기 <span aria-hidden="true">→</span></a></div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><p>김수영 Portfolio</p><p><span>© <span id="current-year">2026</span></span><a href="https://github.com/tndud2505-ops" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> 새 창</span></a></p></div></footer>
+  </body>
+</html>
