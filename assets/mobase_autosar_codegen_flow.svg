@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1280" role="img" aria-labelledby="title desc">
+  <title id="title">AUTOSAR 서비스 패턴 코드 생성 흐름</title>
+  <desc id="desc">ECUD ARXML 파싱, ASW 서비스 후보 유추, 공통 패턴 정규화, C 코드 자동 생성의 네 단계 흐름도</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M2 2 10 6 2 10Z" fill="#376b57" />
+    </marker>
+  </defs>
+  <rect width="900" height="1280" fill="#f4f2ec" />
+  <text x="70" y="82" fill="#1e211d" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="42" font-weight="700">AUTOSAR code-generation flow</text>
+  <text x="70" y="126" fill="#657069" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="24">입력 구조를 서비스 모델과 공통 코드 패턴으로 연결</text>
+
+  <g transform="translate(70 180)">
+    <rect width="760" height="190" fill="#faf9f5" stroke="#b9beb8" stroke-width="2" />
+    <text x="34" y="48" fill="#376b57" font-family="ui-monospace, Consolas, monospace" font-size="20" font-weight="700">01 · PARSE</text>
+    <text x="34" y="94" fill="#1e211d" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="34" font-weight="700">ECUD_*.arxml</text>
+    <text x="34" y="140" fill="#657069" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="25">ECU · ASW · 서비스 참조 관계 읽기</text>
+    <path d="M650 42h52l24 24v82h-76Z" fill="none" stroke="#376b57" stroke-width="4" />
+    <path d="M702 42v24h24" fill="none" stroke="#376b57" stroke-width="4" />
+  </g>
+
+  <path d="M450 384v54" stroke="#376b57" stroke-width="4" marker-end="url(#arrow)" />
+
+  <g transform="translate(70 452)">
+    <rect width="760" height="190" fill="#faf9f5" stroke="#b9beb8" stroke-width="2" />
+    <text x="34" y="48" fill="#376b57" font-family="ui-monospace, Consolas, monospace" font-size="20" font-weight="700">02 · INFER</text>
+    <text x="34" y="94" fill="#1e211d" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="34" font-weight="700">ASW 서비스 코드 후보 유추</text>
+    <text x="34" y="140" fill="#657069" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="25">ASW 구조와 서비스 참조를 비교해 사용 후보 정리</text>
+    <circle cx="675" cy="92" r="44" fill="none" stroke="#376b57" stroke-width="4" />
+    <path d="m706 123 30 30" stroke="#376b57" stroke-width="6" />
+    <path d="M650 82h50M650 101h34" stroke="#376b57" stroke-width="4" />
+  </g>
+
+  <path d="M450 656v54" stroke="#376b57" stroke-width="4" marker-end="url(#arrow)" />
+
+  <g transform="translate(70 724)">
+    <rect width="760" height="238" fill="#faf9f5" stroke="#b9beb8" stroke-width="2" />
+    <text x="34" y="48" fill="#376b57" font-family="ui-monospace, Consolas, monospace" font-size="20" font-weight="700">03 · NORMALIZE</text>
+    <text x="34" y="92" fill="#1e211d" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="34" font-weight="700">공통 패턴 규칙</text>
+    <g font-family="Pretendard, Noto Sans KR, sans-serif" font-size="26" font-weight="600" text-anchor="middle">
+      <rect x="34" y="122" width="164" height="72" fill="#e4ebe6" />
+      <text x="116" y="167" fill="#1e211d">Block</text>
+      <rect x="210" y="122" width="164" height="72" fill="#e4ebe6" />
+      <text x="292" y="167" fill="#1e211d">Message</text>
+      <rect x="386" y="122" width="164" height="72" fill="#e4ebe6" />
+      <text x="468" y="167" fill="#1e211d">Port</text>
+      <rect x="562" y="122" width="164" height="72" fill="#e4ebe6" />
+      <text x="644" y="167" fill="#1e211d">Communication</text>
+    </g>
+  </g>
+
+  <path d="M450 976v54" stroke="#376b57" stroke-width="4" marker-end="url(#arrow)" />
+
+  <g transform="translate(70 1044)">
+    <rect width="760" height="170" fill="#1f2b25" />
+    <text x="34" y="46" fill="#9bc3ad" font-family="ui-monospace, Consolas, monospace" font-size="20" font-weight="700">04 · GENERATE</text>
+    <text x="34" y="92" fill="#ffffff" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="34" font-weight="700">공통 패턴 C 코드 자동 생성</text>
+    <text x="34" y="134" fill="#cad6cf" font-family="ui-monospace, Consolas, monospace" font-size="22">service → port → message → generated code</text>
+  </g>
+  <text x="70" y="1250" fill="#657069" font-family="Pretendard, Noto Sans KR, sans-serif" font-size="20">Public concept diagram · no internal ARXML or source code</text>
+</svg>

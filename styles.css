@@ -836,6 +836,15 @@ h4 {
   color: var(--muted);
   font-size: 0.78rem;
 }
+.case-gallery--diagram {
+  grid-template-columns: minmax(0, 1fr);
+}
+.case-gallery--diagram figure {
+  grid-column: 1 / -1;
+}
+.case-gallery--diagram img {
+  aspect-ratio: auto;
+}
 .case-evidence-steps {
   display: grid;
   gap: 7px;
