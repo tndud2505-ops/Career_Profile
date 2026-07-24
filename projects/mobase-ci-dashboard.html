@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MOBASE 프로젝트 관리 DASH BOARD | 김수영 Portfolio</title>
-    <meta name="description" content="CI 배포 시 생성되는 테스트 결과, 실행 이력, coverage 추이를 한 화면에 정리한 리포트 대시보드입니다." />
+    <meta name="description" content="ASPICE 문서 추적성, Git 브랜치·커밋·태그 연동, CI 결과와 coverage 추이를 한 화면에 정리한 프로젝트 관리 대시보드입니다." />
     <link rel="canonical" href="https://tndud2505-ops.github.io/Career_Profile/projects/mobase-ci-dashboard.html" />
     <link rel="stylesheet" href="../styles.css?v=20260719j" />
     <script src="../script.js?v=20260719i" defer></script>
@@ -30,32 +30,40 @@
       <section class="container case-section">
         <h2>Overview</h2>
         <div class="case-section-content">
-          <p>CI 배포 시 생성되는 리포트를 실행 이력, 모듈, 테스트 결과, coverage 추이 단위로 정리해 현재 품질 상태를 한 화면에서 확인하도록 구성했습니다.</p>
+          <p>ASPICE 문서 단계의 추적성부터 Git 브랜치·커밋·태그, CI 실행 결과와 coverage 추이까지 연결해 프로젝트 상태를 한 화면에서 확인하도록 구성했습니다.</p>
         </div>
       </section>
       <section class="container case-section">
         <h2>Problem</h2>
         <div class="case-section-content">
-          <p>배포마다 테스트 리포트가 쌓여도 결과 파일이 흩어져 있으면 실패 위치와 coverage 변화를 빠르게 파악하기 어렵습니다. 최근 실행과 모듈별 상태를 같은 기준으로 비교할 화면이 필요했습니다.</p>
+          <p>요구사항·설계·테스트 문서, Git 변경 이력, CI 결과가 서로 다른 도구에 흩어지면 변경 영향과 실패 위치를 이어서 확인하기 어렵습니다. 선택한 커밋을 기준으로 추적성과 검증 결과를 함께 보는 화면이 필요했습니다.</p>
         </div>
       </section>
       <section class="container case-section">
         <h2>Approach</h2>
         <div class="case-section-content">
-          <p>CI 실행 결과를 배포 단위로 묶고, 테스트 결과와 추이를 같은 탐색 흐름에 배치했습니다.</p>
+          <p>문서 추적성, Git 변경 이력, CI 결과를 선택한 브랜치와 커밋 기준으로 이어서 탐색하도록 구성했습니다.</p>
           <ol>
-            <li>CI 배포 시 생성된 리포트를 실행 시각과 변경 정보 기준으로 구분합니다.</li>
-            <li>CAN·IO·NVM·MW Manager 등 모듈과 GTest·GUI 결과를 함께 탐색합니다.</li>
-            <li>pass·fail 요약과 개별 테스트 목록을 연결해 실패 위치를 좁힙니다.</li>
-            <li>line·function coverage와 최근 실행 추이를 비교해 품질 변화를 확인합니다.</li>
+            <li>Git 브랜치·모듈·커밋을 선택하고 태그 추가·삭제를 포함한 변경 기준을 관리합니다.</li>
+            <li>ASPICE SWE.1~SWE.6 문서와 요구사항·아키텍처·상세설계·테스트 산출물의 연결 관계를 추적합니다.</li>
+            <li>모듈별 CI 워크플로의 pass·fail·미실행 상태와 실패 단계를 확인합니다.</li>
+            <li>GTest·GUI 결과, 개별 테스트 목록, line·function coverage 추이를 함께 비교합니다.</li>
           </ol>
         </div>
       </section>
       <section class="container case-section">
         <h2>Screen evidence</h2>
         <div class="case-section-content">
-          <p>사용자가 제공한 화면을 바탕으로 공개 가능한 대시보드 구조만 설명합니다. 실제 저장소, 파이프라인 구성과 내부 기준값은 공개하지 않습니다.</p>
-          <div class="case-gallery">
+          <p>사용자가 제공한 화면을 바탕으로 ASPICE 추적성과 Git 연동, CI 배포 시 생성되는 리포트의 공개 가능한 구조만 설명합니다. 실제 저장소, 파이프라인 구성과 내부 기준값은 공개하지 않습니다.</p>
+          <div class="case-gallery case-gallery--diagram">
+            <figure>
+              <img src="../assets/mobase_dashboard_aspice_traceability.png" width="1905" height="894" alt="ASPICE SWE.1 요구사항부터 SWE.6 검증까지 문서와 테스트 항목의 연결 관계를 보여주는 추적성 화면" loading="lazy" />
+              <figcaption>ASPICE 문서 단계 기준 추적성 — 요구사항에서 아키텍처·상세설계·단위 테스트와 후속 검증 항목까지 연결 관계와 변경 영향을 확인합니다.</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/mobase_dashboard_git_ci_integration.png" width="1914" height="904" alt="Git 브랜치와 커밋, 태그 정보, 모듈별 CI 워크플로 결과와 실패 단계를 보여주는 화면" loading="lazy" />
+              <figcaption>Git·CI 연동 — 브랜치·커밋·태그를 기준으로 이력을 선택하고, 태그 추가·삭제와 모듈별 CI 결과·실패 단계를 함께 관리합니다.</figcaption>
+            </figure>
             <figure>
               <img src="../assets/mobase_ci_report_dashboard.png" width="1913" height="918" alt="CI 실행 선택, 모듈 목록, GUI 테스트 결과, coverage 추이와 테스트 목록을 한 화면에 보여주는 리포트 대시보드" loading="lazy" />
               <figcaption>배포 실행 선택 → 모듈 확인 → 테스트 결과와 coverage 추이 비교를 한 화면에서 이어가는 대시보드입니다.</figcaption>
