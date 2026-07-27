@@ -182,4 +182,67 @@
   });
 
   if (projectTabs.length) applyProjectFilter(projectTabs[0]);
+
+  const evidenceImages = [
+    ...document.querySelectorAll(
+      ".case-section--evidence .case-gallery img",
+    ),
+  ];
+
+  if (evidenceImages.length) {
+    const evidenceDialog = document.createElement("dialog");
+    const evidenceShell = document.createElement("div");
+    const evidenceClose = document.createElement("button");
+    const evidenceMedia = document.createElement("img");
+    const evidenceCaption = document.createElement("p");
+
+    evidenceDialog.className = "evidence-lightbox";
+    evidenceDialog.setAttribute("aria-label", "프로젝트 화면 크게 보기");
+    evidenceShell.className = "evidence-lightbox-shell";
+    evidenceClose.className = "evidence-lightbox-close";
+    evidenceClose.type = "button";
+    evidenceClose.textContent = "닫기";
+    evidenceMedia.alt = "";
+
+    evidenceShell.append(evidenceClose, evidenceMedia, evidenceCaption);
+    evidenceDialog.append(evidenceShell);
+    document.body.append(evidenceDialog);
+
+    evidenceImages.forEach((image) => {
+      const trigger = document.createElement("button");
+      const imageLabel = image.getAttribute("alt") || "프로젝트 화면";
+      const figureCaption = image
+        .closest("figure")
+        ?.querySelector("figcaption");
+
+      trigger.className = "evidence-image-trigger";
+      trigger.type = "button";
+      trigger.setAttribute("aria-label", `${imageLabel} 크게 보기`);
+      trigger.title = "원본 크기로 보기";
+      image.parentNode.insertBefore(trigger, image);
+      trigger.append(image);
+
+      trigger.addEventListener("click", () => {
+        if (typeof evidenceDialog.showModal !== "function") {
+          window.open(image.currentSrc || image.src, "_blank", "noopener");
+          return;
+        }
+
+        evidenceMedia.src = image.currentSrc || image.src;
+        evidenceMedia.alt = imageLabel;
+        evidenceCaption.textContent = figureCaption?.textContent.trim() || "";
+        evidenceDialog.showModal();
+      });
+    });
+
+    evidenceClose.addEventListener("click", () => evidenceDialog.close());
+    evidenceDialog.addEventListener("click", (event) => {
+      if (event.target === evidenceDialog) evidenceDialog.close();
+    });
+    evidenceDialog.addEventListener("close", () => {
+      evidenceMedia.removeAttribute("src");
+      evidenceMedia.alt = "";
+      evidenceCaption.textContent = "";
+    });
+  }
 })();
