@@ -31,7 +31,7 @@
       <section class="container case-section">
         <h2>Overview</h2>
         <div class="case-section-content">
-          <p><code>ECUD_*.arxml</code>을 파싱해 ASW가 사용하는 서비스 코드 후보를 유추하고, 블록·메시지·포트·통신 유형별 공통 패턴을 적용해 반복 코드를 자동 생성하는 개발 도구입니다.</p>
+          <p><code>ECUD_*.arxml</code>의 RTE 이름과 설정 정보를 분석해 CAN 수신 타임아웃, NVM 블록 상태 관리, I/O 입력 필터와 RTE 인터페이스 처리 같은 반복 코드를 자동 생성하고 설정 누락·오류를 검출하는 개발 도구입니다.</p>
         </div>
       </section>
       <section class="container case-section">
@@ -47,8 +47,8 @@
           <ol>
             <li><code>ECUD_*.arxml</code>을 파싱해 ECU·ASW·서비스 참조 관계를 읽습니다.</li>
             <li>ASW 구조와 서비스 참조를 비교해 해당 ASW가 사용하는 서비스 코드 후보를 유추합니다.</li>
-            <li>서비스 정보를 블록·메시지·포트·통신 유형 단위로 정규화하고 공통 패턴과 연결합니다.</li>
-            <li>선택된 패턴으로 반복 C 코드를 자동 생성하고 이후 검증 흐름으로 전달합니다.</li>
+            <li>서비스 정보를 블록·메시지·포트·통신 유형 단위로 정규화해 CAN 타임아웃, NVM 상태 관리, I/O 필터와 RTE 처리 패턴에 연결합니다.</li>
+            <li>설정 누락·오류를 검출하고 반복 C 코드를 생성해 이후 검증 흐름으로 전달합니다.</li>
           </ol>
         </div>
       </section>

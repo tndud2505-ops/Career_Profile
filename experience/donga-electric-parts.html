@@ -82,7 +82,7 @@
             </div>
             <div>
               <dt>System</dt>
-              <dd>LIN · MCU · 3상 인버터 · PMSM · 밸브</dd>
+              <dd>LIN · MCU · 3-PWM · Gate Driver · PMSM · 밸브</dd>
             </div>
           </dl>
         </div>
@@ -92,9 +92,9 @@
         <h2>Overview</h2>
         <div class="case-section-content">
           <p>
-            LIN 기반 ASW와 Motor Driver SW를 설계해 MCU의 3상 인버터로
-            PMSM을 구동하고 냉매 밸브 개도·위치 제어 로직을
-            구현·디버깅했습니다.
+            LIN 기반 ASW와 Motor Driver SW를 설계하고, 제품 내부 MCU의
+            3-PWM 출력으로 게이트 드라이버와 3상 인버터를 구동해 냉매 밸브
+            위치 제어 로직을 구현·디버깅했습니다.
           </p>
           <dl class="case-keyword-rows">
             <div>
@@ -113,7 +113,8 @@
                 <ul class="case-keywords">
                   <li>LIN·ASW</li>
                   <li>MCU 주변장치</li>
-                  <li>3상 인버터·FET</li>
+                  <li>3-PWM·Gate Driver</li>
+                  <li>3상 인버터</li>
                   <li>PMSM</li>
                   <li>Motor Driver SW</li>
                   <li>위치 제어</li>
@@ -131,7 +132,7 @@
       <section class="container case-section case-section--evidence">
         <h2>
           <span class="case-section-label">담당 업무</span>
-          MCU / Inverter Control
+          MCU / 3-PWM Control
         </h2>
         <div class="case-section-content">
           <div class="case-gallery case-gallery--diagram">
@@ -140,16 +141,16 @@
                 class="case-figure-note case-figure-note--single"
               >
                 <p>
-                  LIN 목표 위치·방향 명령을 MCU 제어 신호로 변환하고, 게이트
-                  출력과 3상 인버터 스위칭 순서를 구성해 PMSM 구동·위치
-                  제어 로직을 구현·디버깅했습니다.
+                  LIN 목표 위치·방향 명령을 MCU 제어 신호로 변환하고, 3-PWM
+                  기반 Motor Driver SW와 게이트 드라이버 인터페이스를 구성해
+                  PMSM 구동·위치 제어 로직을 구현·디버깅했습니다.
                 </p>
               </figcaption>
               <img
-                src="../assets/experience/donga-mcu-inverter-control-flow.jpg"
+                src="../assets/experience/donga-mcu-inverter-control-flow-v2.jpg"
                 width="1774"
                 height="887"
-                alt="LIN 명령을 처리한 MCU 제어 로직이 게이트 신호를 생성해 6개 스위치의 3상 인버터와 PMSM을 구동하는 간소화된 제어 구조"
+                alt="LIN 명령을 처리한 MCU 제어 로직이 3-PWM으로 통합 게이트 드라이버와 3상 인버터를 거쳐 PMSM을 구동하는 간소화된 제어 구조"
                 loading="lazy"
               />
             </figure>

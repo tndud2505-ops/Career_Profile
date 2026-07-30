@@ -124,7 +124,7 @@
                   <li>HW–SW 디버깅</li>
                   <li>SCM 기술안전 문서 대응 2회</li>
                   <li>PSU ASIL-A 문서 작성 참여</li>
-                  <li>SiL 검증 단기 참여</li>
+                  <li>SCM 모듈 SiL 검증 단기 참여</li>
                 </ul>
               </dd>
             </div>
@@ -168,7 +168,7 @@
                 <strong>01 · REQ → MATLAB/Simulink → MiL</strong>
                 <p>
                   요구 사양을 MATLAB/Simulink에서 동작·상태·조건으로
-                  설계하고 MiL 환경에서 검증했습니다.
+                  설계하고 Test Harness 기반 MiL 환경에서 검증했습니다.
                 </p>
               </figcaption>
               <img
@@ -183,8 +183,8 @@
               <figcaption class="case-figure-note">
                 <strong>02 · MATLAB/Simulink → ARXML</strong>
                 <p>
-                  MATLAB의 AUTOSAR Blockset에서
-                  Port·Runnable·Event·Interface를 매핑해 ARXML을 생성했습니다.
+                  MATLAB의 AUTOSAR Blockset에서 Port·Runnable·Event·Interface를
+                  RTE 흐름에 맞게 매핑해 ARXML을 생성했습니다.
                 </p>
               </figcaption>
               <img
@@ -199,9 +199,9 @@
               <figcaption class="case-figure-note">
                 <strong>03 · ARXML → mobilgene</strong>
                 <p>
-                  ARXML을 mobilgene에 통합·매핑한 뒤 반복 작업을 Python으로
-                  자동화하고, 실제 제어기에서 연계 오류와 HW–SW 이슈를
-                  디버깅했습니다.
+                  ARXML을 mobilgene에 마이그레이션·매핑해 평가하고 반복 연계
+                  작업을 Python으로 자동화했습니다. 실제 제어기에서는 기능,
+                  인터페이스와 HW–SW 이슈를 디버깅했습니다.
                 </p>
               </figcaption>
               <img
