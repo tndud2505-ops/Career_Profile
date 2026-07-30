@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>동아전기부품 냉매 밸브 액추에이터 SW | 김수영 Portfolio</title>
+    <meta
+      name="description"
+      content="LIN 통신 기반 ASW와 Motor Driver SW를 설계하고, MCU에서 3상 인버터와 PMSM을 제어한 동아전기부품 냉매 밸브 액추에이터 경력입니다."
+    />
+    <link
+      rel="canonical"
+      href="https://tndud2505-ops.github.io/Career_Profile/experience/donga-electric-parts.html"
+    />
+    <link
+      rel="icon"
+      href="../assets/profile-header-thumb.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="../styles.css?v=20260730k" />
+    <script src="../script.js?v=20260730a" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">본문으로 건너뛰기</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand"
+          href="../index.html#profile"
+          aria-label="김수영 포트폴리오 처음으로"
+        >
+          <span class="brand-mark brand-photo"
+            ><img
+              src="../assets/profile-header-thumb.png"
+              width="40"
+              height="40"
+              alt=""
+          /></span>
+          <span class="brand-copy"
+            ><strong>김수영</strong
+            ><small>Automotive Software Engineer</small></span
+          >
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-menu"
+        >
+          <span class="sr-only">메뉴</span
+          ><span aria-hidden="true">☰</span>
+        </button>
+        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴">
+          <a href="../index.html#profile">Profile</a>
+          <a href="../index.html#experience">Experience</a>
+          <a href="../index.html#direction">Direction</a>
+          <a href="../index.html#projects">Projects</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" class="case-study case-study--company">
+      <section class="case-hero case-hero--profile">
+        <div class="container case-hero-grid">
+          <div class="case-hero-heading">
+            <p class="case-hero-kicker">경력 사항</p>
+            <h1>동아전기부품</h1>
+            <p class="case-hero-subtitle">냉매 밸브 액추에이터 SW</p>
+          </div>
+          <dl class="case-meta case-meta--hero">
+            <div>
+              <dt>Company</dt>
+              <dd>동아전기부품</dd>
+            </div>
+            <div>
+              <dt>Period</dt>
+              <dd>2022.03–2023.06 · 1년 4개월</dd>
+            </div>
+            <div>
+              <dt>Role</dt>
+              <dd>회로2팀 · 소프트웨어 담당 · 사원 2년차</dd>
+            </div>
+            <div>
+              <dt>System</dt>
+              <dd>LIN · MCU · 3상 인버터 · PMSM · 밸브</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="container case-section">
+        <h2>Overview</h2>
+        <div class="case-section-content">
+          <p>
+            LIN 기반 ASW와 Motor Driver SW를 설계해 MCU의 3상 인버터로
+            PMSM을 구동하고 냉매 밸브 개도·위치 제어 로직을
+            구현·디버깅했습니다.
+          </p>
+          <dl class="case-keyword-rows">
+            <div>
+              <dt>적용 프로젝트</dt>
+              <dd>
+                <ul class="case-keywords">
+                  <li>냉매 밸브 액추에이터 1세대 양산</li>
+                  <li>냉매 밸브 액추에이터 2세대 양산</li>
+                  <li>PT 센서 액추에이터 선행</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt>관련 스킬</dt>
+              <dd>
+                <ul class="case-keywords">
+                  <li>LIN·ASW</li>
+                  <li>MCU 주변장치</li>
+                  <li>3상 인버터·FET</li>
+                  <li>PMSM</li>
+                  <li>Motor Driver SW</li>
+                  <li>위치 제어</li>
+                  <li>MCU 마이그레이션</li>
+                  <li>HW–SW 디버깅</li>
+                  <li>양산 공정 매칭</li>
+                  <li>요구 사양 분석·기술 협의</li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="container case-section case-section--evidence">
+        <h2>
+          <span class="case-section-label">담당 업무</span>
+          MCU / Inverter Control
+        </h2>
+        <div class="case-section-content">
+          <div class="case-gallery case-gallery--diagram">
+            <figure class="case-evidence-figure">
+              <figcaption
+                class="case-figure-note case-figure-note--single"
+              >
+                <p>
+                  LIN 목표 위치·방향 명령을 MCU 제어 신호로 변환하고, 게이트
+                  출력과 3상 인버터 스위칭 순서를 구성해 PMSM 구동·위치
+                  제어 로직을 구현·디버깅했습니다.
+                </p>
+              </figcaption>
+              <img
+                src="../assets/experience/donga-mcu-inverter-control-flow.jpg"
+                width="1774"
+                height="887"
+                alt="LIN 명령을 처리한 MCU 제어 로직이 게이트 신호를 생성해 6개 스위치의 3상 인버터와 PMSM을 구동하는 간소화된 제어 구조"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="container case-section case-section--evidence">
+        <h2>
+          <span class="case-section-label">제품 설명</span>
+          Actuator / Valve
+        </h2>
+        <div class="case-section-content">
+          <div class="case-gallery case-gallery--diagram">
+            <figure class="case-evidence-figure">
+              <figcaption
+                class="case-figure-note case-figure-note--single"
+              >
+                <p>
+                  관 사이에 연결된 액추에이터가 PMSM 회전을 감속 기어와
+                  출력축을 거쳐 밸브 개도로 변환해 냉매 유량을 조절합니다.
+                </p>
+              </figcaption>
+              <img
+                src="../assets/experience/donga-single-flow-valve-actuator-cutaway.jpg"
+                width="1672"
+                height="941"
+                alt="제어 PCB와 PMSM, 감속 기어, 출력축, 회전 밸브가 하나의 대표 냉매 유로를 개폐하는 원리를 보여주는 기구 단면도"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="case-cta">
+          <a class="button button-primary" href="../index.html#experience"
+            >Experience로 돌아가기 <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>김수영 Portfolio</p>
+        <p>
+          <a href="../index.html#profile">Profile</a>
+          <a
+            href="https://github.com/tndud2505-ops"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub<span class="sr-only"> 새 창</span></a
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

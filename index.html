@@ -40,7 +40,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans+KR:wght@400;500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260727a" />
+    <link rel="stylesheet" href="./styles.css?v=20260730k" />
     <script src="./script.js?v=20260727a" defer></script>
   </head>
   <body>
@@ -66,7 +66,7 @@
         </button>
         <nav id="site-menu" class="site-nav is-collapsed" aria-label="주요 메뉴">
           <a href="#profile">Profile</a><a href="#experience">Experience</a
-          ><a href="#projects">Projects</a>
+          ><a href="#direction">Direction</a><a href="#projects">Projects</a>
         </nav>
       </div>
     </header>
@@ -143,7 +143,7 @@
                 <div class="record-heading">
                   <h3>MOBASE ASEC</h3>
                   <p class="record-role">
-                    아키텍처 설계실 · R&amp;D · 책임연구원
+                    아키텍처 설계실 · R&amp;D · 선임연구원
                   </p>
                 </div>
                 <div class="record-groups">
@@ -151,38 +151,37 @@
                     <h4>진행 프로젝트</h4>
                     <ul class="record-bullets">
                       <li>
-                        <a
-                          class="record-evidence-link"
-                          href="./projects/mobase-autosar-codegen.html"
-                          aria-label="MOBASE AUTOSAR 코드 생성 툴 상세 페이지 열기"
-                          >AUTOSAR 코드 생성 툴</a
+                        <strong>AUTOSAR 기반 자동 코드 생성 툴</strong
+                        ><span
+                          >AUTOSAR ARXML에서 RTE·설정 정보를 분석해 반복
+                          패턴 코드를 생성하고 프로토타입 제품에 적용하는 웹
+                          기반 도구 개발</span
                         >
                       </li>
                       <li>
-                        <a
-                          class="record-evidence-link"
-                          href="./projects/mobase-sil.html"
-                          aria-label="MOBASE SILL 검증환경 상세 페이지 열기"
-                          >SILL 검증환경</a
+                        <strong>SiL 검증 환경</strong
+                        ><span
+                          >생성 코드를 불러와 테스트 케이스를 만들고
+                          RTE·메시지·구조체·Runnable 요소를 인스턴스로
+                          구성하는 검증 환경 구성</span
                         >
                       </li>
                       <li>
-                        <a
-                          class="record-evidence-link"
-                          href="./projects/mobase-ci-dashboard.html"
-                          aria-label="MOBASE 프로젝트 관리 DASH BOARD 상세 페이지 열기"
-                          >프로젝트 관리 DASH BOARD</a
+                        <strong>프로젝트 관리 대시보드</strong
+                        ><span
+                          >ASPICE 문서 추적성, Git 이력, CI 결과와 Coverage를
+                          연결한 웹 대시보드 개발</span
                         >
                       </li>
                     </ul>
                   </div>
                   <div class="record-group">
                     <h4>업무 관련 자격사항</h4>
-                    <ul class="record-bullets">
+                    <ol class="record-skills">
                       <li><span>파이썬 기반 툴 개발 능력</span></li>
                       <li>
                         <span
-                          >WSL·GCC 기반 단위·유닛 검증 능력 및 자동 테스트 환경
+                          >WSL·GCC 기반 단위 검증 및 자동 테스트 환경
                           설계·구현 능력</span
                         >
                       </li>
@@ -193,8 +192,16 @@
                           능력</span
                         >
                       </li>
-                    </ul>
+                    </ol>
                   </div>
+                </div>
+                <div class="record-actions">
+                  <a
+                    class="record-evidence-link"
+                    href="./experience/mobase-asec.html"
+                    >AUTOSAR·Tooling 경력 흐름 보기
+                    <span aria-hidden="true">→</span></a
+                  >
                 </div>
               </div>
             </article>
@@ -213,26 +220,28 @@
                     <ul class="record-bullets">
                       <li>
                         <strong
-                          >Steering Wheel Column Module Control (Platform
-                          1.0)</strong
+                          >Steering Wheel Column Module Control · Platform
+                          1.0</strong
                         ><span
-                          >현대 요구 사양에 맞춰 GL3, JK, CV 차종 SCM 개발</span
+                          >복수 차종의 조향 칼럼 위치·메모리·승하차 편의 기능
+                          ASW 개발</span
                         >
                       </li>
                       <li>
                         <strong
-                          >Steering Wheel Column Module Control (Platform
-                          2.0)</strong
+                          >Steering Wheel Column Module Control · Platform
+                          2.0</strong
                         ><span
-                          >현대 요구 사양(Platform 2.0)에 맞춰 JW, RS4 차종 SCM
-                          개발</span
+                          >신규 플랫폼 요구 사양에 맞춘 ASW 설계, 기능 구현과
+                          제어기 디버깅</span
                         >
                       </li>
                       <li>
-                        <strong>Power Seat Unit Control (Platform 2.0)</strong
+                        <strong
+                          >Power Seat Unit Control · Platform 2.0</strong
                         ><span
-                          >JW PE·CE 차종 PSU 아이템 개발, 디버깅, 기능 구현 및
-                          ASIL-A 기능 안전 기술 문서 작성</span
+                          >전동 시트 제어 기능 구현·디버깅과 ASIL-A 기능안전
+                          기술 문서 작성 참여</span
                         >
                       </li>
                       <li>
@@ -246,22 +255,54 @@
                   </div>
                   <div class="record-group">
                     <h4>업무 관련 자격사항</h4>
-                    <ul class="record-bullets">
-                      <li><span>AUTOSAR Mobile GENE 사용 능력</span></li>
+                    <ol class="record-skills">
                       <li>
                         <span
-                          >MATLAB Simulink 기반 MBD 코드 설계 및 사양 분석
-                          능력</span
+                          >mobilgene 사용 및 AUTOSAR 기반 SW 연계 능력</span
                         >
                       </li>
                       <li>
-                        <span>MATLAB 기반 모델 검증 및 시뮬레이션 능력</span>
+                        <span
+                          >MATLAB/Simulink 기반 MBD 코드·ASW 설계와 요구
+                          사양 분석 능력</span
+                        >
                       </li>
                       <li>
-                        <span>DC Motor 제어 이론과 관련 HW 디버깅 능력</span>
+                        <span
+                          >MATLAB 기반 MiL 모델 검증 및 시뮬레이션 능력</span
+                        >
                       </li>
-                    </ul>
+                      <li>
+                        <span
+                          >DC Motor 제어 이론과 관련 HW–SW 디버깅 능력</span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          >RTE 인터페이스 분석 및 반복 설계·연계 작업의 Python
+                          자동화 능력</span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          >SCM 기술안전 문서 대응 2회 및 SiL 검증 업무 단기
+                          참여</span
+                        >
+                      </li>
+                      <li>
+                        <span>PSU ASIL-A 기능안전 기술 문서 작성 참여</span
+                        >
+                      </li>
+                    </ol>
                   </div>
+                </div>
+                <div class="record-actions">
+                  <a
+                    class="record-evidence-link"
+                    href="./experience/ls-automotive.html"
+                    >SCM·PSU·AUTOSAR 개발 흐름 보기
+                    <span aria-hidden="true">→</span></a
+                  >
                 </div>
               </div>
             </article>
@@ -273,7 +314,7 @@
                 <div class="record-heading">
                   <h3>동아전기부품</h3>
                   <p class="record-role">
-                    회로2팀 소프트웨어 담당 · 사원 2년차
+                    회로2팀 · 소프트웨어 담당 · 사원 2년차
                   </p>
                 </div>
                 <div class="record-groups">
@@ -281,51 +322,74 @@
                     <h4>진행 프로젝트</h4>
                     <ul class="record-bullets">
                       <li>
-                        <strong>한온 냉매 밸브 액추에이터 1세대</strong
+                        <strong>냉매 밸브 액추에이터 1세대</strong
                         ><span
-                          >반도체 공급 이슈에 따른 P사 제품 대체, 국내 최초 냉매
-                          밸브 액추에이터 개발 및 공정 매칭 완료</span
+                          >MCU 공급사가 제공한 모터 구동 코드를 분석·적용해
+                          제품 검증, 양산 공정 매칭과 현장 이슈 대응</span
                         >
                       </li>
                       <li>
-                        <strong>한온 냉매 밸브 액추에이터 2세대</strong
+                        <strong>냉매 밸브 액추에이터 2세대</strong
                         ><span
-                          >MCU 공급 이슈에 대응해 MCU 변경, 프로그램 재설계 및
-                          공정 매칭 완료</span
+                          >신규 MCU의 주변장치·출력 구조에 맞춰 SW를
+                          재설계하고 인버터 출력 순서와 PMSM 구동 로직을
+                          직접 구현·디버깅</span
                         >
                       </li>
                       <li>
-                        <strong>PT 센서 액추에이터</strong
+                        <strong>PT 센서 액추에이터 · 선행</strong
                         ><span
                           >온도·압력 조건에서 에너지 변환 효율이 높은 위치로
-                          니들 밸브를 제어하는 선행 제품 개발</span
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="record-group">
-                    <h4>아이템 관련 설명</h4>
-                    <ul class="record-bullets">
-                      <li>
-                        <span
-                          >H사 히트펌프 시스템에 들어가 냉매 유량을 조절하고,
-                          상위 제어기가 정한 각도로 이동하는 액추에이터</span
+                          니들 밸브를 제어하는 로직 구현과 시제품 검증</span
                         >
                       </li>
                     </ul>
                   </div>
                   <div class="record-group">
                     <h4>업무 관련 자격사항</h4>
-                    <ul class="record-bullets">
+                    <ol class="record-skills">
                       <li>
                         <span
-                          >PMSM 모터 제어 이론, Motor Driver SW 분석·디버깅,
-                          180°·90° 통전 인버터 제어</span
+                          >LIN 통신 기반 ASW와 Motor Driver SW 설계
+                          능력</span
                         >
                       </li>
-                      <li><span>고객사 요구 사양 협의 능력</span></li>
-                    </ul>
+                      <li>
+                        <span
+                          >MCU 데이터시트·주변장치 분석과 SW 마이그레이션
+                          능력</span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          >3상 인버터·FET 출력과 PMSM 구동·위치 제어
+                          능력</span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          >모터·액추에이터 HW–SW 통합 디버깅 능력</span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          >제품 검증, 양산 공정 매칭과 현장 이슈 대응
+                          경험</span
+                        >
+                      </li>
+                      <li>
+                        <span>요구 사양 분석과 기술 협의 능력</span>
+                      </li>
+                    </ol>
                   </div>
+                </div>
+                <div class="record-actions">
+                  <a
+                    class="record-evidence-link"
+                    href="./experience/donga-electric-parts.html"
+                    >LIN·MCU·인버터·액추에이터 구조 보기
+                    <span aria-hidden="true">→</span></a
+                  >
                 </div>
               </div>
             </article>
@@ -343,9 +407,9 @@
                     <h4>강의 내용</h4>
                     <ul class="record-bullets">
                       <li>
-                        <strong>STM32 데이터시트·SIL 실습</strong>
+                        <strong>STM32 데이터시트·SiL 실습</strong>
                         <span
-                          >STM32 데이터시트 분석과 관련 SIL 환경 구성·실습
+                          >STM32 데이터시트 분석과 관련 SiL 환경 구성·실습
                           강의</span
                         >
                       </li>
@@ -361,6 +425,51 @@
                 </div>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="direction"
+        class="section-shell"
+        aria-labelledby="direction-title"
+      >
+        <div class="container">
+          <div class="section-intro">
+            <h2 id="direction-title" class="eyebrow">Direction</h2>
+          </div>
+          <div class="direction-layout">
+            <div class="direction-intro">
+              <h3>앞으로 수행하고 싶은 업무</h3>
+              <p>
+                자동차 임베디드 개발 현장의 요구사항과 문제를 이해한 상태에서,
+                AI·Python·웹 기술로 반복 업무를 줄이고 개발 품질과 속도를
+                높이는 시스템을 만들고 싶습니다.
+              </p>
+            </div>
+            <ul class="direction-list">
+              <li>
+                <strong>AUTOSAR 개발 지원 도구</strong>
+                <span
+                  >ARXML 기반 코드 생성에서 설정 누락·오류 검출, 원인 안내,
+                  RTE·BSW 분석과 프로젝트 비교까지 고도화</span
+                >
+              </li>
+              <li>
+                <strong>검증·배포 자동화</strong>
+                <span
+                  >생성 코드와 MiL·SiL·단위 검증을 연결하고, 배포 문서·ROM
+                  패키지·버전 이력을 반복 가능한 흐름으로 구성</span
+                >
+              </li>
+              <li>
+                <strong>개발자 교육 시스템</strong>
+                <span
+                  >요구사항·설정·코드·테스트 결과를 연결해 담당 아이템의
+                  구조와 개발 흐름을 익히는 웹 기반 학습 환경 개발</span
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </section>

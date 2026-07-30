@@ -211,6 +211,8 @@
     evidenceImages.forEach((image) => {
       const trigger = document.createElement("button");
       const imageLabel = image.getAttribute("alt") || "프로젝트 화면";
+      const imageWidth = Number(image.getAttribute("width"));
+      const imageHeight = Number(image.getAttribute("height"));
       const figureCaption = image
         .closest("figure")
         ?.querySelector("figcaption");
@@ -219,6 +221,9 @@
       trigger.type = "button";
       trigger.setAttribute("aria-label", `${imageLabel} 크게 보기`);
       trigger.title = "원본 크기로 보기";
+      if (imageWidth > 0 && imageHeight > 0) {
+        trigger.style.aspectRatio = `${imageWidth} / ${imageHeight}`;
+      }
       image.parentNode.insertBefore(trigger, image);
       trigger.append(image);
 

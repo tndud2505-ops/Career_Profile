@@ -1,6 +1,6 @@
 # Portfolio site
 
-김수영의 공개 포트폴리오 정적 웹사이트입니다. index.html, styles.css, script.js, assets/, projects/만으로 동작하며 React나 번들러를 사용하지 않습니다.
+김수영의 공개 포트폴리오 정적 웹사이트입니다. index.html, styles.css, script.js, assets/, experience/, projects/만으로 동작하며 React나 번들러를 사용하지 않습니다.
 
 ## Local preview
 
@@ -14,6 +14,7 @@
 - index.html: Profile(캐릭터 초상과 소개), Experience, Projects(선형 기록 목록), Profile 내 GitHub·email
 - styles.css: light editorial design tokens, responsive layout, accessibility states, divider-led record lists
 - script.js: mobile menu and current section highlighting
+- experience/: 회사별 실무 경험 상세 페이지와 공개용 시스템 개념도
 - projects/: MOBASE AUTOSAR 코드 생성 툴, MOBASE SiL 검증 환경, MOBASE CI 리포트 대시보드, Virtual MCU, K Stock, Train Gallery, Auto Trading, Questora, Codex Team, Jira Opsidian, 중고 매물 상세 페이지
 - 각 프로젝트 상세 페이지는 프로젝트별 제목을 유지하면서 `Overview` → `Problem` → `Approach` → `Screen evidence` 순서로 구성합니다.
 - assets/: 실제 프로젝트 화면 캡처
