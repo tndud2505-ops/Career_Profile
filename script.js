@@ -22,9 +22,6 @@
     closeMobileMenu = () => setMenuState(false);
 
     setMenuState(false);
-    window.requestAnimationFrame(() => setMenuState(false));
-    window.addEventListener("load", () => setMenuState(false));
-    window.addEventListener("resize", () => setMenuState(false));
     menuButton.addEventListener("click", () => {
       const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
       setMenuState(!isExpanded);
@@ -38,6 +35,15 @@
     });
 
     mobileMenuQuery.addEventListener("change", () => setMenuState(false));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileMenuQuery.matches && menuButton.getAttribute("aria-expanded") === "true") {
+        closeMobileMenu();
+        menuButton.focus();
+      }
+    });
+    document.addEventListener("click", (event) => {
+      if (mobileMenuQuery.matches && !menu.contains(event.target) && !menuButton.contains(event.target)) closeMobileMenu();
+    });
   }
 
   const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
@@ -55,7 +61,7 @@
   let programmaticNav = null;
 
   const initialHash = window.location.hash;
-  let initialRoutePending = Boolean(initialHash);
+  let initialRoutePending = sections.some((section) => `#${section.id}` === initialHash);
   const initialNav = navLinks.find(
     (link) => link.getAttribute("href") === initialHash,
   );
@@ -100,7 +106,7 @@
           ),
         );
       },
-      { rootMargin: "-24% 0px -62% 0px", threshold: [0.1, 0.35, 0.6] },
+      { rootMargin: "-90px 0px -65% 0px", threshold: 0 },
     );
     sections.forEach((section) => observer.observe(section));
   }
@@ -113,7 +119,9 @@
       programmaticNav = link;
       setCurrentNav(link);
       closeMobileMenu();
-      history.replaceState(null, "", link.getAttribute("href"));
+      if (window.location.hash !== link.getAttribute("href")) {
+        history.pushState(null, "", link.getAttribute("href"));
+      }
       target.scrollIntoView({
         block: "start",
         behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -128,11 +136,21 @@
     });
   });
 
+  window.addEventListener("popstate", () => {
+    const link = navLinks.find((item) => item.getAttribute("href") === window.location.hash);
+    if (!link) return;
+    initialRoutePending = false;
+    programmaticNav = null;
+    setCurrentNav(link);
+    document.getElementById(window.location.hash.slice(1))?.scrollIntoView({block: "start", behavior: "auto"});
+  });
+
   const projectTabs = [...document.querySelectorAll("[data-project-filter]")];
   const projectCards = [
     ...document.querySelectorAll("[data-project-category]"),
   ];
   const projectPanel = document.getElementById("project-panel");
+  const projectCount = document.getElementById("project-count");
 
   const applyProjectFilter = (selectedTab) => {
     const selectedFilter = selectedTab.dataset.projectFilter;
@@ -153,6 +171,9 @@
 
     if (projectPanel) {
       projectPanel.setAttribute("aria-labelledby", selectedTab.id);
+    }
+    if (projectCount) {
+      projectCount.textContent = `${projectCards.filter((card) => !card.hidden).length}개 프로젝트`;
     }
   };
 
@@ -213,7 +234,16 @@
         const capabilityList = article.querySelector("ol.record-skills");
         const detailLink = article.querySelector("[data-career-detail-link]");
 
-        if (period) period.textContent = record.periodLabel;
+        if (period) {
+          const [dates, duration] = record.periodLabel.split(" · ");
+          period.replaceChildren(document.createTextNode(dates));
+          if (duration) {
+            const extra = document.createElement("span");
+            extra.className = "record-duration";
+            extra.textContent = duration;
+            period.append(document.createTextNode(" "), extra);
+          }
+        }
         if (company) company.textContent = record.company;
         if (role) role.textContent = record.role;
         if (summary) summary.textContent = record.summary;
@@ -307,7 +337,7 @@
 
       if (projectTabs.length) {
         const selected = projectTabs.find(
-          (tab) => tab.dataset.projectFilter === "all",
+          (tab) => tab.getAttribute("aria-selected") === "true",
         );
         if (selected) applyProjectFilter(selected);
       }
@@ -316,7 +346,9 @@
     }
   };
 
-  hydrateCareerSource();
+  hydrateCareerSource().then(() => {
+    if (initialRoutePending) settleInitialHash();
+  });
 
   const evidenceImages = [
     ...document.querySelectorAll(
@@ -328,6 +360,8 @@
     const evidenceDialog = document.createElement("dialog");
     const evidenceShell = document.createElement("div");
     const evidenceClose = document.createElement("button");
+    const evidenceZoom = document.createElement("button");
+    const evidenceControls = document.createElement("div");
     const evidenceMedia = document.createElement("img");
     const evidenceCaption = document.createElement("p");
 
@@ -337,17 +371,21 @@
     evidenceClose.className = "evidence-lightbox-close";
     evidenceClose.type = "button";
     evidenceClose.textContent = "닫기";
+    evidenceControls.className = "evidence-lightbox-controls";
+    evidenceZoom.className = "evidence-lightbox-zoom";
+    evidenceZoom.type = "button";
+    evidenceZoom.textContent = "원본 크기";
+    evidenceZoom.setAttribute("aria-pressed", "false");
     evidenceMedia.alt = "";
 
-    evidenceShell.append(evidenceClose, evidenceMedia, evidenceCaption);
+    evidenceControls.append(evidenceZoom, evidenceClose);
+    evidenceShell.append(evidenceControls, evidenceMedia, evidenceCaption);
     evidenceDialog.append(evidenceShell);
     document.body.append(evidenceDialog);
 
     evidenceImages.forEach((image) => {
       const trigger = document.createElement("button");
       const imageLabel = image.getAttribute("alt") || "프로젝트 화면";
-      const imageWidth = Number(image.getAttribute("width"));
-      const imageHeight = Number(image.getAttribute("height"));
       const figureCaption = image
         .closest("figure")
         ?.querySelector("figcaption");
@@ -356,9 +394,6 @@
       trigger.type = "button";
       trigger.setAttribute("aria-label", `${imageLabel} 크게 보기`);
       trigger.title = "원본 크기로 보기";
-      if (imageWidth > 0 && imageHeight > 0) {
-        trigger.style.aspectRatio = `${imageWidth} / ${imageHeight}`;
-      }
       image.parentNode.insertBefore(trigger, image);
       trigger.append(image);
 
@@ -372,14 +407,26 @@
         evidenceMedia.alt = imageLabel;
         evidenceCaption.textContent = figureCaption?.textContent.trim() || "";
         evidenceDialog.showModal();
+        document.body.classList.add("lightbox-open");
+        evidenceDialog.scrollTo(0, 0);
+        evidenceClose.focus();
       });
     });
 
     evidenceClose.addEventListener("click", () => evidenceDialog.close());
+    evidenceZoom.addEventListener("click", () => {
+      const zoomed = evidenceDialog.classList.toggle("is-zoomed");
+      evidenceZoom.setAttribute("aria-pressed", String(zoomed));
+      evidenceZoom.textContent = zoomed ? "화면에 맞추기" : "원본 크기";
+    });
     evidenceDialog.addEventListener("click", (event) => {
       if (event.target === evidenceDialog) evidenceDialog.close();
     });
     evidenceDialog.addEventListener("close", () => {
+      document.body.classList.remove("lightbox-open");
+      evidenceDialog.classList.remove("is-zoomed");
+      evidenceZoom.setAttribute("aria-pressed", "false");
+      evidenceZoom.textContent = "원본 크기";
       evidenceMedia.removeAttribute("src");
       evidenceMedia.alt = "";
       evidenceCaption.textContent = "";

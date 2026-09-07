@@ -3,45 +3,46 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MOBASE AUTOSAR 기반 자동 코드 생성 툴 | 김수영 Portfolio</title>
+    <title>MOBASE AUTOSAR 자동생성툴 | 김수영 Portfolio</title>
     <meta name="description" content="ECUD_ARXML을 파싱해 ASW 사용 서비스 후보를 유추하고 공통 패턴 코드를 자동 생성하는 AUTOSAR 개발 도구입니다." />
     <link rel="canonical" href="https://tndud2505-ops.github.io/Career_Profile/projects/mobase-autosar-codegen.html" />
     <link rel="icon" href="../assets/profile-header-thumb.png" type="image/png" />
-    <link rel="stylesheet" href="../styles.css?v=20260730k" />
-    <script src="../script.js?v=20260727a" defer></script>
+    <link rel="stylesheet" href="../styles.css?v=20260908a" />
+    <script src="../script.js?v=20260908a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">본문으로 건너뛰기</a>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="../index.html#profile" aria-label="김수영 포트폴리오 처음으로">
-          <span class="brand-mark brand-photo"><img src="../assets/profile-header-thumb.png" width="40" height="40" alt="" /></span><span class="brand-copy"><strong>김수영</strong><small>Automotive Software Engineer</small></span>
+          <span class="brand-mark brand-photo"><img width="96" height="96" src="../assets/profile-header-thumb.png" alt="" /></span><span class="brand-copy"><strong>김수영</strong><small>Automotive Software Engineer</small></span>
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="sr-only">메뉴</span><span aria-hidden="true">☰</span></button>
-        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴"><a href="../index.html#profile">Profile</a><a href="../index.html#experience">Experience</a><a href="../index.html#projects">Projects</a></nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">메뉴</button>
+        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴"><a href="../index.html#profile">소개</a><a href="../index.html#experience" aria-current="page">실무 경력</a><a href="../index.html#projects">개인 프로젝트</a></nav>
       </div>
     </header>
     <main id="content" class="case-study">
+      <div class="container case-breadcrumb"><a href="../experience/mobase-asec.html">← MOBASE ASEC</a></div>
       <section class="case-hero case-hero--title">
         <div class="container">
           <p class="eyebrow">MOBASE ASEC · AUTOSAR / ARXML</p>
-          <h1>AUTOSAR 기반 자동 코드 생성 툴</h1>
+          <h1>AUTOSAR 자동생성툴</h1>
         </div>
       </section>
       <section class="container case-section">
-        <h2>Overview</h2>
+        <h2>개요</h2>
         <div class="case-section-content">
           <p><code>ECUD_*.arxml</code>의 RTE 이름과 설정 정보를 분석해 CAN 수신 타임아웃, NVM 블록 상태 관리, I/O 입력 필터와 RTE 인터페이스 처리 같은 반복 코드를 자동 생성하고 설정 누락·오류를 검출하는 개발 도구입니다.</p>
         </div>
       </section>
       <section class="container case-section">
-        <h2>Problem</h2>
+        <h2>해결할 문제</h2>
         <div class="case-section-content">
           <p>ASW마다 필요한 서비스와 통신 구조가 달라도 코드 형태에는 반복되는 패턴이 있습니다. ARXML 관계를 수작업으로 따라가며 같은 구조를 다시 작성하면 누락과 형식 차이가 생기기 쉬웠습니다.</p>
         </div>
       </section>
       <section class="container case-section">
-        <h2>Approach</h2>
+        <h2>구현 과정</h2>
         <div class="case-section-content">
           <p>ARXML 구조를 공통 서비스 모델로 정리한 뒤 패턴 규칙과 코드 생성 단계로 연결했습니다.</p>
           <ol>
@@ -53,7 +54,7 @@
         </div>
       </section>
       <section class="container case-section case-section--evidence">
-        <h2>Screen evidence</h2>
+        <h2>화면·동작</h2>
         <div class="case-section-content">
           <div class="case-gallery case-gallery--diagram">
             <figure>

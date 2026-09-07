@@ -7,44 +7,45 @@
     <meta name="description" content="실행 전 조건과 차단 사유, 운영 상태를 분리해 확인하는 개인 검토용 주식 매매 자동화 도구입니다." />
     <link rel="canonical" href="https://tndud2505-ops.github.io/Career_Profile/projects/auto-trading.html" />
     <link rel="icon" href="../assets/profile-header-thumb.png" type="image/png" />
-    <link rel="stylesheet" href="../styles.css?v=20260727a" />
-    <script src="../script.js?v=20260727a" defer></script>
+    <link rel="stylesheet" href="../styles.css?v=20260908a" />
+    <script src="../script.js?v=20260908a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">본문으로 건너뛰기</a>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="../index.html#profile" aria-label="김수영 포트폴리오 처음으로">
-          <span class="brand-mark brand-photo"><img src="../assets/profile-header-thumb.png" width="40" height="40" alt="" /></span><span class="brand-copy"><strong>김수영</strong><small>Automotive Software Engineer</small></span>
+          <span class="brand-mark brand-photo"><img width="96" height="96" src="../assets/profile-header-thumb.png" alt="" /></span><span class="brand-copy"><strong>김수영</strong><small>Automotive Software Engineer</small></span>
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="sr-only">메뉴</span><span aria-hidden="true">☰</span></button>
-        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴"><a href="../index.html#profile">Profile</a><a href="../index.html#experience">Experience</a><a href="../index.html#projects">Projects</a></nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">메뉴</button>
+        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴"><a href="../index.html#profile">소개</a><a href="../index.html#experience">실무 경력</a><a href="../index.html#projects" aria-current="page">개인 프로젝트</a></nav>
       </div>
     </header>
     <main id="content" class="case-study">
+      <div class="container case-breadcrumb"><a href="../index.html#projects">← 개인 프로젝트</a></div>
       <section class="case-hero case-hero--title"><div class="container"><h1>Auto Trading</h1></div></section>
       <section class="container case-section">
-        <h2>Overview</h2>
+        <h2>개요</h2>
         <div class="case-section-content"><p>Kiwoom OpenAPI 기반 후보 상태 보드에서 실행 전 조건, 차단 사유, 보유 포지션, 최근 체결과 운영 로그를 분리해 확인하는 개인 검토용 주식 매매 자동화 도구입니다.</p></div>
       </section>
       <section class="container case-section">
-        <h2>Problem</h2>
+        <h2>해결할 문제</h2>
         <div class="case-section-content"><p>후보 탐색 정보와 실행 조건이 한 화면에 섞이면 왜 대기 중인지, 무엇이 차단됐는지, 실행 이후 어떤 상태가 남았는지 설명하기 어렵습니다.</p></div>
       </section>
       <section class="container case-section">
-        <h2>Approach</h2>
+        <h2>구현 과정</h2>
         <div class="case-section-content">
           <p>추천 결과를 바로 실행으로 연결하지 않고, 상태 확인과 차단 사유 검토를 먼저 거치는 운영 흐름으로 나눴습니다.</p>
           <ol><li>후보 스냅샷과 현재 상태 확인</li><li>setup·execution·CTX 상태 점검</li><li>차단 사유와 readiness gate 검토</li><li>운영 로그·보유·체결 상태 복기</li></ol>
         </div>
       </section>
       <section class="container case-section case-section--evidence">
-        <h2>Screen evidence</h2>
+        <h2>화면·동작</h2>
         <div class="case-section-content">
-          <div class="case-gallery"><figure><img src="../assets/kiwom_autotrade_latest.png" width="1200" height="760" alt="Auto Trading 후보 상태, readiness gate, 보유·체결·운영 로그 화면" loading="lazy" /><figcaption>자동매매 운영 화면 — 실행 후보, 차단 사유, 보유 종목, 체결 내역과 운영 로그를 한 화면에서 확인합니다.</figcaption></figure></div>
+          <div class="case-gallery"><figure><img width="1672" height="941" src="../assets/kiwom_autotrade_latest.png" alt="Auto Trading 후보 상태, readiness gate, 보유·체결·운영 로그 화면" loading="lazy" /><figcaption>자동매매 운영 화면 — 실행 후보, 차단 사유, 보유 종목, 체결 내역과 운영 로그를 한 화면에서 확인합니다.</figcaption></figure></div>
         </div>
       </section>
     </main>
-    <footer class="site-footer"><div class="container footer-inner"><p>김수영 Portfolio</p><p><a href="../index.html#profile">Profile</a><a href="https://github.com/tndud2505-ops" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> 새 창</span></a></p></div></footer>
+    <footer class="site-footer"><div class="container footer-inner"><p>김수영 Portfolio</p><p><a href="../index.html#profile">소개</a><a href="https://github.com/tndud2505-ops" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> 새 창</span></a></p></div></footer>
   </body>
 </html>

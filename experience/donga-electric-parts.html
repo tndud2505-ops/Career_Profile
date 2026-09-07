@@ -17,8 +17,8 @@
       href="../assets/profile-header-thumb.png"
       type="image/png"
     />
-    <link rel="stylesheet" href="../styles.css?v=20260730k" />
-    <script src="../script.js?v=20260730a" defer></script>
+    <link rel="stylesheet" href="../styles.css?v=20260908a" />
+    <script src="../script.js?v=20260908a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">본문으로 건너뛰기</a>
@@ -30,10 +30,10 @@
           aria-label="김수영 포트폴리오 처음으로"
         >
           <span class="brand-mark brand-photo"
-            ><img
+            ><img width="96" height="96"
               src="../assets/profile-header-thumb.png"
-              width="40"
-              height="40"
+
+
               alt=""
           /></span>
           <span class="brand-copy"
@@ -46,19 +46,17 @@
           type="button"
           aria-expanded="false"
           aria-controls="site-menu"
-        >
-          <span class="sr-only">메뉴</span
-          ><span aria-hidden="true">☰</span>
-        </button>
+        >메뉴</button>
         <nav id="site-menu" class="site-nav" aria-label="주요 메뉴">
-          <a href="../index.html#profile">Profile</a>
-          <a href="../index.html#experience">Experience</a>
-          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#profile">소개</a>
+          <a href="../index.html#experience" aria-current="page">실무 경력</a>
+          <a href="../index.html#projects">개인 프로젝트</a>
         </nav>
       </div>
     </header>
 
     <main id="content" class="case-study case-study--company">
+      <div class="container case-breadcrumb"><a href="../index.html#experience">← 실무 경력</a></div>
       <section class="case-hero case-hero--profile">
         <div class="container case-hero-grid">
           <div class="case-hero-heading">
@@ -67,20 +65,17 @@
             <p class="case-hero-subtitle">냉매 밸브 액추에이터 SW</p>
           </div>
           <dl class="case-meta case-meta--hero">
+
             <div>
-              <dt>Company</dt>
-              <dd>동아전기부품</dd>
-            </div>
-            <div>
-              <dt>Period</dt>
+              <dt>기간</dt>
               <dd>2022.03–2023.06 · 1년 4개월</dd>
             </div>
             <div>
-              <dt>Role</dt>
+              <dt>역할</dt>
               <dd>회로2팀 · 소프트웨어 담당 · 사원 2년차</dd>
             </div>
             <div>
-              <dt>System</dt>
+              <dt>분야</dt>
               <dd>LIN · MCU · 3-PWM · Gate Driver · PMSM · 밸브</dd>
             </div>
           </dl>
@@ -88,12 +83,13 @@
       </section>
 
       <section class="container case-section">
-        <h2>Overview</h2>
+        <h2>개요</h2>
         <div class="case-section-content">
           <p>
-            LIN 기반 ASW와 Motor Driver SW를 설계하고, 제품 내부 MCU의
-            3-PWM 출력으로 게이트 드라이버와 3상 인버터를 구동해 냉매 밸브
-            위치 제어 로직을 구현·디버깅했습니다.
+            냉매 밸브 액추에이터 1·2세대의 제어 코드 개발·검증·양산을
+            담당했습니다. 1세대는 MCU 칩 공급사의 Motor Driver 로직을
+            분석·적용했고, 2세대는 새로운 MCU에 맞춰 3-PWM Motor Driver SW와
+            게이트 드라이버 인터페이스를 공동 설계·구현했습니다.
           </p>
           <dl class="case-keyword-rows">
             <div>
@@ -145,10 +141,10 @@
                   PMSM 구동·위치 제어 로직을 구현·디버깅했습니다.
                 </p>
               </figcaption>
-              <img
+              <img width="1774" height="887"
                 src="../assets/experience/donga-mcu-inverter-control-flow-v2.jpg"
-                width="1774"
-                height="887"
+
+
                 alt="LIN 명령을 처리한 MCU 제어 로직이 3-PWM으로 통합 게이트 드라이버와 3상 인버터를 거쳐 PMSM을 구동하는 간소화된 제어 구조"
                 loading="lazy"
               />
@@ -173,10 +169,10 @@
                   출력축을 거쳐 밸브 개도로 변환해 냉매 유량을 조절합니다.
                 </p>
               </figcaption>
-              <img
+              <img width="1672" height="941"
                 src="../assets/experience/donga-single-flow-valve-actuator-cutaway.jpg"
-                width="1672"
-                height="941"
+
+
                 alt="제어 PCB와 PMSM, 감속 기어, 출력축, 회전 밸브가 하나의 대표 냉매 유로를 개폐하는 원리를 보여주는 기구 단면도"
                 loading="lazy"
               />
@@ -188,7 +184,7 @@
       <section class="container">
         <div class="case-cta">
           <a class="button button-primary" href="../index.html#experience"
-            >Experience로 돌아가기 <span aria-hidden="true">→</span></a
+            >실무 경력으로 돌아가기 <span aria-hidden="true">→</span></a
           >
         </div>
       </section>
@@ -198,7 +194,7 @@
       <div class="container footer-inner">
         <p>김수영 Portfolio</p>
         <p>
-          <a href="../index.html#profile">Profile</a>
+          <a href="../index.html#profile">소개</a>
           <a
             href="https://github.com/tndud2505-ops"
             target="_blank"

@@ -7,21 +7,22 @@
     <meta name="description" content="ASPICE 문서 추적성, Git 브랜치·커밋·태그 연동, CI 결과와 coverage 추이를 한 화면에 정리한 프로젝트 관리 대시보드입니다." />
     <link rel="canonical" href="https://tndud2505-ops.github.io/Career_Profile/projects/mobase-ci-dashboard.html" />
     <link rel="icon" href="../assets/profile-header-thumb.png" type="image/png" />
-    <link rel="stylesheet" href="../styles.css?v=20260730k" />
-    <script src="../script.js?v=20260727a" defer></script>
+    <link rel="stylesheet" href="../styles.css?v=20260908a" />
+    <script src="../script.js?v=20260908a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">본문으로 건너뛰기</a>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="../index.html#profile" aria-label="김수영 포트폴리오 처음으로">
-          <span class="brand-mark brand-photo"><img src="../assets/profile-header-thumb.png" width="40" height="40" alt="" /></span><span class="brand-copy"><strong>김수영</strong><small>Automotive Software Engineer</small></span>
+          <span class="brand-mark brand-photo"><img width="96" height="96" src="../assets/profile-header-thumb.png" alt="" /></span><span class="brand-copy"><strong>김수영</strong><small>Automotive Software Engineer</small></span>
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="sr-only">메뉴</span><span aria-hidden="true">☰</span></button>
-        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴"><a href="../index.html#profile">Profile</a><a href="../index.html#experience">Experience</a><a href="../index.html#projects">Projects</a></nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">메뉴</button>
+        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴"><a href="../index.html#profile">소개</a><a href="../index.html#experience" aria-current="page">실무 경력</a><a href="../index.html#projects">개인 프로젝트</a></nav>
       </div>
     </header>
     <main id="content" class="case-study">
+      <div class="container case-breadcrumb"><a href="../experience/mobase-asec.html">← MOBASE ASEC</a></div>
       <section class="case-hero case-hero--title">
         <div class="container">
           <p class="eyebrow">MOBASE ASEC · CI / Test Report</p>
@@ -29,19 +30,19 @@
         </div>
       </section>
       <section class="container case-section">
-        <h2>Overview</h2>
+        <h2>개요</h2>
         <div class="case-section-content">
           <p>ASPICE 문서 단계의 추적성부터 Git 브랜치·커밋·태그, CI 실행 결과와 coverage 추이까지 연결해 프로젝트 상태를 한 화면에서 확인하도록 구성했습니다.</p>
         </div>
       </section>
       <section class="container case-section">
-        <h2>Problem</h2>
+        <h2>해결할 문제</h2>
         <div class="case-section-content">
           <p>요구사항·설계·테스트 문서, Git 변경 이력, CI 결과가 서로 다른 도구에 흩어지면 변경 영향과 실패 위치를 이어서 확인하기 어렵습니다. 선택한 커밋을 기준으로 추적성과 검증 결과를 함께 보는 화면이 필요했습니다.</p>
         </div>
       </section>
       <section class="container case-section">
-        <h2>Approach</h2>
+        <h2>구현 과정</h2>
         <div class="case-section-content">
           <p>문서 추적성, Git 변경 이력, CI 결과를 선택한 브랜치와 커밋 기준으로 이어서 탐색하도록 구성했습니다.</p>
           <ol>
@@ -53,19 +54,19 @@
         </div>
       </section>
       <section class="container case-section case-section--evidence">
-        <h2>Screen evidence</h2>
+        <h2>화면·동작</h2>
         <div class="case-section-content">
           <div class="case-gallery case-gallery--diagram">
             <figure>
-              <img src="../assets/mobase_dashboard_aspice_traceability.png" width="1905" height="894" alt="ASPICE SWE.1 요구사항부터 SWE.6 검증까지 문서와 테스트 항목의 연결 관계를 보여주는 추적성 화면" loading="lazy" />
+              <img width="1905" height="894" src="../assets/mobase_dashboard_aspice_traceability.png" alt="ASPICE SWE.1 요구사항부터 SWE.6 검증까지 문서와 테스트 항목의 연결 관계를 보여주는 추적성 화면" loading="lazy" />
               <figcaption>ASPICE 추적성 화면 — SWE.1 요구사항부터 아키텍처·상세설계·단위 테스트·검증 항목까지 연결 관계를 조회합니다.</figcaption>
             </figure>
             <figure>
-              <img src="../assets/mobase_dashboard_git_ci_integration.png" width="1914" height="904" alt="Git 브랜치와 커밋, 태그 정보, 모듈별 CI 워크플로 결과와 실패 단계를 보여주는 화면" loading="lazy" />
+              <img width="1914" height="904" src="../assets/mobase_dashboard_git_ci_integration.png" alt="Git 브랜치와 커밋, 태그 정보, 모듈별 CI 워크플로 결과와 실패 단계를 보여주는 화면" loading="lazy" />
               <figcaption>Git·CI 연동 화면 — 브랜치·커밋·태그를 선택하고 모듈별 CI 상태와 실패 단계를 확인합니다.</figcaption>
             </figure>
             <figure>
-              <img src="../assets/mobase_ci_report_dashboard.png" width="1913" height="918" alt="CI 실행 선택, 모듈 목록, GUI 테스트 결과, coverage 추이와 테스트 목록을 한 화면에 보여주는 리포트 대시보드" loading="lazy" />
+              <img width="1913" height="918" src="../assets/mobase_ci_report_dashboard.png" alt="CI 실행 선택, 모듈 목록, GUI 테스트 결과, coverage 추이와 테스트 목록을 한 화면에 보여주는 리포트 대시보드" loading="lazy" />
               <figcaption>CI 리포트 화면 — 배포 실행별 테스트 결과, 테스트 목록, line·function coverage 추이를 한 화면에서 비교합니다.</figcaption>
             </figure>
           </div>

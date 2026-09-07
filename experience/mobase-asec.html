@@ -17,8 +17,8 @@
       href="../assets/profile-header-thumb.png"
       type="image/png"
     />
-    <link rel="stylesheet" href="../styles.css?v=20260730k" />
-    <script src="../script.js?v=20260730a" defer></script>
+    <link rel="stylesheet" href="../styles.css?v=20260908a" />
+    <script src="../script.js?v=20260908a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">본문으로 건너뛰기</a>
@@ -30,10 +30,10 @@
           aria-label="김수영 포트폴리오 처음으로"
         >
           <span class="brand-mark brand-photo"
-            ><img
+            ><img width="96" height="96"
               src="../assets/profile-header-thumb.png"
-              width="40"
-              height="40"
+
+
               alt=""
           /></span>
           <span class="brand-copy"
@@ -46,19 +46,17 @@
           type="button"
           aria-expanded="false"
           aria-controls="site-menu"
-        >
-          <span class="sr-only">메뉴</span
-          ><span aria-hidden="true">☰</span>
-        </button>
+        >메뉴</button>
         <nav id="site-menu" class="site-nav" aria-label="주요 메뉴">
-          <a href="../index.html#profile">Profile</a>
-          <a href="../index.html#experience">Experience</a>
-          <a href="../index.html#projects">Projects</a>
+          <a href="../index.html#profile">소개</a>
+          <a href="../index.html#experience" aria-current="page">실무 경력</a>
+          <a href="../index.html#projects">개인 프로젝트</a>
         </nav>
       </div>
     </header>
 
     <main id="content" class="case-study case-study--company">
+      <div class="container case-breadcrumb"><a href="../index.html#experience">← 실무 경력</a></div>
       <section class="case-hero case-hero--profile">
         <div class="container case-hero-grid">
           <div class="case-hero-heading">
@@ -67,20 +65,17 @@
             <p class="case-hero-subtitle">개발·검증 Tooling</p>
           </div>
           <dl class="case-meta case-meta--hero">
+
             <div>
-              <dt>Company</dt>
-              <dd>MOBASE ASEC</dd>
-            </div>
-            <div>
-              <dt>Period</dt>
+              <dt>기간</dt>
               <dd>2026.01–현재</dd>
             </div>
             <div>
-              <dt>Role</dt>
+              <dt>역할</dt>
               <dd>아키텍처 설계실 · R&amp;D · 선임연구원</dd>
             </div>
             <div>
-              <dt>System</dt>
+              <dt>분야</dt>
               <dd>AUTOSAR · ARXML · Python · WSL/GCC</dd>
             </div>
           </dl>
@@ -88,19 +83,19 @@
       </section>
 
       <section class="container case-section">
-        <h2>Overview</h2>
+        <h2>개요</h2>
         <div class="case-section-content">
           <p>
-            AUTOSAR ARXML 기반 코드 생성 도구를 핵심 업무로 개발하고
-            있습니다. SiL·테스트 검토와 프로젝트 대시보드는 생성 결과의
-            신뢰성과 활용 범위를 높이는 고도화 업무로 연결하고 있습니다.
+            AUTOSAR 자동생성툴을 핵심 업무로 개발하고 있습니다.
+            생성 코드의 SiL·단위 검증 환경과 ASPICE 문서 추적성·Git·CI 결과를
+            연결하는 프로젝트 관리 대시보드도 직접 개발했습니다.
           </p>
           <dl class="case-keyword-rows">
             <div>
               <dt>적용 프로젝트</dt>
               <dd>
                 <ul class="case-keywords">
-                  <li>핵심 업무 · AUTOSAR 기반 자동 코드 생성 툴</li>
+                  <li>핵심 업무 · AUTOSAR 자동생성툴</li>
                   <li>프로젝트 고도화 · SiL 검증 환경</li>
                   <li>프로젝트 고도화 · 프로젝트 관리 대시보드</li>
                 </ul>
@@ -111,8 +106,8 @@
               <dd>
                 <ul class="case-keywords">
                   <li>Python</li>
-                  <li>AUTOSAR·ARXML</li>
-                  <li>RTE 분석</li>
+                  <li>AUTOSAR</li>
+                  <li>웹 대시보드 개발</li>
                   <li>코드 생성 자동화</li>
                   <li>WSL·GCC</li>
                   <li>단위 검증</li>
@@ -185,10 +180,10 @@
                   >프로젝트 상세 보기 <span aria-hidden="true">→</span></a
                 >
               </figcaption>
-              <img
+              <img width="1919" height="1003"
                 src="../assets/mobase_sil_code_import_test_generation.png"
-                width="1919"
-                height="1003"
+
+
                 alt="생성 코드의 바인딩을 불러오고 인스턴스별 주기, 입력과 반환 조건을 구성하는 SiL 검증 화면"
                 loading="lazy"
               />
@@ -219,10 +214,10 @@
                   >프로젝트 상세 보기 <span aria-hidden="true">→</span></a
                 >
               </figcaption>
-              <img
+              <img width="1914" height="904"
                 src="../assets/mobase_dashboard_git_ci_integration.png"
-                width="1914"
-                height="904"
+
+
                 alt="Git 브랜치와 커밋, 태그 정보, 모듈별 CI 결과와 실패 단계를 함께 보여주는 프로젝트 관리 화면"
                 loading="lazy"
               />
@@ -234,7 +229,7 @@
       <section class="container">
         <div class="case-cta">
           <a class="button button-primary" href="../index.html#experience"
-            >Experience로 돌아가기 <span aria-hidden="true">→</span></a
+            >실무 경력으로 돌아가기 <span aria-hidden="true">→</span></a
           >
         </div>
       </section>
@@ -244,7 +239,7 @@
       <div class="container footer-inner">
         <p>김수영 Portfolio</p>
         <p>
-          <a href="../index.html#profile">Profile</a>
+          <a href="../index.html#profile">소개</a>
           <a
             href="https://github.com/tndud2505-ops"
             target="_blank"

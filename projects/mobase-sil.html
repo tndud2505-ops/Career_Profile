@@ -7,21 +7,22 @@
     <meta name="description" content="생성 결과 코드를 import해 테스트 케이스를 만들고, 코드 요소를 instance로 구성한 SiL 검증 환경 기록입니다." />
     <link rel="canonical" href="https://tndud2505-ops.github.io/Career_Profile/projects/mobase-sil.html" />
     <link rel="icon" href="../assets/profile-header-thumb.png" type="image/png" />
-    <link rel="stylesheet" href="../styles.css?v=20260730k" />
-    <script src="../script.js?v=20260727a" defer></script>
+    <link rel="stylesheet" href="../styles.css?v=20260908a" />
+    <script src="../script.js?v=20260908a" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#content">본문으로 건너뛰기</a>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="../index.html#profile" aria-label="김수영 포트폴리오 처음으로">
-          <span class="brand-mark brand-photo"><img src="../assets/profile-header-thumb.png" width="40" height="40" alt="" /></span><span class="brand-copy"><strong>김수영</strong><small>Automotive Software Engineer</small></span>
+          <span class="brand-mark brand-photo"><img width="96" height="96" src="../assets/profile-header-thumb.png" alt="" /></span><span class="brand-copy"><strong>김수영</strong><small>Automotive Software Engineer</small></span>
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><span class="sr-only">메뉴</span><span aria-hidden="true">☰</span></button>
-        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴"><a href="../index.html#profile">Profile</a><a href="../index.html#experience">Experience</a><a href="../index.html#projects">Projects</a></nav>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">메뉴</button>
+        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴"><a href="../index.html#profile">소개</a><a href="../index.html#experience" aria-current="page">실무 경력</a><a href="../index.html#projects">개인 프로젝트</a></nav>
       </div>
     </header>
     <main id="content" class="case-study">
+      <div class="container case-breadcrumb"><a href="../experience/mobase-asec.html">← MOBASE ASEC</a></div>
       <section class="case-hero case-hero--title">
         <div class="container">
           <p class="eyebrow">MOBASE ASEC · Software-in-the-Loop</p>
@@ -29,19 +30,19 @@
         </div>
       </section>
       <section class="container case-section">
-        <h2>Overview</h2>
+        <h2>개요</h2>
         <div class="case-section-content">
           <p>코드 생성 결과물을 import해 테스트 케이스를 만들고, 코드에서 식별한 RTE·메시지·구조체·Runnable 요소를 instance로 구성해 실행 가능한 검증 환경으로 연결했습니다.</p>
         </div>
       </section>
       <section class="container case-section">
-        <h2>Problem</h2>
+        <h2>해결할 문제</h2>
         <div class="case-section-content">
           <p>생성 코드만으로는 인터페이스 관계와 호출 주기를 반복해서 확인하기 어렵습니다. 테스트에 필요한 요소를 다시 찾는 수작업을 줄이고, 코드 결과가 곧 테스트 입력이 되는 구조가 필요했습니다.</p>
         </div>
       </section>
       <section class="container case-section">
-        <h2>Approach</h2>
+        <h2>구현 과정</h2>
         <div class="case-section-content">
           <p>코드 import부터 instance injection과 결과 확인까지 한 흐름으로 구성했습니다.</p>
           <ol>
@@ -53,15 +54,15 @@
         </div>
       </section>
       <section class="container case-section case-section--evidence">
-        <h2>Screen evidence</h2>
+        <h2>화면·동작</h2>
         <div class="case-section-content">
           <div class="case-gallery">
             <figure>
-              <img src="../assets/mobase_sil_code_import_test_generation.png" width="1919" height="1003" alt="생성 코드의 middleware binding과 주기별 CAN instance injection을 함께 보여주는 SiL workspace" loading="lazy" />
+              <img width="1919" height="1003" src="../assets/mobase_sil_code_import_test_generation.png" alt="생성 코드의 middleware binding과 주기별 CAN instance injection을 함께 보여주는 SiL workspace" loading="lazy" />
               <figcaption>코드 import 및 테스트 구성 화면 — 생성 코드의 binding을 불러오고 instance별 주기·입력·반환 조건을 설정합니다.</figcaption>
             </figure>
             <figure>
-              <img src="../assets/mobase_sil_instance_model.png" width="1912" height="977" alt="코드에서 추출한 RTE 메시지, 반환값, 구조체, Runnable 요소와 instance 속성을 보여주는 SiL component 화면" loading="lazy" />
+              <img width="1912" height="977" src="../assets/mobase_sil_instance_model.png" alt="코드에서 추출한 RTE 메시지, 반환값, 구조체, Runnable 요소와 instance 속성을 보여주는 SiL component 화면" loading="lazy" />
               <figcaption>Instance 모델링 화면 — RTE 메시지·구조체·Runnable을 테스트 환경의 instance로 구성하고 속성을 확인합니다.</figcaption>
             </figure>
           </div>
