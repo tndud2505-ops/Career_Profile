@@ -316,8 +316,8 @@
           mediaLink.setAttribute("aria-label", `${project.name} 상세 보기`);
         }
         if (detailLink) detailLink.href = project.detailPath;
-        if (externalLink && project.externalUrl) {
-          externalLink.href = project.externalUrl;
+        if (externalLink && (project.externalUrl || project.documentationUrl)) {
+          externalLink.href = project.externalUrl || project.documentationUrl;
         }
       });
 

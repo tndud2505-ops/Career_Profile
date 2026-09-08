@@ -175,11 +175,12 @@
     },
     {
       "id": "jira-opsidian",
-      "name": "Jira Opsidian",
+      "name": "Jira Obsidian",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "Jira 이슈 트리·관계 맵·상세 패널을 하나의 화면에 연결한 개인 제품 콘셉트",
-      "detailPath": "./projects/jira-mini.html"
+      "description": "Jira Cloud 이슈의 계층과 연결 관계를 시각화하고, 선행·연관·검증 관계를 직접 추가하는 앱",
+      "detailPath": "./projects/jira-mini.html",
+      "documentationUrl": "https://tndud2505-ops.github.io/jira-obsidian-support/docs.html"
     },
     {
       "id": "train-gallery",
