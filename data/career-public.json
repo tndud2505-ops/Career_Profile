@@ -188,30 +188,6 @@
       "categoryLabel": "제품·서비스",
       "description": "운동 영상을 날짜별로 기록하고 클립·자막·하이라이트 export까지 지원하는 모바일 앱",
       "detailPath": "./projects/train-gallery.html"
-    },
-    {
-      "id": "questora",
-      "name": "Questora",
-      "category": "tool",
-      "categoryLabel": "개발 도구",
-      "description": "GitHub·논문·웹·커뮤니티·OpenKB/Wiki를 질문 유형에 따라 탐색하고 근거와 HTML 보고서로 정리하는 리서치 에이전트",
-      "detailPath": "./projects/daily-automation.html"
-    },
-    {
-      "id": "codex-team",
-      "name": "Codex Team",
-      "category": "tool",
-      "categoryLabel": "개발 도구",
-      "description": "Operator·Chief·Specialists/Review 역할과 Issue·Discussion·Decision·Approval·Evidence를 관리하는 로컬 AI 작업 콘솔",
-      "detailPath": "./projects/codex-team.html"
-    },
-    {
-      "id": "auto-trading",
-      "name": "Auto Trading",
-      "category": "automation",
-      "categoryLabel": "자동화",
-      "description": "Kiwoom OpenAPI 기반으로 실행 후보, 차단 사유, 보유·체결 흐름을 관리하는 로컬 자동매매 운영 워크벤치",
-      "detailPath": "./projects/auto-trading.html"
     }
   ]
 }

@@ -16,17 +16,18 @@
     <main id="content" class="case-study">
       <div class="container case-breadcrumb"><a href="../index.html#projects">← 개인 프로젝트</a><a href="https://virtual-mcu-training-env.pages.dev/" target="_blank" rel="noopener noreferrer">사이트 열기 ↗<span class="sr-only"> 새 창</span></a></div>
       <section class="case-hero case-hero--title"><div class="container"><h1>Virtual MCU Training Environment</h1></div></section>
-      <section class="container case-section"><h2>개요</h2><div class="case-section-content"><p>브라우저에서 C 코드를 빌드·실행하며 MCU, H-Bridge 드라이버와 DC 모터의 연결을 살펴보는 실습 환경입니다. 외부 명령 입력과 핀 경로, 레지스터 상태를 함께 확인할 수 있습니다.</p></div></section>
-      <section class="container case-section"><h2>해결할 문제</h2><div class="case-section-content"><p>코드와 회로를 따로 보면 설정한 레지스터가 어느 핀과 장치에 영향을 주는지 이해하기 어렵습니다. 코드 편집기와 회로·신호 관찰 화면을 연결해 실습 흐름을 구성했습니다.</p></div></section>
       <section class="container case-section">
-        <h2>구현 과정</h2>
+        <h2>서비스 소개</h2>
+        <div class="case-section-content"><p>실습 장비 없이 C 코드와 모터 제어 회로의 동작을 살펴보는 브라우저 실습 환경입니다. MCU·H-Bridge·DC 모터의 연결을 보면서 펌웨어를 실행하고 핀과 레지스터 상태를 확인할 수 있습니다.</p></div>
+      </section>
+      <section class="container case-section">
+        <h2>주요 기능</h2>
         <div class="case-section-content">
-          <p>펌웨어 실행과 회로 관찰을 연결하고, 핀과 주변장치 상태를 따라가며 학습하도록 만들었습니다.</p>
-          <ol><li>펌웨어 편집기에서 예제 C 코드를 확인·수정하고 빌드</li><li>실행·정지와 외부 명령 입력으로 동작 확인</li><li>MCU·드라이버·모터·Hall 센서 연결과 핀 상태 시각화</li><li>레지스터·그래프·로그에서 설정값과 실행 결과 비교</li></ol>
+          <ul><li>펌웨어 편집 — 예제 C 코드·API 확인과 코드 수정</li><li>실행 조작 — 빌드·실행·정지와 외부 명령 입력</li><li>회로 관찰 — MCU·드라이버·모터·Hall 센서 연결과 핀 상태 확인</li><li>신호 확인 — 레지스터·그래프·로그를 통한 설정값과 실행 결과 비교</li></ul>
         </div>
       </section>
       <section class="container case-section case-section--evidence">
-        <h2>화면·동작</h2>
+        <h2>실제 화면</h2>
         <div class="case-section-content">
           <div class="case-gallery">
             <figure><img width="1440" height="1000" src="../assets/virtualmcu_motor_lab_20260908.png" alt="Virtual MCU Training Environment 모터 제어 실습" loading="lazy" /><figcaption>모터 제어 실습 — MCU·H-Bridge·DC 모터·Hall 센서의 연결과 핀 상태를 확인합니다.</figcaption></figure>
