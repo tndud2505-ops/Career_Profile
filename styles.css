@@ -10,7 +10,7 @@
   --line-strong: #c4cec5;
   --accent: #315d4b;
   --accent-soft: #e8f0eb;
-  --max: 1100px;
+  --max: 1180px;
   --sans: "IBM Plex Sans KR", "Noto Sans KR", system-ui, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
 }
@@ -1733,12 +1733,12 @@ h4 {
   object-position: 42% 58%;
 }
 .hero {
-  padding: clamp(44px, 5vw, 66px) 0 clamp(38px, 4vw, 54px);
+  padding: 28px 0 28px;
 }
 .profile-intro {
   display: grid;
-  grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1.14fr);
-  gap: clamp(40px, 6vw, 80px);
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 48px);
   align-items: center;
 }
 .profile-intro-copy {
@@ -1813,21 +1813,21 @@ h4 {
 
 /* Experience: resume-like date, company, project, and skill rhythm. */
 #experience.section-shell {
-  padding-top: 40px;
-  padding-bottom: 42px;
+  padding-top: 22px;
+  padding-bottom: 24px;
 }
 #experience .section-intro {
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 #experience .record-item {
-  grid-template-columns: 170px minmax(0, 1fr);
-  gap: 30px;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 20px;
 }
 .experience-record {
-  padding: 34px 0 38px;
+  padding: 18px 0 20px;
 }
 .experience-record .record-main {
-  gap: 16px;
+  gap: 8px;
   max-width: none;
 }
 .experience-record .record-heading {
@@ -1836,7 +1836,7 @@ h4 {
   border-bottom: 0;
 }
 .experience-record .record-heading h3 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 .experience-record .record-role {
   color: var(--muted);
@@ -1844,7 +1844,7 @@ h4 {
   font-weight: 500;
 }
 .experience-record .record-groups {
-  gap: 24px;
+  gap: 12px;
 }
 .experience-record .record-group {
   padding-top: 0;
@@ -1859,7 +1859,7 @@ h4 {
   display: flex;
   align-items: center;
   gap: 7px;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
   color: var(--text);
   font: 600 0.8rem/1.4 var(--sans);
   letter-spacing: 0;
@@ -1868,23 +1868,24 @@ h4 {
   content: none;
 }
 .experience-record .record-bullets {
-  gap: 13px;
+  gap: 5px;
 }
 .experience-record .record-bullets li {
   display: block;
   padding-left: 0;
-  font-size: 0.94rem;
-  line-height: 1.8;
+  font-size: 0.92rem;
+  line-height: 1.65;
 }
 .experience-record .record-bullets li::before {
   content: none;
 }
 .experience-record .record-bullets li strong,
 .experience-record .record-bullets li span {
-  display: block;
+  display: inline;
 }
 .experience-record .record-bullets li strong + span::before {
-  content: none;
+  content: " — ";
+  color: var(--line-strong);
 }
 .experience-record .record-bullets li > span:only-child {
   color: var(--muted);
@@ -1892,7 +1893,7 @@ h4 {
 .experience-record .record-skills {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 7px 24px;
+  gap: 4px 20px;
   margin: 0;
   padding: 0;
   color: var(--muted);
@@ -1939,17 +1940,17 @@ h4 {
 
 /* Projects: tabs for navigation, divider-led records for independent units. */
 #projects.section-shell {
-  padding-top: 42px;
-  padding-bottom: 60px;
+  padding-top: 22px;
+  padding-bottom: 32px;
   border-top: 1px solid var(--line);
 }
 .projects-intro {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 .project-tabs {
   display: flex;
   gap: 22px;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
   overflow-x: auto;
   border-bottom: 0;
   scrollbar-width: thin;
@@ -1981,11 +1982,11 @@ h4 {
 }
 .project-card {
   display: grid;
-  grid-template-columns: minmax(260px, 0.96fr) minmax(0, 1.04fr);
-  gap: clamp(28px, 4vw, 52px);
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: 24px;
   align-items: center;
   min-width: 0;
-  padding: 32px 0;
+  padding: 16px 0;
   background: transparent;
   border: 0;
   border-top: 1px solid var(--line);
@@ -1994,28 +1995,31 @@ h4 {
   display: none;
 }
 .project-card-media {
-  display: block;
-  overflow: hidden;
-  background: var(--surface-soft);
-  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  background: transparent;
+  border: 0;
 }
 .project-card-media img {
   display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: top center;
-  border: 0;
-  transition: transform 220ms ease;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 220px;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border: 1px solid var(--line);
 }
 .project-card-media:hover img {
-  transform: scale(1.015);
+  transform: none;
 }
 .project-card-body {
   display: grid;
   min-width: 0;
   align-content: start;
-  gap: 12px;
+  gap: 7px;
   padding: 0;
 }
 .project-card-meta {
@@ -2024,14 +2028,14 @@ h4 {
   letter-spacing: 0.04em;
 }
 .project-card h3 {
-  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  font-size: clamp(1.25rem, 1.7vw, 1.5rem);
   line-height: 1.2;
 }
 .project-card-body > p:not(.project-card-meta) {
   color: var(--muted);
   overflow-wrap: anywhere;
   font-size: 0.95rem;
-  line-height: 1.8;
+  line-height: 1.65;
 }
 .project-card-actions {
   display: flex;
@@ -2243,24 +2247,24 @@ h4 {
 }
 .brand-copy small { font-size: 0.66rem; }
 #profile .section-intro { margin: 0; }
-.section-intro > .eyebrow { font: 600 1.65rem/1.3 var(--sans); letter-spacing: -0.045em; color: var(--text); text-transform: none; }
+.section-intro > .eyebrow { font: 600 1.35rem/1.3 var(--sans); letter-spacing: -0.045em; color: var(--text); text-transform: none; }
 .record-index { font: 400 0.8rem/1.85 var(--mono); color: var(--muted); }
 .record-duration { display: block; color: var(--muted); }
-.record-description { font-size: 0.96rem; line-height: 1.8; }
+.record-description { font-size: 0.94rem; line-height: 1.65; }
 .record-bullets li strong { font-weight: 600; }
 .record-bullets li span { color: var(--muted); }
 .experience-record .record-evidence-link { min-height: 40px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; }
-#experience .activity-intro { margin-top: 36px; margin-bottom: 12px; }
-.supporting-record .record-bullets { gap: 10px; }
+#experience .activity-intro { margin-top: 20px; margin-bottom: 8px; }
+.supporting-record .record-bullets { gap: 5px; }
 .project-toolbar { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
 .project-tabs { display: none; }
 .js .project-tabs { display: flex; }
 .project-count { flex: 0 0 auto; color: var(--muted); font-size: 0.78rem; }
 .project-card h3 { overflow-wrap: anywhere; }
-.case-breadcrumb { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding-top: 22px; }
+.case-breadcrumb { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding-top: 12px; }
 .case-breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); font-size: 0.86rem; text-decoration: none; }
 .case-breadcrumb a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.case-hero--title, .case-hero--profile { padding: 28px 0 36px; }
+.case-hero--title, .case-hero--profile { padding: 14px 0 22px; }
 .case-hero--title h1 { font-size: clamp(1.9rem, 3.6vw, 3.1rem); max-width: 28ch; overflow-wrap: anywhere; }
 .case-hero--profile h1 { font-size: clamp(2rem, 3.8vw, 3.3rem); }
 .case-hero--profile .case-hero-grid { grid-template-columns: minmax(0, 1fr) minmax(330px, 0.9fr); gap: 48px; }
@@ -2268,13 +2272,13 @@ h4 {
 .case-meta--hero div, .case-meta--hero div:nth-child(odd), .case-meta--hero div:nth-child(even) { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; padding: 10px 0; align-items: baseline; }
 .case-meta--hero dd { margin: 0; }
 .case-meta--hero dt { font: 500 0.76rem/1.6 var(--sans); }
-.case-section { padding: 30px 0; }
+.case-section { padding: 20px 0; }
 .case-section > h2 { font-size: 1.05rem; line-height: 1.6; }
-.case-section-content { max-width: 70ch; font-size: 0.96rem; line-height: 1.85; }
-.case-section-content ol { gap: 10px; }
-.case-section--evidence, .case-study--company .case-section--evidence { width: min(calc(100% - 96px), var(--max)); padding-top: 34px; }
+.case-section-content { max-width: 75ch; font-size: 0.96rem; line-height: 1.7; }
+.case-section-content ol { gap: 6px; }
+.case-section--evidence, .case-study--company .case-section--evidence { width: min(calc(100% - 96px), var(--max)); padding-top: 22px; }
 .case-gallery figcaption { font-size: 0.88rem; line-height: 1.75; }
-.case-study { padding-bottom: 44px; }
+.case-study { padding-bottom: 28px; }
 .case-cta { flex-wrap: wrap; gap: 20px; }
 .lightbox-open { overflow: hidden; }
 .evidence-lightbox-controls { position: sticky; top: 0; left: 0; display: flex; justify-content: flex-end; gap: 8px; padding: 10px 14px; background: #101411; z-index: 1; }
@@ -2285,9 +2289,9 @@ h4 {
 .project-tab:focus-visible { outline-offset: -3px; }
 
 @media (max-width: 980px) {
-  .profile-intro { grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr); gap: 36px; }
+  .profile-intro { grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr); gap: 24px; }
   .desktop-break { display: none; }
-  #experience .record-item { grid-template-columns: 150px minmax(0, 1fr); gap: 22px; }
+  #experience .record-item { grid-template-columns: 135px minmax(0, 1fr); gap: 18px; }
   .experience-record .record-skills { grid-template-columns: 1fr; }
   .case-hero--profile .case-hero-grid { grid-template-columns: 1fr; gap: 24px; }
 }
@@ -2299,7 +2303,7 @@ h4 {
   .brand-copy small { max-width: 52vw; font-size: 0.58rem; }
   .menu-toggle { display: none; font: 500 0.8rem var(--sans); }
   .js .menu-toggle { display: inline-flex; }
-  .profile-intro { grid-template-columns: 1fr; gap: 26px; }
+  .profile-intro { grid-template-columns: 1fr; gap: 16px; }
   .profile-intro-photo { width: 100%; max-height: 300px; }
   .profile-intro-copy h1 { max-width: none; font-size: clamp(1.35rem, 5.4vw, 1.7rem); line-height: 1.6; }
   .desktop-break { display: initial; }
@@ -2309,28 +2313,28 @@ h4 {
   .profile-text-link { font-size: 0.72rem; overflow-wrap: anywhere; }
   .profile-contact-list dt { font-size: 0.7rem; }
   .section-intro > .eyebrow { font-size: 1.35rem; }
-  #experience.section-shell { padding-top: 28px; }
-  #experience .record-item { grid-template-columns: 1fr; gap: 12px; padding: 24px 0 28px; }
+  #experience.section-shell { padding-top: 20px; }
+  #experience .record-item { grid-template-columns: 1fr; gap: 6px; padding: 14px 0 18px; }
   .record-duration { display: inline; margin-left: 10px; }
   .record-index { font-size: 0.75rem; }
   .experience-record .record-heading { display: grid; gap: 6px; }
   .experience-record .record-heading h3 { font-size: 1.35rem; }
-  .experience-record .record-main { gap: 14px; }
-  .experience-record .record-bullets li { font-size: 0.91rem; line-height: 1.8; }
+  .experience-record .record-main { gap: 8px; }
+  .experience-record .record-bullets li { font-size: 0.91rem; line-height: 1.65; }
   .record-description { font-size: 0.91rem; }
   .project-toolbar { flex-wrap: wrap; gap: 0; }
   .project-tabs, .js .project-tabs { width: 100%; gap: 18px; margin-bottom: 10px; }
-  .project-count { margin: 0 0 14px; }
+  .project-count { margin: 0 0 8px; }
   .project-tab { font-size: 0.81rem; }
-  .project-card { grid-template-columns: 1fr; gap: 20px; padding: 26px 0; }
-  .project-card-body { padding: 0; gap: 10px; }
-  .project-card h3 { font-size: 1.5rem; }
+  .project-card { grid-template-columns: 1fr; gap: 12px; padding: 16px 0; }
+  .project-card-body { padding: 0; gap: 6px; }
+  .project-card h3 { font-size: 1.3rem; }
   .project-card-actions { gap: 22px; }
-  .case-hero--title, .case-hero--profile { padding: 22px 0 28px; }
+  .case-hero--title, .case-hero--profile { padding: 14px 0 18px; }
   .case-hero--title h1 { font-size: 1.9rem; }
-  .case-breadcrumb { padding-top: 14px; }
+  .case-breadcrumb { padding-top: 8px; }
   .case-breadcrumb a { font-size: 0.8rem; }
-  .case-section { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
+  .case-section { grid-template-columns: 1fr; gap: 8px; padding: 16px 0; }
   .case-section--evidence, .case-study--company .case-section--evidence { width: min(calc(100% - 40px), var(--max)); }
   .case-keyword-rows > div { grid-template-columns: 1fr; gap: 10px; }
   .case-keywords { grid-template-columns: 1fr; }
@@ -2338,7 +2342,7 @@ h4 {
 }
 @media (max-width: 760px) {
   .case-hero--title {
-    padding: 22px 0 28px;
+    padding: 14px 0 18px;
   }
   .case-hero--title h1 {
     font-size: 1.9rem;
