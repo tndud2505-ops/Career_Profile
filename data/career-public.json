@@ -160,9 +160,10 @@
       "name": "Virtual MCU Training Environment",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "C 코드 실행을 MCU·H-Bridge·DC 모터 회로와 연결하고 핀·레지스터·신호 변화를 확인하는 브라우저 모터 제어 실습 환경",
+      "description": "C 펌웨어·DC 모터 회로·센서 입력을 연결하고, 레지스터와 학습 문서로 제어 흐름을 익히는 브라우저 실습 서비스",
       "detailPath": "./projects/virtual-mcu.html",
-      "externalUrl": "https://virtual-mcu-training-env.pages.dev/"
+      "externalUrl": "https://virtual-mcu-training-env.pages.dev/",
+      "documentationUrl": "https://virtual-mcu-training-env.pages.dev/docs/unified-dc-motor-trainer-guide.html"
     },
     {
       "id": "saigyeol-chat-analysis",
