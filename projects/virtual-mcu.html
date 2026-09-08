@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Virtual MCU Training Environment | 김수영</title>
-    <meta name="description" content="브라우저에서 C 코드 실행과 GPIO·register·graph·log 변화를 연결해 보는 Virtual MCU 학습 환경입니다." />
+    <title>Virtual MCU Training Environment | 김수영 Portfolio</title>
+    <meta name="description" content="C 코드 실행을 MCU·H-Bridge·DC 모터 회로와 연결하고 핀·레지스터·신호 변화를 확인하는 브라우저 모터 제어 실습 환경" />
     <link rel="canonical" href="https://tndud2505-ops.github.io/Career_Profile/projects/virtual-mcu.html" />
     <link rel="icon" href="../assets/profile-header-thumb.png" type="image/png" />
     <link rel="stylesheet" href="../styles.css?v=20260908b" />
@@ -16,27 +16,25 @@
     <main id="content" class="case-study">
       <div class="container case-breadcrumb"><a href="../index.html#projects">← 개인 프로젝트</a><a href="https://virtual-mcu-training-env.pages.dev/" target="_blank" rel="noopener noreferrer">사이트 열기 ↗<span class="sr-only"> 새 창</span></a></div>
       <section class="case-hero case-hero--title"><div class="container"><h1>Virtual MCU Training Environment</h1></div></section>
-      <section class="container case-section"><h2>개요</h2><div class="case-section-content"><p>실습 장비가 없어도 C 코드 변화와 MCU 동작 원리의 관계를 단계적으로 확인할 수 있도록 만든 브라우저 기반 학습 도구입니다. 실행 결과를 GPIO·register·graph·log로 나눠 읽을 수 있습니다.</p></div></section>
-      <section class="container case-section"><h2>해결할 문제</h2><div class="case-section-content"><p>코드만 보거나 로그만 확인하면 실행 결과가 왜 달라졌는지 설명하기 어렵습니다. 하드웨어 상태와 실행 흐름을 여러 화면에서 오가야 하는 학습 부담도 있었습니다.</p></div></section>
+      <section class="container case-section"><h2>개요</h2><div class="case-section-content"><p>브라우저에서 C 코드를 빌드·실행하며 MCU, H-Bridge 드라이버와 DC 모터의 연결을 살펴보는 실습 환경입니다. 외부 명령 입력과 핀 경로, 레지스터 상태를 함께 확인할 수 있습니다.</p></div></section>
+      <section class="container case-section"><h2>해결할 문제</h2><div class="case-section-content"><p>코드와 회로를 따로 보면 설정한 레지스터가 어느 핀과 장치에 영향을 주는지 이해하기 어렵습니다. 코드 편집기와 회로·신호 관찰 화면을 연결해 실습 흐름을 구성했습니다.</p></div></section>
       <section class="container case-section">
         <h2>구현 과정</h2>
         <div class="case-section-content">
-          <p>코드 편집과 실행 결과를 한 작업 단위로 묶고, 상태가 바뀌는 지점을 서로 다른 시각화에서 동시에 확인하게 구성했습니다.</p>
-          <ol><li>브라우저에서 C 코드 작성·수정</li><li>실행 결과를 GPIO와 회로 시각화로 확인</li><li>register 변화와 graph 추이 추적</li><li>Runtime Log로 실행 흐름 다시 읽기</li></ol>
+          <p>펌웨어 실행과 회로 관찰을 연결하고, 핀과 주변장치 상태를 따라가며 학습하도록 만들었습니다.</p>
+          <ol><li>펌웨어 편집기에서 예제 C 코드를 확인·수정하고 빌드</li><li>실행·정지와 외부 명령 입력으로 동작 확인</li><li>MCU·드라이버·모터·Hall 센서 연결과 핀 상태 시각화</li><li>레지스터·그래프·로그에서 설정값과 실행 결과 비교</li></ol>
         </div>
       </section>
       <section class="container case-section case-section--evidence">
         <h2>화면·동작</h2>
         <div class="case-section-content">
           <div class="case-gallery">
-            <figure><img width="1440" height="2379" src="../assets/virtual_mcu_home.png" alt="Virtual MCU 실습 선택 화면" loading="lazy" /><figcaption>실습 선택 화면 — MCU와 예제를 선택해 실습을 시작합니다.</figcaption></figure>
-            <figure><img width="1440" height="2379" src="../assets/virtual_mcu_editor.png" alt="Virtual MCU 코드 편집기와 실행 결과 화면" loading="lazy" /><figcaption>코드 실행 화면 — C 코드를 수정·실행하고 출력 로그를 확인합니다.</figcaption></figure>
-            <figure><img width="1447" height="804" src="../assets/virtual_mcu_register_deck.png" alt="Virtual MCU register와 graph 화면" loading="lazy" /><figcaption>Register·Graph 화면 — 레지스터 값과 시간에 따른 신호 변화를 확인합니다.</figcaption></figure>
-            <figure><img width="1181" height="751" src="../assets/virtual_mcu_schematic_focus.png" alt="Virtual MCU 회로 상태 시각화 화면" loading="lazy" /><figcaption>회로 상태 화면 — 코드 실행에 따라 GPIO와 회로 상태가 어떻게 바뀌는지 시각화합니다.</figcaption></figure>
+            <figure><img width="1440" height="1000" src="../assets/virtualmcu_motor_lab_20260908.png" alt="Virtual MCU Training Environment 모터 제어 실습" loading="lazy" /><figcaption>모터 제어 실습 — MCU·H-Bridge·DC 모터·Hall 센서의 연결과 핀 상태를 확인합니다.</figcaption></figure>
+            <figure><img width="1440" height="1000" src="../assets/virtualmcu_firmware_20260908.png" alt="Virtual MCU Training Environment 펌웨어 편집기" loading="lazy" /><figcaption>펌웨어 편집기 — 예제 C 코드와 API를 확인하고 빌드·실행·디버그 흐름으로 연결합니다.</figcaption></figure>
           </div>
         </div>
       </section>
-      <section class="container"><div class="case-cta"><a class="button button-primary" href="https://virtual-mcu-training-env.pages.dev/" target="_blank" rel="noopener noreferrer">실제 학습 환경 열기 <span aria-hidden="true">↗</span><span class="sr-only"> 새 창</span></a><a class="text-link" href="../index.html#projects">개인 프로젝트로 돌아가기 <span aria-hidden="true">→</span></a></div></section>
+      <section class="container"><div class="case-cta"><a class="button button-primary" href="https://virtual-mcu-training-env.pages.dev/" target="_blank" rel="noopener noreferrer">실제 사이트 열기 <span aria-hidden="true">↗</span><span class="sr-only"> 새 창</span></a><a class="text-link" href="../index.html#projects">개인 프로젝트로 돌아가기 <span aria-hidden="true">→</span></a></div></section>
     </main>
     <footer class="site-footer"><div class="container footer-inner"><p>김수영 Portfolio</p><p><span>© <span id="current-year">2026</span></span><a href="https://github.com/tndud2505-ops" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> 새 창</span></a></p></div></footer>
   </body>

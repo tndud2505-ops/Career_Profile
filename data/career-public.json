@@ -124,7 +124,7 @@
       "name": "K Stock",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "종목 검색, 테마·산업군 필터, 점수 비교, 상세 차트를 하나의 읽기 전용 웹 서비스로 구현하고 배포",
+      "description": "국내 주식의 캔들·거래량·이동평균선과 비교 지표를 함께 보는 상세 차트 중심의 시장 탐색 서비스",
       "detailPath": "./projects/k-stock.html",
       "externalUrl": "https://kstockclock.com/"
     },
@@ -133,7 +133,7 @@
       "name": "USED PICK",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "여러 중고 플랫폼의 상품을 한 화면에서 검색하고 카테고리·가격·정렬 기준으로 비교하는 중고거래 통합 검색 사이트",
+      "description": "여러 중고 플랫폼의 PC 부품 매물을 통합 검색하고 모델별 시세·가격 추이·부품 조합 비용을 비교하는 서비스",
       "detailPath": "./projects/used-market-agent.html",
       "externalUrl": "https://www.used-pick.com/"
     },
@@ -142,7 +142,7 @@
       "name": "COTEEPET",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "Codex Pet 캐릭터를 검색·정렬하고 애니메이션 동작을 미리 본 뒤 업로드·찜·다운로드 흐름으로 연결한 웹 카탈로그",
+      "description": "Codex Pet 캐릭터의 9가지 애니메이션을 미리 보고 검색·필터·무료 패키지 다운로드로 연결하는 웹 카탈로그",
       "detailPath": "./projects/coteepet.html",
       "externalUrl": "https://coteepet.com/"
     },
@@ -151,7 +151,7 @@
       "name": "EMOTOWN",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "이모티콘 묶음을 검색·카테고리·정렬로 탐색하고 좋아요·찜·무료 다운로드와 제작자 업로드를 연결한 공개 웹 서비스",
+      "description": "디자인 작업용 이모티콘 세트를 검색·분류하고 무료 다운로드와 제작자 이미지·ZIP 업로드를 제공하는 웹 갤러리",
       "detailPath": "./projects/emotown.html",
       "externalUrl": "https://emotown.com/"
     },
@@ -160,9 +160,18 @@
       "name": "Virtual MCU Training Environment",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "MCU 데이터시트 기반으로 C 코드 작성·실행과 GPIO·Register·Graph·Log 변화를 확인하는 가상 개발·학습 환경",
+      "description": "C 코드 실행을 MCU·H-Bridge·DC 모터 회로와 연결하고 핀·레지스터·신호 변화를 확인하는 브라우저 모터 제어 실습 환경",
       "detailPath": "./projects/virtual-mcu.html",
       "externalUrl": "https://virtual-mcu-training-env.pages.dev/"
+    },
+    {
+      "id": "saigyeol-chat-analysis",
+      "name": "대화 분석",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "카카오톡 TXT를 브라우저에서 분석해 참여자별 통계·표현 신호·대화 연결과 원문 근거를 보여주는 서비스",
+      "detailPath": "./projects/saigyeol-chat-analysis.html",
+      "externalUrl": "https://saigyeol-chat-analysis.tndud2503.workers.dev/"
     },
     {
       "id": "jira-opsidian",
