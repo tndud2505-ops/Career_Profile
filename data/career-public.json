@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "lastVerified": "2026-08-26",
+  "lastVerified": "2026-09-09",
   "profile": {
     "name": "Kim Suyoung",
     "nameKo": "김수영",
@@ -18,7 +18,7 @@
       "id": "mobase-asec",
       "company": "MOBASE ASEC",
       "periodLabel": "2026.01 ~ 재직중",
-      "role": "아키텍처 설계실 · R&D · 선임연구원",
+      "role": "플랫폼 설계실 · R&D · 책임연구원",
       "summary": "AUTOSAR 자동생성툴을 개발하고, 생성 코드의 검증 환경과 프로젝트 관리 대시보드를 함께 구현했습니다.",
       "detailPath": "./experience/mobase-asec.html",
       "detailLabel": "AUTOSAR·Tooling 경력 흐름 보기",
@@ -181,7 +181,8 @@
       "categoryLabel": "제품·서비스",
       "description": "Jira Cloud 이슈의 계층과 연결 관계를 시각화하고, 선행·연관·검증 관계를 직접 추가하는 앱",
       "detailPath": "./projects/jira-mini.html",
-      "documentationUrl": "https://tndud2505-ops.github.io/jira-obsidian-support/docs.html"
+      "documentationUrl": "https://tndud2505-ops.github.io/jira-obsidian-support/docs.html",
+      "marketplaceUrl": "https://marketplace.atlassian.com/apps/1923219004"
     },
     {
       "id": "train-gallery",

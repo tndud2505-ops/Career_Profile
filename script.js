@@ -306,6 +306,9 @@
           (link) => !link.target,
         );
         const externalLink = card.querySelector(
+          '.project-card-actions a[data-project-link="site"]',
+        );
+        const fallbackExternalLink = card.querySelector(
           '.project-card-actions a[target="_blank"]',
         );
 
@@ -316,8 +319,9 @@
           mediaLink.setAttribute("aria-label", `${project.name} 상세 보기`);
         }
         if (detailLink) detailLink.href = project.detailPath;
-        if (externalLink && (project.externalUrl || project.documentationUrl)) {
-          externalLink.href = project.externalUrl || project.documentationUrl;
+        const siteLink = externalLink || fallbackExternalLink;
+        if (siteLink && (project.marketplaceUrl || project.externalUrl || project.documentationUrl)) {
+          siteLink.href = project.marketplaceUrl || project.externalUrl || project.documentationUrl;
         }
       });
 
