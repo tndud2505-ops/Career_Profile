@@ -129,6 +129,16 @@
       "externalUrl": "https://kstockclock.com/"
     },
     {
+      "id": "jira-opsidian",
+      "name": "Jira Obsidian",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "Jira Cloud 이슈의 계층과 연결 관계를 시각화하고, 선행·연관·검증 관계를 직접 추가하는 앱",
+      "detailPath": "./projects/jira-mini.html",
+      "documentationUrl": "https://tndud2505-ops.github.io/jira-obsidian-support/docs.html",
+      "marketplaceUrl": "https://marketplace.atlassian.com/apps/1923219004"
+    },
+    {
       "id": "used-market-agent",
       "name": "USED PICK",
       "category": "product",
@@ -166,6 +176,14 @@
       "documentationUrl": "https://virtual-mcu-training-env.pages.dev/docs/unified-dc-motor-trainer-guide.html"
     },
     {
+      "id": "train-gallery",
+      "name": "Train Gallery",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "운동 영상을 날짜별로 기록하고 클립·자막·하이라이트 export까지 지원하는 모바일 앱",
+      "detailPath": "./projects/train-gallery.html"
+    },
+    {
       "id": "saigyeol-chat-analysis",
       "name": "대화 분석",
       "category": "product",
@@ -173,24 +191,6 @@
       "description": "카카오톡 TXT를 브라우저에서 분석해 참여자별 통계·표현 신호·대화 연결과 원문 근거를 보여주는 서비스",
       "detailPath": "./projects/saigyeol-chat-analysis.html",
       "externalUrl": "https://saigyeol-chat-analysis.tndud2503.workers.dev/"
-    },
-    {
-      "id": "jira-opsidian",
-      "name": "Jira Obsidian",
-      "category": "product",
-      "categoryLabel": "제품·서비스",
-      "description": "Jira Cloud 이슈의 계층과 연결 관계를 시각화하고, 선행·연관·검증 관계를 직접 추가하는 앱",
-      "detailPath": "./projects/jira-mini.html",
-      "documentationUrl": "https://tndud2505-ops.github.io/jira-obsidian-support/docs.html",
-      "marketplaceUrl": "https://marketplace.atlassian.com/apps/1923219004"
-    },
-    {
-      "id": "train-gallery",
-      "name": "Train Gallery",
-      "category": "product",
-      "categoryLabel": "제품·서비스",
-      "description": "운동 영상을 날짜별로 기록하고 클립·자막·하이라이트 export까지 지원하는 모바일 앱",
-      "detailPath": "./projects/train-gallery.html"
     }
   ]
 }
