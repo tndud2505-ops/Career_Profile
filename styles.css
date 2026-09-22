@@ -883,6 +883,15 @@ h4 {
   color: var(--muted);
   font-size: 0.78rem;
 }
+.case-phone-capture {
+  width: min(100%, 430px);
+}
+.case-phone-capture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line-strong);
+}
 .case-section--evidence {
   width: min(calc(100% - 96px), 1440px);
   grid-template-columns: minmax(0, 1fr);
@@ -2011,6 +2020,9 @@ h4 {
   aspect-ratio: auto;
   object-fit: contain;
   border: 1px solid var(--line);
+}
+.project-card--mobile .project-card-media img {
+  max-height: 330px;
 }
 .project-card-media:hover img {
   transform: none;

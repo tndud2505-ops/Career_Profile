@@ -184,6 +184,16 @@
       "detailPath": "./projects/train-gallery.html"
     },
     {
+      "id": "dulharu",
+      "name": "둘의 하루",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "날짜·사진·장소·짧은 이야기를 한 기록으로 남기고, 이야기·달력·지도 흐름에서 다시 보는 커플 기록 앱",
+      "detailPath": "./projects/dulharu.html",
+      "cardLabel": "모바일 앱",
+      "externalUrl": "https://dulharu-dev.tndud2503.workers.dev/"
+    },
+    {
       "id": "saigyeol-chat-analysis",
       "name": "대화 분석",
       "category": "product",
