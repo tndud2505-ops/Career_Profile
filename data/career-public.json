@@ -182,6 +182,24 @@
       "categoryLabel": "제품·서비스",
       "description": "운동 영상을 날짜별로 기록하고 클립·자막·하이라이트 export까지 지원하는 모바일 앱",
       "detailPath": "./projects/train-gallery.html"
+    },
+    {
+      "id": "dulharu",
+      "name": "둘의 하루",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "날짜·사진·장소·짧은 이야기를 한 기록으로 남기고, 이야기·달력·지도 흐름에서 다시 보는 커플 기록 앱",
+      "detailPath": "./projects/dulharu.html",
+      "cardLabel": "모바일 앱"
+    },
+    {
+      "id": "saigyeol-chat-analysis",
+      "name": "대화 분석",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "카카오톡 TXT를 브라우저에서 분석해 참여자별 통계·표현 신호·대화 연결과 원문 근거를 보여주는 서비스",
+      "detailPath": "./projects/saigyeol-chat-analysis.html",
+      "cardLabel": "웹 서비스"
     }
   ]
 }
