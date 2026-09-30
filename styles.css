@@ -2376,7 +2376,7 @@ h4 {
   }
 }
 
-/* Approved editorial layout: one type family and aligned career records. */
+/* Career records read continuously along one text axis. */
 .brand-copy strong { font-size: 1.1rem; font-weight: 650; }
 .brand-copy small { font-size: 0.78rem; }
 .site-nav a { font-size: 0.98rem; }
@@ -2414,8 +2414,8 @@ h4 {
   text-align: right;
 }
 [data-career-company] .record-duration { display: inline; margin-left: 10px; }
-[data-career-company] .record-description { font-size: 1.0625rem; line-height: 1.75; }
-[data-career-company] .record-groups { gap: 20px; }
+[data-career-company] .record-description { max-width: 920px; font-size: 1.0625rem; line-height: 1.75; }
+[data-career-company] .record-groups { max-width: 920px; gap: 22px; }
 [data-career-company] .record-group:first-child h4 {
   position: absolute;
   width: 1px;
@@ -2426,25 +2426,25 @@ h4 {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-[data-career-company] .record-bullets { gap: 14px; }
+[data-career-company] .record-bullets { gap: 18px; }
 [data-career-company] .record-bullets li {
   display: grid;
-  grid-template-columns: minmax(0, 270px) minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 4px;
   font-size: 1rem;
   line-height: 1.7;
 }
 [data-career-company] .record-bullets li strong,
 [data-career-company] .record-bullets li span { display: block; }
 [data-career-company] .record-bullets li strong { font-weight: 600; }
-[data-career-company] .record-bullets li span { border-left: 1px solid var(--line); padding-left: 24px; }
+[data-career-company] .record-bullets li span { border-left: 0; padding-left: 0; }
 [data-career-company] .record-bullets li strong + span::before { content: none; }
 [data-career-company] .record-group + .record-group {
   display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  gap: 18px;
-  border-top: 1px solid var(--line);
-  padding-top: 14px;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  border-top: 0;
+  padding-top: 0;
 }
 [data-career-company] .record-group h4 { margin: 0; font-size: 0.9rem; line-height: 1.7; color: var(--muted); }
 [data-career-company] .record-skills { display: flex; flex-wrap: wrap; gap: 4px 0; }
@@ -2459,10 +2459,6 @@ h4 {
 .project-card h3 { font-weight: 650; }
 .project-card-body > p:not(.project-card-meta) { font-size: 1rem; line-height: 1.75; }
 
-@media (max-width: 980px) {
-  [data-career-company] .record-bullets li { grid-template-columns: minmax(0, 215px) minmax(0, 1fr); gap: 18px; }
-  [data-career-company] .record-bullets li span { padding-left: 18px; }
-}
 @media (max-width: 760px) {
   .brand-copy small { font-size: 0.7rem; }
   .site-nav a { font-size: 0.93rem; }
