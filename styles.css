@@ -1,4 +1,10 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "Pretendard";
+  src: url("./assets/fonts/PretendardVariable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
 
 :root {
   --bg: #f8f8f5;
@@ -11,8 +17,8 @@
   --accent: #315d4b;
   --accent-soft: #e8f0eb;
   --max: 1180px;
-  --sans: "IBM Plex Sans KR", "Noto Sans KR", system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --sans: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+  --mono: var(--sans);
 }
 
 * {
@@ -2368,4 +2374,110 @@ h4 {
     grid-template-columns: 1fr;
     gap: 3px;
   }
+}
+
+/* Approved editorial layout: one type family and aligned career records. */
+.brand-copy strong { font-size: 1.1rem; font-weight: 650; }
+.brand-copy small { font-size: 0.78rem; }
+.site-nav a { font-size: 0.98rem; }
+.section-intro > .eyebrow {
+  font-size: clamp(1.65rem, 2.8vw, 2.25rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+#experience.section-shell { padding-top: 36px; padding-bottom: 36px; }
+#experience .section-intro { margin-bottom: 8px; }
+#experience [data-career-company] {
+  display: block;
+  padding: 28px 0 30px;
+}
+[data-career-company] .record-main { gap: 20px; max-width: none; }
+[data-career-company] .record-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px 32px;
+}
+[data-career-company] .record-heading { display: grid; gap: 6px; }
+[data-career-company] .record-heading h3 {
+  font-size: 1.65rem;
+  font-weight: 650;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+[data-career-company] .record-role { font-size: 1rem; font-weight: 450; line-height: 1.5; }
+[data-career-company] .record-index {
+  flex-shrink: 0;
+  padding: 0;
+  font: 400 0.9rem/1.6 var(--sans);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+[data-career-company] .record-duration { display: inline; margin-left: 10px; }
+[data-career-company] .record-description { font-size: 1.0625rem; line-height: 1.75; }
+[data-career-company] .record-groups { gap: 20px; }
+[data-career-company] .record-group:first-child h4 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+[data-career-company] .record-bullets { gap: 14px; }
+[data-career-company] .record-bullets li {
+  display: grid;
+  grid-template-columns: minmax(0, 270px) minmax(0, 1fr);
+  gap: 24px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+[data-career-company] .record-bullets li strong,
+[data-career-company] .record-bullets li span { display: block; }
+[data-career-company] .record-bullets li strong { font-weight: 600; }
+[data-career-company] .record-bullets li span { border-left: 1px solid var(--line); padding-left: 24px; }
+[data-career-company] .record-bullets li strong + span::before { content: none; }
+[data-career-company] .record-group + .record-group {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+[data-career-company] .record-group h4 { margin: 0; font-size: 0.9rem; line-height: 1.7; color: var(--muted); }
+[data-career-company] .record-skills { display: flex; flex-wrap: wrap; gap: 4px 0; }
+[data-career-company] .record-skills li { display: block; font-size: 0.9rem; line-height: 1.7; }
+[data-career-company] .record-skills li::before { content: none; }
+[data-career-company] .record-skills li:not(:last-child)::after { content: "·"; margin: 0 10px; color: var(--line-strong); }
+[data-career-company] .record-actions { padding: 0; }
+[data-career-company] .record-evidence-link { font-size: 0.98rem; min-height: 36px; }
+#experience .activity-intro { margin-top: 32px; }
+.activity-intro > .eyebrow { font-size: 1.4rem; }
+.project-card-meta { font-size: 0.88rem; }
+.project-card h3 { font-weight: 650; }
+.project-card-body > p:not(.project-card-meta) { font-size: 1rem; line-height: 1.75; }
+
+@media (max-width: 980px) {
+  [data-career-company] .record-bullets li { grid-template-columns: minmax(0, 215px) minmax(0, 1fr); gap: 18px; }
+  [data-career-company] .record-bullets li span { padding-left: 18px; }
+}
+@media (max-width: 760px) {
+  .brand-copy small { font-size: 0.7rem; }
+  .site-nav a { font-size: 0.93rem; }
+  #experience.section-shell { padding-top: 26px; padding-bottom: 24px; }
+  #experience [data-career-company] { padding: 22px 0 26px; }
+  [data-career-company] .record-main { gap: 16px; }
+  [data-career-company] .record-header { flex-direction: column; gap: 8px; }
+  [data-career-company] .record-heading h3 { font-size: 1.45rem; }
+  [data-career-company] .record-role { font-size: 0.94rem; }
+  [data-career-company] .record-index { font-size: 0.85rem; text-align: left; }
+  [data-career-company] .record-description { font-size: 1rem; line-height: 1.7; }
+  [data-career-company] .record-bullets { gap: 16px; }
+  [data-career-company] .record-bullets li { grid-template-columns: 1fr; gap: 4px; font-size: 0.98rem; }
+  [data-career-company] .record-bullets li span { padding-left: 0; border-left: 0; }
+  [data-career-company] .record-group + .record-group { grid-template-columns: 1fr; gap: 6px; }
+  [data-career-company] .record-skills li { font-size: 0.86rem; }
+  [data-career-company] .record-evidence-link { font-size: 0.92rem; }
 }
