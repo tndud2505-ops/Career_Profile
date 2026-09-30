@@ -2376,7 +2376,7 @@ h4 {
   }
 }
 
-/* Career records read continuously along one text axis. */
+/* Company, short scope, then role and detailed career in a single group. */
 .brand-copy strong { font-size: 1.1rem; font-weight: 650; }
 .brand-copy small { font-size: 0.78rem; }
 .site-nav a { font-size: 0.98rem; }
@@ -2388,10 +2388,12 @@ h4 {
 #experience.section-shell { padding-top: 36px; padding-bottom: 36px; }
 #experience .section-intro { margin-bottom: 8px; }
 #experience [data-career-company] {
-  display: block;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 32px;
   padding: 28px 0 30px;
 }
-[data-career-company] .record-main { gap: 20px; max-width: none; }
+[data-career-company] .record-main { gap: 18px; max-width: none; }
 [data-career-company] .record-header {
   display: flex;
   align-items: baseline;
@@ -2400,33 +2402,36 @@ h4 {
 }
 [data-career-company] .record-heading { display: grid; gap: 6px; }
 [data-career-company] .record-heading h3 {
-  font-size: 1.65rem;
+  font-size: 1.4rem;
   font-weight: 650;
   line-height: 1.3;
   letter-spacing: -0.025em;
 }
+[data-career-company-name] { white-space: nowrap; }
+[data-career-company] .record-headline {
+  font-size: 1.05rem;
+  font-weight: 450;
+  letter-spacing: -0.015em;
+  line-height: 1.6;
+  color: var(--muted);
+}
+[data-career-company] .record-headline::before { content: " : "; white-space: pre; }
 [data-career-company] .record-role { font-size: 1rem; font-weight: 450; line-height: 1.5; }
 [data-career-company] .record-index {
   flex-shrink: 0;
-  padding: 0;
+  padding: 4px 0 0;
   font: 400 0.9rem/1.6 var(--sans);
   font-variant-numeric: tabular-nums;
-  text-align: right;
+  text-align: left;
 }
-[data-career-company] .record-duration { display: inline; margin-left: 10px; }
+[data-career-company] .record-duration { display: block; margin-left: 0; font-size: 0.82rem; }
 [data-career-company] .record-description { max-width: 920px; font-size: 1.0625rem; line-height: 1.75; }
 [data-career-company] .record-groups { max-width: 920px; gap: 22px; }
 [data-career-company] .record-group:first-child h4 {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+  margin-bottom: 10px;
+  color: var(--text);
 }
-[data-career-company] .record-bullets { gap: 18px; }
+[data-career-company] .record-bullets { gap: 12px; }
 [data-career-company] .record-bullets li {
   display: grid;
   grid-template-columns: 1fr;
@@ -2459,16 +2464,22 @@ h4 {
 .project-card h3 { font-weight: 650; }
 .project-card-body > p:not(.project-card-meta) { font-size: 1rem; line-height: 1.75; }
 
+@media (max-width: 980px) {
+  #experience [data-career-company] { grid-template-columns: 130px minmax(0, 1fr); gap: 24px; }
+  [data-career-company] .record-headline { display: block; margin-top: 5px; }
+  [data-career-company] .record-headline::before { content: none; }
+}
 @media (max-width: 760px) {
   .brand-copy small { font-size: 0.7rem; }
   .site-nav a { font-size: 0.93rem; }
   #experience.section-shell { padding-top: 26px; padding-bottom: 24px; }
-  #experience [data-career-company] { padding: 22px 0 26px; }
+  #experience [data-career-company] { grid-template-columns: 1fr; gap: 8px; padding: 22px 0 26px; }
   [data-career-company] .record-main { gap: 16px; }
   [data-career-company] .record-header { flex-direction: column; gap: 8px; }
   [data-career-company] .record-heading h3 { font-size: 1.45rem; }
   [data-career-company] .record-role { font-size: 0.94rem; }
   [data-career-company] .record-index { font-size: 0.85rem; text-align: left; }
+  [data-career-company] .record-duration { display: inline; margin-left: 8px; }
   [data-career-company] .record-description { font-size: 1rem; line-height: 1.7; }
   [data-career-company] .record-bullets { gap: 16px; }
   [data-career-company] .record-bullets li { grid-template-columns: 1fr; gap: 4px; font-size: 0.98rem; }

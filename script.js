@@ -227,7 +227,8 @@
         if (!record) return;
 
         const period = article.querySelector("time");
-        const company = article.querySelector(".record-heading h3");
+        const company = article.querySelector("[data-career-company-name]");
+        const headline = article.querySelector("[data-career-headline]");
         const role = article.querySelector(".record-role");
         const summary = article.querySelector("[data-career-summary]");
         const projectList = article.querySelector("ul.record-bullets");
@@ -245,6 +246,7 @@
           }
         }
         if (company) company.textContent = record.company;
+        if (headline) headline.textContent = record.headline || record.summary;
         if (role) role.textContent = record.role;
         if (summary) summary.textContent = record.summary;
 
