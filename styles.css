@@ -931,6 +931,23 @@ h4 {
   line-height: 1.65;
   text-wrap: pretty;
 }
+.case-section--evidence .case-gallery--phones {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 28px;
+  row-gap: 32px;
+  max-width: 888px;
+  align-items: start;
+}
+.case-gallery--phones .case-phone-capture {
+  width: 100%;
+  min-width: 0;
+}
+@media (max-width: 680px) {
+  .case-section--evidence .case-gallery--phones {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 430px;
+  }
+}
 .case-figure-note {
   display: grid;
   gap: 8px;
