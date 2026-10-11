@@ -132,6 +132,16 @@
       "externalUrl": "https://kstockclock.com/"
     },
     {
+      "id": "train-gallery",
+      "name": "Train Gallery",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "매일 찍은 운동 영상을 달력에 기록하고, 영상별 구간·자막·이모티콘을 편집해 여러 영상을 하나의 브이로그로 만드는 모바일 앱",
+      "detailPath": "./projects/train-gallery.html",
+      "cardLabel": "모바일 앱",
+      "trialUrl": "https://github.com/tndud2505-ops/Train-Gallery-Downloads/releases/tag/v1.0.0-27-media-menu-20261011"
+    },
+    {
       "id": "jira-opsidian",
       "name": "Jira Obsidian",
       "category": "product",
@@ -177,14 +187,6 @@
       "detailPath": "./projects/virtual-mcu.html",
       "externalUrl": "https://virtual-mcu-training-env.pages.dev/",
       "documentationUrl": "https://virtual-mcu-training-env.pages.dev/docs/unified-dc-motor-trainer-guide.html"
-    },
-    {
-      "id": "train-gallery",
-      "name": "Train Gallery",
-      "category": "product",
-      "categoryLabel": "제품·서비스",
-      "description": "매일 찍은 운동 영상을 달력에 기록하고, 영상별 구간·자막·이모티콘을 편집해 여러 영상을 하나의 브이로그로 만드는 모바일 앱",
-      "detailPath": "./projects/train-gallery.html"
     },
     {
       "id": "dulharu",

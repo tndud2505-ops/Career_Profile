@@ -1970,11 +1970,15 @@ h4 {
   padding-top: 2px;
 }
 
-/* Projects: tabs for navigation, divider-led records for independent units. */
+/* Projects: broad two-column gallery; keep profile and experience rails intact. */
 #projects.section-shell {
   padding-top: 22px;
   padding-bottom: 32px;
   border-top: 1px solid var(--line);
+}
+#projects > .container {
+  max-width: 1320px;
+  width: calc(100% - 96px);
 }
 .projects-intro {
   margin-bottom: 10px;
@@ -2009,19 +2013,19 @@ h4 {
 }
 .project-card-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 64px 40px;
 }
 .project-card {
   display: grid;
-  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  align-content: start;
+  align-items: start;
   min-width: 0;
-  padding: 16px 0;
+  padding: 0;
   background: transparent;
   border: 0;
-  border-top: 1px solid var(--line);
 }
 .project-card[hidden] {
   display: none;
@@ -2031,21 +2035,23 @@ h4 {
   align-items: center;
   justify-content: center;
   min-width: 0;
-  background: transparent;
-  border: 0;
+  height: clamp(300px, 29vw, 420px);
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
 }
 .project-card-media img {
   display: block;
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: 220px;
+  max-height: 100%;
   aspect-ratio: auto;
   object-fit: contain;
-  border: 1px solid var(--line);
+  border: 0;
 }
 .project-card--mobile .project-card-media img {
-  max-height: 330px;
+  max-height: 100%;
 }
 .project-card-media:hover img {
   transform: none;
@@ -2188,14 +2194,24 @@ h4 {
   }
   .project-card-grid {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 40px;
   }
   .project-card {
     grid-template-columns: 1fr;
     gap: 14px;
   }
   .project-card-body {
-    padding: 14px 0 0;
+    padding: 0;
+  }
+  #projects > .container {
+    width: calc(100% - 40px);
+  }
+  .project-card-media {
+    height: auto;
+  }
+  .project-card-media img,
+  .project-card--mobile .project-card-media img {
+    max-height: 380px;
   }
 }
 
