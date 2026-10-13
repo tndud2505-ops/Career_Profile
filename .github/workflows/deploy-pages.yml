@@ -32,6 +32,8 @@ jobs:
           cp 404.html _site/
           cp styles.css _site/
           cp script.js _site/
+          cp portfolio.css portfolio.js detail-portfolio.css detail-portfolio.js _site/
+          cp -R vendor _site/vendor
           [ -f README.md ] && cp README.md _site/
           [ -f .nojekyll ] && cp .nojekyll _site/
           [ -d assets ] && cp -R assets _site/assets

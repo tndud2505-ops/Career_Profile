@@ -8,52 +8,18 @@
       name="description"
       content="MOBASE ASEC에서 AUTOSAR ARXML 기반 코드 생성 도구, SiL 검증 환경과 프로젝트 관리 대시보드를 개발한 경력입니다."
     />
-    <link
-      rel="canonical"
-      href="https://tndud2505-ops.github.io/Career_Profile/experience/mobase-asec.html"
-    />
+    <link rel="canonical" href="https://tndud2505-ops.github.io/Career_Profile/experience/mobase-asec.html">
     <link
       rel="icon"
       href="../assets/profile-header-thumb.png"
       type="image/png"
     />
     <link rel="stylesheet" href="../styles.css?v=20260930e" />
-    <script src="../script.js?v=20260930c" defer></script>
-  </head>
+    
+  <link rel="stylesheet" href="../portfolio.css?v=20261013"><link rel="stylesheet" href="../detail-portfolio.css?v=20261013"><script src="../detail-portfolio.js?v=20261013" defer></script></head>
   <body>
     <a class="skip-link" href="#content">본문으로 건너뛰기</a>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a
-          class="brand"
-          href="../index.html#profile"
-          aria-label="김수영 포트폴리오 처음으로"
-        >
-          <span class="brand-mark brand-photo"
-            ><img width="96" height="96"
-              src="../assets/profile-header-thumb.png"
-
-
-              alt=""
-          /></span>
-          <span class="brand-copy"
-            ><strong>김수영</strong
-            ><small>Automotive Software Engineer</small></span
-          >
-        </a>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-menu"
-        >메뉴</button>
-        <nav id="site-menu" class="site-nav" aria-label="주요 메뉴">
-          <a href="../index.html#profile">소개</a>
-          <a href="../index.html#experience" aria-current="page">실무 경력</a>
-          <a href="../index.html#projects">개인 프로젝트</a>
-        </nav>
-      </div>
-    </header>
+    <header class="site-header"><div class="header-inner container"><nav aria-label="주요 메뉴"><a href="../index.html#profile">소개</a><a href="../index.html#projects">개인 프로젝트</a><a href="../index.html#experience" aria-current="page">실무 경력</a></nav></div></header>
 
     <main id="content" class="case-study case-study--company">
       <div class="container case-breadcrumb"><a href="../index.html#experience">← 실무 경력</a></div>
@@ -72,7 +38,7 @@
             </div>
             <div>
               <dt>역할</dt>
-              <dd>아키텍처 설계실 · R&amp;D · 선임연구원</dd>
+              <dd>플랫폼 설계실 · R&amp;D · 책임연구원</dd>
             </div>
             <div>
               <dt>분야</dt>
@@ -82,11 +48,12 @@
         </div>
       </section>
 
-      <section class="container case-section">
+      <nav class="container career-section-links" aria-label="MOBASE 업무 바로가기"><a href="#code-generation">AUTOSAR 코드 생성</a><a href="#mobilgene">모빌진 모듈 설정·검증</a><a href="#sil-verification">SiL 검증</a><a href="#project-dashboard">대시보드</a></nav>
+<section class="container case-section">
         <h2>개요</h2>
         <div class="case-section-content">
           <p>
-            AUTOSAR 자동생성툴을 핵심 업무로 개발하고 있습니다.
+            AUTOSAR 자동생성툴을 개발하고 있습니다. 플랫폼 개발 업무에서는 모빌진(mobilgene)에서 모듈을 설정·검증하고, ASW 담당자에게 배포하여 개발을 지원합니다.
             생성 코드의 SiL·단위 검증 환경과 ASPICE 문서 추적성·Git·CI 결과를
             연결하는 프로젝트 관리 대시보드도 직접 개발했습니다.
           </p>
@@ -95,7 +62,7 @@
               <dt>적용 프로젝트</dt>
               <dd>
                 <ul class="case-keywords">
-                  <li>핵심 업무 · AUTOSAR 자동생성툴</li>
+                  <li>핵심 업무 · AUTOSAR 자동생성툴</li><li>모빌진 기반 플랫폼 개발 · 모듈 설정 및 검증 개발</li>
                   <li>프로젝트 고도화 · SiL 검증 환경</li>
                   <li>프로젝트 고도화 · 프로젝트 관리 대시보드</li>
                 </ul>
@@ -122,7 +89,7 @@
         </div>
       </section>
 
-      <section class="container case-section case-section--evidence">
+      <section id="code-generation" class="container case-section case-section--evidence">
         <h2>
           <span class="case-section-label">핵심 업무</span>
           AUTOSAR Code Generation
@@ -151,14 +118,23 @@
                 width="900"
                 height="1280"
                 alt="ECUD ARXML 파싱, ASW 서비스 후보 유추, 공통 패턴 정규화와 C 코드 자동 생성으로 이어지는 개발 흐름"
-                loading="lazy"
+                loading="eager"
               />
             </figure>
           </div>
         </div>
       </section>
 
-      <section class="container case-section case-section--evidence">
+<section id="mobilgene" class="container case-section case-section--evidence">
+  <h2><span class="case-section-label">플랫폼 개발</span>모빌진 모듈 설정·검증</h2>
+  <div class="case-section-content">
+    <p>모빌진(mobilgene)에서 플랫폼 모듈을 설정·검증하고, ASW 담당자에게 배포하여 개발을 지원합니다.</p>
+    <figure class="mobilgene-figure">
+      <img src="../assets/mobilgene-development-flow.svg" width="640" height="700" alt="플랫폼 개발 업무 개념도: mobilgene에서 모듈 설정, 검증, ASW 담당자에게 배포 및 개발 지원. mobilgene 제품 자체의 개발이 아닙니다." loading="eager">
+    </figure>
+  </div>
+</section>
+      <section id="sil-verification" class="container case-section case-section--evidence">
         <h2>
           <span class="case-section-label">프로젝트 고도화</span>
           SiL Verification
@@ -185,14 +161,14 @@
 
 
                 alt="생성 코드의 바인딩을 불러오고 인스턴스별 주기, 입력과 반환 조건을 구성하는 SiL 검증 화면"
-                loading="lazy"
+                loading="eager"
               />
             </figure>
           </div>
         </div>
       </section>
 
-      <section class="container case-section case-section--evidence">
+      <section id="project-dashboard" class="container case-section case-section--evidence">
         <h2>
           <span class="case-section-label">프로젝트 고도화</span>
           Project Dashboard
@@ -219,7 +195,7 @@
 
 
                 alt="Git 브랜치와 커밋, 태그 정보, 모듈별 CI 결과와 실패 단계를 함께 보여주는 프로젝트 관리 화면"
-                loading="lazy"
+                loading="eager"
               />
             </figure>
           </div>
@@ -235,19 +211,6 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>김수영 Portfolio</p>
-        <p>
-          <a href="../index.html#profile">소개</a>
-          <a
-            href="https://github.com/tndud2505-ops"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub<span class="sr-only"> 새 창</span></a
-          >
-        </p>
-      </div>
-    </footer>
+    <footer class="container"><a href="../index.html#experience">실무 경력으로 돌아가기</a></footer>
   </body>
 </html>

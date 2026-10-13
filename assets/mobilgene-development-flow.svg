@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="700" viewBox="0 0 640 700" role="img" aria-labelledby="title desc">
+<title id="title">모빌진 기반 플랫폼 개발</title><desc id="desc">mobilgene에서 플랫폼 모듈을 설정하고 검증한 뒤 ASW 담당자에게 배포하여 개발을 지원합니다. 업무 개념도이며 내부 화면이 아닙니다.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M2 2 5 5 2 8" fill="none" stroke="#54765e" stroke-width="1.6"/></marker></defs>
+<rect width="640" height="700" fill="#eef1e9"/>
+<g font-family="Pretendard, 'Malgun Gothic', sans-serif">
+<text x="44" y="55" fill="#52634f" font-size="17">플랫폼 개발 업무</text>
+<text x="44" y="104" fill="#283b2c" font-size="32" font-weight="700">설정·검증에서 ASW 개발 지원까지</text>
+<path d="M44 133H596" stroke="#bac6b5"/>
+<rect x="44" y="158" width="552" height="189" fill="#fffefa" stroke="#a7b99e"/>
+<path d="M44 217H596" stroke="#c2cdbd"/>
+<text x="69" y="198" fill="#38563f" font-size="23" font-weight="600">mobilgene</text>
+<text x="570" y="196" fill="#697663" text-anchor="end" font-size="16">모듈 설정 환경</text>
+<rect x="78" y="242" width="484" height="79" fill="#e4ebdf"/>
+<text x="320" y="291" text-anchor="middle" fill="#283b2c" font-size="28" font-weight="600">플랫폼 모듈 설정</text>
+<path d="M320 359V386" stroke="#54765e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="44" y="403" width="552" height="84" fill="#fffefa" stroke="#a7b99e"/>
+<text x="320" y="456" text-anchor="middle" fill="#283b2c" font-size="28" font-weight="600">검증</text>
+<path d="M320 499V526" stroke="#54765e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="44" y="541" width="552" height="101" fill="#38563f"/>
+<text x="320" y="583" text-anchor="middle" fill="#f5f7ef" font-size="26" font-weight="600">ASW 담당자에게 배포</text>
+<text x="320" y="616" text-anchor="middle" fill="#dce8d7" font-size="22">개발 지원</text>
+<text x="44" y="680" fill="#697663" font-size="15">업무 개념도 · 실제 내부 화면 아님</text>
+</g></svg>

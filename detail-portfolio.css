@@ -1,0 +1,10 @@
+.case-study--company{padding-top:0}
+.site-header .header-inner{display:flex;min-height:88px;padding-block:0}
+.site-header .brand{display:block;min-width:0}
+.site-header nav{display:flex}
+.case-section#mobilgene{scroll-margin-top:110px}
+.career-section-links{display:flex;flex-wrap:wrap;gap:12px 28px;padding-block:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px}
+.mobilgene-figure{max-width:580px;margin:28px auto 0}
+.mobilgene-figure img{width:100%;max-width:580px;height:auto;display:block}
+.mobilgene-figure figcaption{color:var(--muted);font-size:12px;margin-top:14px}
+@media(max-width:760px){.site-header .header-inner{min-height:76px}.case-study--company .case-hero h1{font-size:36px}.mobilgene-figure img{max-width:100%}}
