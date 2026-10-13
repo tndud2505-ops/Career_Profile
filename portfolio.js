@@ -61,7 +61,7 @@
       if (link.hash === '#'+active.id) link.setAttribute('aria-current','page');
       else link.removeAttribute('aria-current');
     });
-    const label = active.id === 'profile' ? '소개' : active.id === 'projects' ? '개인 프로젝트' : '실무 경력';
+    const label = {profile:'소개',projects:'개인 프로젝트',experience:'실무 경력',activities:'외부활동 및 수상경력'}[active.id];
     document.title = label+' · 김수영'+(replay ? ' — POC' : '');
     window.scrollTo({top:0,behavior:'instant'});
     if (focus) {
@@ -110,7 +110,7 @@
   document.addEventListener('visibilitychange', () => {
     if (document.hidden && intro?.isActive()) intro.progress(1);
   });
-  // Without JavaScript, all three semantic sections remain available.
+  // Without JavaScript, all semantic sections remain available.
   showScreen();
   updateMotion();
 })();

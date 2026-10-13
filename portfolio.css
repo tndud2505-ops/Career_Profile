@@ -96,7 +96,7 @@ footer{display:flex;justify-content:flex-end;border-top:1px solid var(--line);pa
   :root{--rail:20px}
   .header-inner{min-height:76px;gap:16px;flex-wrap:wrap;padding:14px 0}
   .brand{font-size:22px}
-  nav{gap:17px;font-size:12px}
+  nav{gap:4px 17px;font-size:12px;flex-wrap:wrap;justify-content:flex-end;max-width:100%}
   .contact-nav{display:none}
   .hero{grid-template-columns:1fr;padding-top:32px;gap:28px;padding-bottom:0}
   .hero h1{font-size:27px;line-height:1.5;max-width:21ch}
