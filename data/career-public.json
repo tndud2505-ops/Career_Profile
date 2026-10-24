@@ -194,12 +194,14 @@
     },
     {
       "id": "dulharu",
-      "name": "둘의 하루",
+      "name": "우리여정",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "날짜·사진·장소·짧은 이야기를 한 기록으로 남기고, 이야기·달력·지도 흐름에서 다시 보는 커플 기록 앱",
+      "description": "가족과 사진·글·장소를 함께 기록하고, 달력과 추억 지도에서 다시 찾아보는 모바일 앱",
       "detailPath": "./projects/dulharu.html",
-      "cardLabel": "모바일 앱"
+      "cardLabel": "모바일 앱",
+      "trialUrl": "https://github.com/tndud2505-ops/dulharu-android/releases/tag/v0.2.5-journey.1",
+      "githubUrl": "https://github.com/tndud2505-ops/dulharu-android"
     },
     {
       "id": "saigyeol-chat-analysis",
