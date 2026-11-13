@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">상보형 인버터를 이용한 PMSM 모터 제어 흐름</title>
+  <desc id="desc">MCU의 제어 소프트웨어가 PWM 구동 명령을 내장 게이트 드라이버에 전달하고 상보형 3상 인버터를 통해 PMSM을 구동하는 공개용 개념도. MCU가 여섯 FET 게이트를 개별 직접 제어하는 회로를 나타내지 않는다.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#244e78"/></marker>
+    <marker id="feedback" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#414d48"/></marker>
+    <style>
+      text{font-family:'Malgun Gothic','Noto Sans KR',sans-serif;fill:#182820;text-anchor:middle}
+      .heading{font-size:43px;font-weight:700}.block{font-size:34px;font-weight:700}.label{font-size:25px}.small{font-size:23px;fill:#58665f}
+      .box{fill:#fff;stroke:#315f45;stroke-width:4}.boundary{fill:#fafcf9;stroke:#6c7d72;stroke-width:2}
+      .signal{fill:none;stroke:#244e78;stroke-width:5;marker-end:url(#arrow)}.power{fill:none;stroke:#182820;stroke-width:4}
+    </style>
+  </defs>
+  <rect width="1600" height="900" fill="#fff"/>
+  <text class="heading" x="800" y="95">PMSM 모터 제어 흐름</text>
+  <text class="small" x="800" y="145">MCU 제어 SW → 내장 게이트 드라이버 → 상보형 인버터 → 모터</text>
+
+  <text class="label" x="240" y="230">LIN 명령 · 목표 위치</text>
+  <path class="signal" d="M240 246 V285"/>
+  <rect class="box" x="60" y="290" width="360" height="260" rx="4"/>
+  <text class="block" x="240" y="365">MCU 제어 로직</text>
+  <text class="label" x="240" y="425">ASW · Motor Driver SW</text>
+  <text class="small" x="240" y="485">모터 구동 · 위치 제어</text>
+
+  <rect class="boundary" x="570" y="225" width="650" height="375" rx="5"/>
+  <text class="label" x="895" y="270">내장 드라이버 · 인버터</text>
+  <rect class="box" x="605" y="325" width="235" height="210" rx="4"/>
+  <text class="block" x="722" y="406">게이트</text>
+  <text class="block" x="722" y="454">드라이버</text>
+  <text class="label" x="495" y="370">PWM</text>
+  <path class="signal" d="M420 425 H600"/>
+
+  <rect class="box" x="910" y="325" width="275" height="210" rx="4"/>
+  <text class="block" x="1047" y="401">상보형</text>
+  <text class="block" x="1047" y="449">3상 인버터</text>
+  <path class="signal" d="M840 425 H905"/>
+
+  <circle class="box" cx="1410" cy="425" r="108"/>
+  <text class="block" x="1410" y="437">PMSM</text>
+  <path class="power" d="M1185 375 H1316 M1185 425 H1302 M1185 475 H1316"/>
+  <text class="label" x="1245" y="358">U</text>
+  <text class="label" x="1245" y="411">V</text>
+  <text class="label" x="1245" y="461">W</text>
+  <path d="M1410 535 V700 H240 V555" fill="none" stroke="#414d48" stroke-width="4" marker-end="url(#feedback)"/>
+  <rect x="680" y="673" width="330" height="48" fill="#fff"/>
+  <text class="label" x="845" y="708">위치 · 상태 피드백</text>
+  <text class="small" x="800" y="812">공개용 설명 개념도</text>
+</svg>

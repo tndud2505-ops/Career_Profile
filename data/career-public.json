@@ -101,7 +101,7 @@
         },
         {
           "name": "냉매 밸브 액추에이터 2세대",
-          "scope": "MCU 변경에 맞춰 3-PWM Motor Driver SW와 게이트 드라이버 인터페이스를 공동 설계하고, 코드 구현·디버깅·검증을 거쳐 양산했습니다."
+          "scope": "MCU 변경에 맞춰 상보형 인버터를 구동하는 Motor Driver SW와 게이트 드라이버 인터페이스를 공동 설계하고, PMSM 제어 코드 구현·디버깅·검증을 거쳐 양산했습니다."
         },
         {
           "name": "PT 센서 액추에이터 · 선행",
@@ -110,7 +110,7 @@
       ],
       "capabilities": [
         "Embedded C · LIN",
-        "MCU 주변장치 · 3-PWM · Gate Driver",
+        "MCU 주변장치 · PWM · Gate Driver",
         "PMSM·BLDC·DC 모터 제어",
         "보호·재시동 · 양산 HW–SW 디버깅"
       ]
