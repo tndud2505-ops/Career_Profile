@@ -26,6 +26,12 @@ Windows에서는 `run_local_preview.bat`를 더블클릭해도 됩니다. macOS/
 - 저장소: <https://github.com/tndud2505-ops/Career_Profile>
 - Pages 설정: Repository Settings → Pages → Source를 `GitHub Actions`로 선택
 
+## 출시한 Android 앱
+
+- [USED PICK — 중고 PC 부품 시세](https://play.google.com/store/apps/details?id=com.usedpick.app): PC 부품 매물 검색과 모델별 시세 비교. [웹 서비스](https://www.used-pick.com/)도 운영합니다.
+- [우리여정](https://play.google.com/store/apps/details?id=app.dulharu.couple): 가족과 사진·글·장소를 기록하고 달력과 추억 지도에서 돌아보는 앱입니다. 가족 기록은 초대받은 구성원과만 공유합니다.
+- [Train Gallery: 운동 영상 기록](https://play.google.com/store/apps/details?id=com.trainingapp.traingallery): 운동 영상을 달력에 기록하고 브이로그로 편집하는 앱입니다.
+
 이 저장소에는 개인 비밀번호, API 키, 계좌 정보, `.env` 파일을 넣지 않습니다. 공개 데이터는 `data/career-public.json`에서 관리합니다.
 
 ## Local preview

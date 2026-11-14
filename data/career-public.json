@@ -141,7 +141,7 @@
       "name": "Train Gallery",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "매일 찍은 운동 영상을 달력에 기록하고, 영상별 구간·자막·이모티콘을 편집해 여러 영상을 하나의 브이로그로 만드는 모바일 앱",
+      "description": "운동 영상을 날짜별 달력에 기록하고 태그·즐겨찾기로 모아, 구간·자막·스티커를 편집해 선택한 영상으로 브이로그를 만드는 모바일 앱",
       "detailPath": "./projects/train-gallery.html",
       "cardLabel": "Android · Google Play 출시",
       "externalUrl": "https://play.google.com/store/apps/details?id=com.trainingapp.traingallery"
@@ -161,9 +161,11 @@
       "name": "USED PICK",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "여러 중고 플랫폼의 PC 부품 매물을 통합 검색하고 모델별 시세·가격 추이·부품 조합 비용을 비교하는 서비스",
+      "description": "여러 중고 플랫폼의 PC 부품 매물을 통합 검색하고 모델별 시세·가격 추이·부품 조합 비용을 비교하는 웹·Android 서비스",
       "detailPath": "./projects/used-market-agent.html",
-      "externalUrl": "https://www.used-pick.com/"
+      "cardLabel": "웹 · Android 출시",
+      "externalUrl": "https://www.used-pick.com/",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.usedpick.app"
     },
     {
       "id": "coteepet",
@@ -198,11 +200,12 @@
       "name": "우리여정",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "가족과 사진·글·장소를 함께 기록하고, 달력과 추억 지도에서 다시 찾아보는 모바일 앱",
+      "description": "가족과 사진·글·장소를 함께 기록하고 달력과 추억 지도에서 다시 찾아보는 Google Play 출시 Android 앱",
       "detailPath": "./projects/dulharu.html",
-      "cardLabel": "모바일 앱",
-      "trialUrl": "https://github.com/tndud2505-ops/dulharu-android/releases/tag/v0.2.5-journey.1",
-      "githubUrl": "https://github.com/tndud2505-ops/dulharu-android"
+      "cardLabel": "Android · Google Play 출시",
+      "githubUrl": "https://github.com/tndud2505-ops/dulharu-android",
+      "externalUrl": "https://play.google.com/store/apps/details?id=app.dulharu.couple",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=app.dulharu.couple"
     },
     {
       "id": "saigyeol-chat-analysis",
