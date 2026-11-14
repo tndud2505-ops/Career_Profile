@@ -26,17 +26,27 @@ Windows에서는 `run_local_preview.bat`를 더블클릭해도 됩니다. macOS/
 - 저장소: <https://github.com/tndud2505-ops/Career_Profile>
 - Pages 설정: Repository Settings → Pages → Source를 `GitHub Actions`로 선택
 
-## 출시한 Android 앱
+## 개인 프로젝트
 
-- [USED PICK — 중고 PC 부품 시세](https://play.google.com/store/apps/details?id=com.usedpick.app): PC 부품 매물 검색과 모델별 시세 비교. [웹 서비스](https://www.used-pick.com/)도 운영합니다.
-- [우리여정](https://play.google.com/store/apps/details?id=app.dulharu.couple): 가족과 사진·글·장소를 기록하고 달력과 추억 지도에서 돌아보는 앱입니다. 가족 기록은 초대받은 구성원과만 공유합니다.
-- [Train Gallery: 운동 영상 기록](https://play.google.com/store/apps/details?id=com.trainingapp.traingallery): 운동 영상을 달력에 기록하고 브이로그로 편집하는 앱입니다.
+### 서비스 중
 
-## 개발·심사 중인 프로젝트
+- [K Stock](https://tndud2505-ops.github.io/Career_Profile/projects/k-stock.html) — **서비스 중 · 웹 서비스**. 국내 주식의 캔들·거래량·이동평균선과 비교 지표를 함께 보는 상세 차트 중심의 시장 탐색 서비스. [공개 링크 ↗](https://kstockclock.com/)
+- [Train Gallery](https://tndud2505-ops.github.io/Career_Profile/projects/train-gallery.html) — **서비스 중 · Android · Google Play 출시**. 운동 영상을 날짜별 달력에 기록하고 태그·즐겨찾기로 모아, 구간·자막·스티커를 편집해 선택한 영상으로 브이로그를 만드는 모바일 앱. [공개 링크 ↗](https://play.google.com/store/apps/details?id=com.trainingapp.traingallery)
+- [Jira Obsidian](https://tndud2505-ops.github.io/Career_Profile/projects/jira-mini.html) — **서비스 중 · Jira 앱**. Jira Cloud 이슈의 계층과 연결 관계를 시각화하고, 선행·연관·검증 관계를 직접 추가하는 앱. [Marketplace ↗](https://marketplace.atlassian.com/apps/1923219004) · [사용 안내 ↗](https://tndud2505-ops.github.io/jira-obsidian-support/docs.html)
+- [USED PICK](https://tndud2505-ops.github.io/Career_Profile/projects/used-market-agent.html) — **서비스 중 · 웹 · Android 출시**. 여러 중고 플랫폼의 PC 부품 매물을 통합 검색하고 모델별 시세·가격 추이·부품 조합 비용을 비교하는 웹·Android 서비스. [공개 링크 ↗](https://www.used-pick.com/) · [Google Play ↗](https://play.google.com/store/apps/details?id=com.usedpick.app)
+- [우리여정](https://tndud2505-ops.github.io/Career_Profile/projects/dulharu.html) — **서비스 중 · Android · Google Play 출시**. 가족과 사진·글·장소를 함께 기록하고 달력과 추억 지도에서 다시 찾아보는 Google Play 출시 Android 앱. [공개 링크 ↗](https://play.google.com/store/apps/details?id=app.dulharu.couple)
 
-- [MORI CAM](https://tndud2505-ops.github.io/Career_Profile/projects/mori-cam.html) — **Android 테스트 APK 배포 · Google Play 심사 중**. 컬러·필름 효과와 네컷 사진 저장·공유를 제공하는 카메라 앱입니다. [테스트 APK 받기](https://github.com/tndud2505-ops/MORI-CAM-Downloads/releases/download/v2.1.1-camera-preview/MORI-CAM-2.1.1-release.apk) · [배포 기록](https://github.com/tndud2505-ops/MORI-CAM-Downloads/releases/tag/v2.1.1-camera-preview) · [앱 소개](https://mori-cam.tndud2503.chatgpt.site/). 앱 소스는 비공개입니다.
-- [Doll Toss](https://tndud2505-ops.github.io/Career_Profile/projects/doll-toss.html) — **개발 중인 3D 인형뽑기 게임**. 집게 조작, 스테이지와 인형 도감을 개발하고 있습니다.
-- [대화 분석](https://tndud2505-ops.github.io/Career_Profile/projects/saigyeol-chat-analysis.html) — **개발 중인 앱**. 카카오톡 TXT의 참여자별 통계·표현 신호·대화 연결과 원문 근거를 보여줍니다.
+### 폐기
+
+- [COTEEPET](https://tndud2505-ops.github.io/Career_Profile/projects/coteepet.html) — **폐기 · 웹 카탈로그**. Codex Pet 캐릭터를 검색하고 9가지 동작 미리보기·패키지 업로드·무료 다운로드를 제공하는 웹 카탈로그. [과거 사이트 ↗](https://coteepet.com/)
+- [EMOTOWN](https://tndud2505-ops.github.io/Career_Profile/projects/emotown.html) — **폐기 · 웹 갤러리**. 디자인 작업용 이모티콘 세트를 검색·분류하고 무료 다운로드와 제작자 이미지·ZIP 업로드를 제공하는 웹 갤러리. [과거 사이트 ↗](https://emotown.com/)
+
+### 검토 중
+
+- [Virtual MCU Training Environment](https://tndud2505-ops.github.io/Career_Profile/projects/virtual-mcu.html) — **검토 중 · 웹 실습 도구**. C 펌웨어·DC 모터 회로·센서 입력을 연결하고, 레지스터와 학습 문서로 제어 흐름을 익히는 브라우저 실습 서비스. [검토용 화면 ↗](https://virtual-mcu-training-env.pages.dev/) · [검토용 사용 안내 ↗](https://virtual-mcu-training-env.pages.dev/docs/unified-dc-motor-trainer-guide.html)
+- [대화 분석](https://tndud2505-ops.github.io/Career_Profile/projects/saigyeol-chat-analysis.html) — **검토 중 · 개발 중 · 앱**. 카카오톡 TXT에서 참여자별 통계·표현 신호·대화 연결과 원문 근거를 보여주는 개발 중인 앱.
+- [MORI CAM](https://tndud2505-ops.github.io/Career_Profile/projects/mori-cam.html) — **검토 중 · Android · 테스트 APK · Play 심사 중**. 사진 촬영에 컬러·필름 효과를 적용하고 네컷 사진을 저장·공유하는 Android 카메라 앱. [테스트 APK 배포 기록 ↗](https://github.com/tndud2505-ops/MORI-CAM-Downloads/releases/tag/v2.1.1-camera-preview) · [검토용 테스트 APK ↗](https://github.com/tndud2505-ops/MORI-CAM-Downloads/releases/download/v2.1.1-camera-preview/MORI-CAM-2.1.1-release.apk) · [검토용 화면 ↗](https://mori-cam.tndud2503.chatgpt.site/)
+- [Doll Toss](https://tndud2505-ops.github.io/Career_Profile/projects/doll-toss.html) — **검토 중 · 개발 중 · 3D 게임**. 3D 집게를 조작해 인형을 뽑고 스테이지와 인형 도감을 진행하는 개발 중인 인형뽑기 게임.
 
 이 저장소에는 개인 비밀번호, API 키, 계좌 정보, `.env` 파일을 넣지 않습니다. 공개 데이터는 `data/career-public.json`에서 관리합니다.
 
@@ -55,7 +65,7 @@ python -m http.server 5180 --bind 127.0.0.1
 - script.js: 모바일 메뉴, 현재 구역 표시, 키보드 프로젝트 분류, 화면 맞춤·원본 확대 보기
 - data/career-public.json: 사이트에 노출하는 공개 프로필·경력·프로젝트 데이터
 - experience/: 회사별 실무 경험 상세 페이지와 공개용 시스템 개념도
-- projects/: K Stock, Train Gallery, Jira Obsidian, USED PICK, COTEEPET, EMOTOWN, Virtual MCU, 우리여정, 대화 분석, MORI CAM, Doll Toss의 개인 프로젝트 11개 소개와 기존 회사 업무 상세 자료
+- projects/: K Stock, Train Gallery, Jira Obsidian, USED PICK, 우리여정, COTEEPET, EMOTOWN, Virtual MCU Training Environment, 대화 분석, MORI CAM, Doll Toss의 개인 프로젝트 11개 소개와 기존 회사 업무 상세 자료
 - 개인 프로젝트 상세 페이지는 `서비스 소개` → `주요 기능` → `실제 화면` 순서로 구성하며, 개발·배포 단계를 구분합니다.
 - assets/: 실제 프로젝트 화면 캡처
 - 404.html: 잘못된 주소에서 소개·실무 경력·개인 프로젝트로 돌아가는 안내 페이지
