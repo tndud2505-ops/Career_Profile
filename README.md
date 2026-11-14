@@ -32,6 +32,12 @@ Windows에서는 `run_local_preview.bat`를 더블클릭해도 됩니다. macOS/
 - [우리여정](https://play.google.com/store/apps/details?id=app.dulharu.couple): 가족과 사진·글·장소를 기록하고 달력과 추억 지도에서 돌아보는 앱입니다. 가족 기록은 초대받은 구성원과만 공유합니다.
 - [Train Gallery: 운동 영상 기록](https://play.google.com/store/apps/details?id=com.trainingapp.traingallery): 운동 영상을 달력에 기록하고 브이로그로 편집하는 앱입니다.
 
+## 개발·심사 중인 프로젝트
+
+- [MORI CAM](https://tndud2505-ops.github.io/Career_Profile/projects/mori-cam.html) — **Android 테스트 APK 배포 · Google Play 심사 중**. 컬러·필름 효과와 네컷 사진 저장·공유를 제공하는 카메라 앱입니다. [테스트 APK 받기](https://github.com/tndud2505-ops/MORI-CAM-Downloads/releases/download/v2.1.1-camera-preview/MORI-CAM-2.1.1-release.apk) · [배포 기록](https://github.com/tndud2505-ops/MORI-CAM-Downloads/releases/tag/v2.1.1-camera-preview) · [앱 소개](https://mori-cam.tndud2503.chatgpt.site/). 앱 소스는 비공개입니다.
+- [Doll Toss](https://tndud2505-ops.github.io/Career_Profile/projects/doll-toss.html) — **개발 중인 3D 인형뽑기 게임**. 집게 조작, 스테이지와 인형 도감을 개발하고 있습니다.
+- [대화 분석](https://tndud2505-ops.github.io/Career_Profile/projects/saigyeol-chat-analysis.html) — **개발 중인 앱**. 카카오톡 TXT의 참여자별 통계·표현 신호·대화 연결과 원문 근거를 보여줍니다.
+
 이 저장소에는 개인 비밀번호, API 키, 계좌 정보, `.env` 파일을 넣지 않습니다. 공개 데이터는 `data/career-public.json`에서 관리합니다.
 
 ## Local preview
@@ -49,8 +55,8 @@ python -m http.server 5180 --bind 127.0.0.1
 - script.js: 모바일 메뉴, 현재 구역 표시, 키보드 프로젝트 분류, 화면 맞춤·원본 확대 보기
 - data/career-public.json: 사이트에 노출하는 공개 프로필·경력·프로젝트 데이터
 - experience/: 회사별 실무 경험 상세 페이지와 공개용 시스템 개념도
-- projects/: MOBASE AUTOSAR 코드 생성 툴, MOBASE SiL 검증 환경, MOBASE CI 리포트 대시보드, K Stock, USED PICK, COTEEPET, EMOTOWN, Virtual MCU, Jira Opsidian, Train Gallery, Questora, Codex Team, Auto Trading
-- 각 프로젝트 상세 페이지는 `개요` → `해결할 문제` → `구현 과정` → `화면·동작` 순서로 구성합니다.
+- projects/: K Stock, Train Gallery, Jira Obsidian, USED PICK, COTEEPET, EMOTOWN, Virtual MCU, 우리여정, 대화 분석, MORI CAM, Doll Toss의 개인 프로젝트 11개 소개와 기존 회사 업무 상세 자료
+- 개인 프로젝트 상세 페이지는 `서비스 소개` → `주요 기능` → `실제 화면` 순서로 구성하며, 개발·배포 단계를 구분합니다.
 - assets/: 실제 프로젝트 화면 캡처
 - 404.html: 잘못된 주소에서 소개·실무 경력·개인 프로젝트로 돌아가는 안내 페이지
 

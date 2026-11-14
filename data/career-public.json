@@ -212,9 +212,31 @@
       "name": "대화 분석",
       "category": "product",
       "categoryLabel": "제품·서비스",
-      "description": "카카오톡 TXT를 브라우저에서 분석해 참여자별 통계·표현 신호·대화 연결과 원문 근거를 보여주는 서비스",
+      "description": "카카오톡 TXT에서 참여자별 통계·표현 신호·대화 연결과 원문 근거를 보여주는 개발 중인 앱",
       "detailPath": "./projects/saigyeol-chat-analysis.html",
-      "cardLabel": "웹 서비스"
+      "cardLabel": "개발 중 · 앱"
+    },
+    {
+      "id": "mori-cam",
+      "name": "MORI CAM",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "사진 촬영에 컬러·필름 효과를 적용하고 네컷 사진을 저장·공유하는 Android 카메라 앱",
+      "detailPath": "./projects/mori-cam.html",
+      "cardLabel": "Android · 테스트 APK · Play 심사 중",
+      "githubUrl": "https://github.com/tndud2505-ops/MORI-CAM-Downloads",
+      "externalUrl": "https://github.com/tndud2505-ops/MORI-CAM-Downloads/releases/tag/v2.1.1-camera-preview",
+      "apkUrl": "https://github.com/tndud2505-ops/MORI-CAM-Downloads/releases/download/v2.1.1-camera-preview/MORI-CAM-2.1.1-release.apk",
+      "websiteUrl": "https://mori-cam.tndud2503.chatgpt.site/"
+    },
+    {
+      "id": "doll-toss",
+      "name": "Doll Toss",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "3D 집게를 조작해 인형을 뽑고 스테이지와 인형 도감을 진행하는 개발 중인 인형뽑기 게임",
+      "detailPath": "./projects/doll-toss.html",
+      "cardLabel": "개발 중 · 3D 게임"
     }
   ]
 }

@@ -52,6 +52,7 @@ main{min-height:calc(100svh - 225px)}
 .project-card--mobile img{border-radius:10px;border:2px solid #485244}
 .project-card-body{padding:23px 24px 25px;display:flex;flex-direction:column;flex:1}
 .project-card-meta{display:none}
+.project-card-meta--status{display:block;margin:0 0 10px;font-size:12px;line-height:1.6;color:var(--green);word-break:keep-all}
 .project-card-body h3{margin:0 0 12px;font-size:23px;line-height:1.25;font-weight:650;letter-spacing:-.035em}
 .project-card-body>p:not(.project-card-meta){font-size:14px;line-height:1.7;margin:0 0 24px;max-width:60ch;color:#5a655b;word-break:keep-all}
 .project-card-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;font-size:12px;color:var(--green)}
