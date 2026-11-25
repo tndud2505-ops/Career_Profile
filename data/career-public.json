@@ -192,6 +192,20 @@
       "playStoreUrl": "https://play.google.com/store/apps/details?id=app.dulharu.couple"
     },
     {
+      "id": "mori-cam",
+      "name": "MORI CAM",
+      "category": "product",
+      "categoryLabel": "제품·서비스",
+      "description": "사진 촬영에 컬러·필름 효과를 적용하고 네컷 사진을 저장·공유하는 Android 카메라 앱",
+      "detailPath": "./projects/mori-cam.html",
+      "cardLabel": "Android · Google Play 정식 출시",
+      "operationalStatus": "서비스 중",
+      "githubUrl": "https://github.com/tndud2505-ops/MORI-CAM-Downloads",
+      "externalUrl": "https://play.google.com/store/apps/details?id=com.moricam.app&hl=ko&gl=KR",
+      "playStoreUrl": "https://play.google.com/store/apps/details?id=com.moricam.app&hl=ko&gl=KR",
+      "websiteUrl": "https://mori-cam.tndud2503.chatgpt.site/"
+    },
+    {
       "id": "coteepet",
       "name": "COTEEPET",
       "category": "product",
@@ -234,20 +248,6 @@
       "detailPath": "./projects/saigyeol-chat-analysis.html",
       "cardLabel": "개발 중 · 앱",
       "operationalStatus": "검토 중"
-    },
-    {
-      "id": "mori-cam",
-      "name": "MORI CAM",
-      "category": "product",
-      "categoryLabel": "제품·서비스",
-      "description": "사진 촬영에 컬러·필름 효과를 적용하고 네컷 사진을 저장·공유하는 Android 카메라 앱",
-      "detailPath": "./projects/mori-cam.html",
-      "cardLabel": "Android · 테스트 APK · Play 심사 중",
-      "operationalStatus": "검토 중",
-      "githubUrl": "https://github.com/tndud2505-ops/MORI-CAM-Downloads",
-      "externalUrl": "https://github.com/tndud2505-ops/MORI-CAM-Downloads/releases/tag/v2.1.1-camera-preview",
-      "apkUrl": "https://github.com/tndud2505-ops/MORI-CAM-Downloads/releases/download/v2.1.1-camera-preview/MORI-CAM-2.1.1-release.apk",
-      "websiteUrl": "https://mori-cam.tndud2503.chatgpt.site/"
     },
     {
       "id": "doll-toss",
